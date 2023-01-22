@@ -1,6 +1,7 @@
 #include"stdio.h"
 #include "stdlib.h"
 #include "tipoDicionario.h"
+#include "string.h"
 
 struct tipoDicionario{
 char** vet;
@@ -40,4 +41,9 @@ int buscar(tipoDicionario* x, char* palavra){
         }
     }
     return 0;
+}
+
+void ordenaDicionario(tipoDicionario*x){
+    qsort(x->vet,x->ocupacao,sizeof(char*),&strcmp);
+
 }
