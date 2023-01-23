@@ -16,8 +16,8 @@ void carrega_stopword(char word[30], DE *dic){
         {
             //printf("%s",stop_word);
             inserirDE(dic,stop_word);
+            printf("%s\n",stop_word);
             stop_word = malloc(sizeof(char)*50);
-            printf("Inseriu\n");
             fscanf(arq,"%s",stop_word);
         }
         
