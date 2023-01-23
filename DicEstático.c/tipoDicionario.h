@@ -1,9 +1,9 @@
 #ifndef TIPODIC_H
 #define TIPODIC_H
-typedef struct tipoDicionario tipoDicionario;
-tipoDicionario* criarvetor(int tam);
-void inserir(tipoDicionario* x, char* y);
-int buscar(tipoDicionario* x, char* palavra);
+typedef struct tipoDicionario DE;
+DE* criarDE(int tam);
+void inserirDE(DE* x, void* y);
+int buscarDE(DE* x, char* palavra);
 
 
 

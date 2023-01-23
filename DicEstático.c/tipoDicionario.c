@@ -9,24 +9,24 @@ int ocupacao;
 int tam;
 };
 
-tipoDicionario* criarvetor(int tam){
-    tipoDicionario* x = malloc(sizeof(tipoDicionario));
-    x->vet = malloc(sizeof(char*)*tam);
+DE* criarDE(int tam){
+    DE* x = malloc(sizeof(DE));
+    x->vet = malloc(sizeof(void*)*tam);
     x->ocupacao = 0;
     x->tam = tam;
     return x;
 }
 
-
-void inserir(tipoDicionario* x, char* y){
+void inserirDE(DE* x, void* y){
     if(x->ocupacao == x->tam){
         return;
     }
-    strcpy(x->vet[x->ocupacao], y);
+    x->vet[x->ocupacao] = y;
     x->ocupacao++;
     return ;
 }
-int buscar(tipoDicionario* x, char* palavra){
+
+int buscarDE(DE* x, char* palavra){
     int inicio = 0;
     int fim = x->ocupacao;
     int meio;
@@ -45,7 +45,7 @@ int buscar(tipoDicionario* x, char* palavra){
     return 0;
 }
 
-void ordenaDicionario(tipoDicionario*x){
+/*void ordenaDicionario(DE*x){
     qsort(x->vet,x->ocupacao,sizeof(char*),&strcmp);
 
-}
+}*/
