@@ -38,7 +38,7 @@ TDicDinamic* criarDicDinamic(int tam){
   void inserirDicDinamico (TDicDinamic* x, char* chave, void* info){
     int posicao = funcaoHash(chave,x->tam); 
     conjunto* novo = malloc(sizeof(conjunto));                  /// Definimos um conjunto que une chave e info para inserir na lista encadenada
-    novo->chave = chave;
+    novo->chave = chave;                                        /// 
     novo->info = info;
     inserirLista(x->listas[posicao], novo); 
  }
@@ -49,3 +49,8 @@ TDicDinamic* criarDicDinamic(int tam){
     
  }
 // falta remover 
+void removerDicDinamico(TDicDinamic* x, char* chave){
+    int posicaoBuscada = funcaoHash(chave,x->tam);          /// através da chave localizamos a posiçao que iremos remover do dicionario
+    return removerLista (x->listas[posicaoBuscada], chave); /// como para cada posiçao ha um ponteiro para uma lista encadeada usamos a remove lista
+    
+}
