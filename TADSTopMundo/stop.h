@@ -8,5 +8,4 @@ tipoStop * criarStop(char*arquivoStop);
 int verificaStop(tipoStop* stop, char* arquivoStop);
 
 
-
 #endif
