@@ -37,14 +37,14 @@ int funcaoHash(char*chave, int tam){
 
 void inserirDicDinamico (TDicDinamic* x, char* chave, void* info){
     int posicao = funcaoHash(chave,x->tam); 
-    conjunto* novo = malloc(sizeof(conjunto));                  /// Definimos um conjunto que une chave e info para inserir na lista encadenada
+    conjunto* novo = malloc(sizeof(conjunto));                 /// Definimos um conjunto que une chave e info para inserir na lista encadenada
     novo->chave = chave;
     novo->info = info;
     inserirLista(x->listas[posicao], novo); 
 }
 
 void* buscarDicDinamico(TDicDinamic* x, char* chave){
-    int posicaoBuscada = funcaoHash(chave,x->tam);              /// Usamos a funçao hash para buscar a chave 
+    int posicaoBuscada = funcaoHash(chave,x->tam);           /// Usamos a funçao hash para buscar a chave 
     return buscarLista(x->listas[posicaoBuscada], chave);   /// buscamos a chave na lista encadeada 
     
 }
@@ -53,5 +53,4 @@ void removerDicDinamico(TDicDinamic* x, char* chave){
     int posicaoBuscada = funcaoHash(chave,x->tam); 
     removerLista(x->listas[posicaoBuscada], chave);  
     return ;
-}
-// falta remover 
+} 
