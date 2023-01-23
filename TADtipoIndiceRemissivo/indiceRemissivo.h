@@ -2,11 +2,11 @@
 #define TIPOINDISSEREMISSIVO_H
 
 typedef struct tipoIndiceRemissivo tipoIndiceRemissivo;
-
+typedef struct InfoDic;
 
 tipoIndiceRemissivo * criarIndice(char*nomeArquivo, void*stopMundo);
 
-int buscarIndice(tipoIndiceRemissivo*nomeIndice, char* nomeArquivo);
+int buscarIndice(tipoIndiceRemissivo* nomeIndice, char* palavraDoArquivo);
 
 
 
