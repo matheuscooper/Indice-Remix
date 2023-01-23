@@ -4,7 +4,7 @@
 #include "string.h"
 
 struct tipoDicionario{
-char** vet;
+void** vet;
 int ocupacao;
 int tam;
 };
@@ -26,7 +26,7 @@ void inserirDE(DE* x, void* y){
     return ;
 }
 
-int buscarDE(DE* x, char* palavra){
+int buscarDE(DE* x, void* palavra){
     int inicio = 0;
     int fim = x->ocupacao;
     int meio;
@@ -45,7 +45,6 @@ int buscarDE(DE* x, char* palavra){
     return 0;
 }
 
-/*void ordenaDicionario(DE*x){
-    qsort(x->vet,x->ocupacao,sizeof(char*),&strcmp);
-
-}*/
+void ordenaDic(DE* dic){
+    qsort(dic->vet[0],393,sizeof(void*),&strcmp);
+}

@@ -1,6 +1,7 @@
 #include "tipoDicionario.h"
 #include "stdlib.h"
 #include "stdio.h"
+#include "string.h"
 
 void carrega_stopword(char word[30], DE *dic){
     FILE *arq = fopen(word,"r");
@@ -25,14 +26,16 @@ void carrega_stopword(char word[30], DE *dic){
     printf("sucesso!\n");
 }
 
+
 int main(int argc, const char *argv[]){
-    DE* dic = criarDE(393);
+    DE* dic = criarDE(394);
 
     carrega_stopword("stopwords_br.txt",dic);
     printf("dicionario criado\n");
+
+    ordenaDic(dic);
+
     char palavra[30];
     scanf("%[^\n]%*c",palavra);
     printf("%d",buscarDE(dic, palavra));
-    //printf("Digite uma palavra a ser buscada: \n");
-    //dashboard_DE(dic);
 }
