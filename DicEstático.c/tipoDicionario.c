@@ -16,6 +16,8 @@ tipoDicionario* criarvetor(int tam){
     x->tam = tam;
     return x;
 }
+
+
 void inserir(tipoDicionario* x, char* y){
     if(x->ocupacao == x->tam){
         return;
@@ -23,6 +25,10 @@ void inserir(tipoDicionario* x, char* y){
     strcpy(x->vet[x->ocupacao], y);
     x->ocupacao++;
     return ;
+
+    //x->vet[x->ocupacao] = y;
+    //x->ocupacao++;
+
 }
 int buscar(tipoDicionario* x, char* palavra){
     int inicio = 0;
