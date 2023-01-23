@@ -54,3 +54,4 @@ void removerDicDinamico(TDicDinamic* x, char* chave){
     removerLista(x->listas[posicaoBuscada], chave);  
     return ;
 } 
+/// OI GENTE
