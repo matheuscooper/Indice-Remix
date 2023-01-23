@@ -45,6 +45,12 @@ int buscarDE(DE* x, void* palavra){
     return 0;
 }
 
+int compara(const void * a, const void * b){
+    const char **str_a = (const char **)a;
+    const char **str_b = (const char **)b;
+    return strcmp(*str_a,*str_b);
+}
+
 void ordenaDic(DE* dic){
-    qsort(dic->vet[0],393,sizeof(void*),&strcmp);
+    qsort(dic->vet,393,sizeof(char*),compara);
 }
