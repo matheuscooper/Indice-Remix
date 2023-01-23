@@ -25,10 +25,6 @@ void inserir(tipoDicionario* x, char* y){
     strcpy(x->vet[x->ocupacao], y);
     x->ocupacao++;
     return ;
-
-    //x->vet[x->ocupacao] = y;
-    //x->ocupacao++;
-
 }
 int buscar(tipoDicionario* x, char* palavra){
     int inicio = 0;
