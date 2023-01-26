@@ -53,4 +53,5 @@ int compara(const void * a, const void * b){
 
 void ordenaDic(DE* dic){
     qsort(dic->vet,393,sizeof(char*),compara);
+    printf("vetor ordenado");
 }
