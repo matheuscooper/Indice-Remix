@@ -1,6 +1,7 @@
 #include "stdio.h"
 #include "stdlib.h"
 #include "indiceRemissivo.h"
+#include "Dic.Dinamico.h"
 typedef struct pagOcorre{    
     int pagina;
     int ocorrencias;
@@ -40,4 +41,5 @@ pagOcorre* criarPagOcorre(int ocorrenciasXX, int paginaXX){
 
 
 struct tipoIndiceRemissivo{
-    };
+    
+};
