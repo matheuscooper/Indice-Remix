@@ -18,14 +18,14 @@ TDicDinamic* criarDicDinamic(int tam){
     TDicDinamic* novoDic = malloc(sizeof(TDicDinamic));
     novoDic->listas = malloc(sizeof(ListaE*)*tam);
     for(x=0; x<tam; x++){
-        novoDic->listas[x] = criarLista();
+        novoDic->listas[x] = criarListaEncadeada();
     }
     return novoDic;
 }
 
-int funcaoHash(char*chave, int tam){
+int funcaoHash(void*chave, int tam){
     char* palavra = chave;                                 
-    unsigned int cons = 0xf;
+    unsigned int cons = 0xf;                    /// generalizar os parâmetros para agradar a César
     unsigned int acumulador = 0;
     unsigned int i = 0;
     while(palavra[i]){ 
@@ -35,22 +35,22 @@ int funcaoHash(char*chave, int tam){
     return acumulador%tam;
 }
 
-void inserirDicDinamico (TDicDinamic* x, char* chave, void* info){
+void inserirDicDinamico (TDicDinamic* x, void* chave, void* info){      /// generalizar os parâmetros para agradar a César
     int posicao = funcaoHash(chave,x->tam); 
     conjunto* novo = malloc(sizeof(conjunto));                  /// Definimos um conjunto que une chave e info para inserir na lista encadenada
     novo->chave = chave;
     novo->info = info;
-    inserirLista(x->listas[posicao], novo); 
+    inserirListaEncadeada(x->listas[posicao], novo); 
 }
 
-void* buscarDicDinamico(TDicDinamic* x, char* chave){
+void* buscarDicDinamico(TDicDinamic* x, void* chave){           /// generalizar os parâmetros para agradar a César
     int posicaoBuscada = funcaoHash(chave,x->tam);           /// Usamos a funçao hash para buscar a chave 
-    return buscarLista(x->listas[posicaoBuscada], chave);   /// buscamos a chave na lista encadeada 
+    return buscarListaEncadeada(x->listas[posicaoBuscada], chave);   /// buscamos a chave na lista encadeada 
     
 }
 
-void removerDicDinamico(TDicDinamic* x, char* chave){
+void removerDicDinamico(TDicDinamic* x, void* chave){           /// generalizar os parâmetros para agradar a César
     int posicaoBuscada = funcaoHash(chave,x->tam); 
-    removerLista(x->listas[posicaoBuscada], chave);  
+    removerListaEncadeada(x->listas[posicaoBuscada], chave);  
     return ;
 }

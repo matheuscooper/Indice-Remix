@@ -9,7 +9,7 @@ int ocupacao;
 int tam;
 };
 
-DE* criarDE(int tam){
+DE* criarDEstatico(int tam){
     DE* x = malloc(sizeof(DE));
     x->vet = malloc(sizeof(void*)*tam);
     x->ocupacao = 0;
@@ -17,7 +17,7 @@ DE* criarDE(int tam){
     return x;
 }
 
-void inserirDE(DE* x, void* y){
+void inserirDEstatico(DE* x, void* y){
     if(x->ocupacao == x->tam){
         return;
     }
@@ -26,7 +26,7 @@ void inserirDE(DE* x, void* y){
     return ;
 }
 
-int buscarDE(DE* x, void* palavra){
+int buscarDEstatico(DE* x, void* palavra){
     int inicio = 0;
     int fim = x->ocupacao;
     int meio;
@@ -45,13 +45,13 @@ int buscarDE(DE* x, void* palavra){
     return 0;
 }
 
-int compara(const void * a, const void * b){
+int comparaDEstatico(const void * a, const void * b){
     const char **str_a = (const char **)a;
     const char **str_b = (const char **)b;
     return strcmp(*str_a,*str_b);
 }
 
-void ordenaDic(DE* dic){
-    qsort(dic->vet,393,sizeof(char*),compara);
+void ordenaDEstatico(DE* dic){
+    qsort(dic->vet,393,sizeof(char*),comparaDEstatico);
     printf("vetor ordenado");
 }
