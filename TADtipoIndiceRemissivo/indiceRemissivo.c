@@ -1,22 +1,14 @@
 #include "stdio.h"
 #include "stdlib.h"
-#include "indiceRemissivo.h"
+#include "../ListaEncadeada/ListaEncadeada.h"
 
 typedef struct pagOcorre{
     int pagina;
     int ocorrencias;
 }pagOcorre;
 
-struct InfoDic{
-    pagOcorre* vetDeOcorrencias;
+typedef struct InfoDic{
+    ListaE listaDePags;
     int ocorrenciasTotal;
     int paginasTotal;
 };
-
-tipoIndiceRemissivo *criarIndice(char*nomeArquivo, void*stopMundo){
-            
-}
-
-int mostrarIndice(tipoIndiceRemissivo* nomeIndice){
-
-}

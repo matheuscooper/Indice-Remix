@@ -4,27 +4,29 @@
 #include "string.h"
 
 struct tipoDicionario{
-char** vet;
+void** vet;
 int ocupacao;
 int tam;
 };
 
-tipoDicionario* criarvetor(int tam){
-    tipoDicionario* x = malloc(sizeof(tipoDicionario));
-    x->vet = malloc(sizeof(char*)*tam);
+DE* criarDE(int tam){
+    DE* x = malloc(sizeof(DE));
+    x->vet = malloc(sizeof(void*)*tam);
     x->ocupacao = 0;
     x->tam = tam;
     return x;
 }
-void inserir(tipoDicionario* x, char* y){
+
+void inserirDE(DE* x, void* y){
     if(x->ocupacao == x->tam){
         return;
     }
-    strcpy(x->vet[x->ocupacao], y);
+    x->vet[x->ocupacao] = y;
     x->ocupacao++;
     return ;
 }
-int buscar(tipoDicionario* x, char* palavra){
+
+int buscarDE(DE* x, void* palavra){
     int inicio = 0;
     int fim = x->ocupacao;
     int meio;
@@ -43,7 +45,13 @@ int buscar(tipoDicionario* x, char* palavra){
     return 0;
 }
 
-void ordenaDicionario(tipoDicionario*x){
-    qsort(x->vet,x->ocupacao,sizeof(char*),&strcmp);
+int compara(const void * a, const void * b){
+    const char **str_a = (const char **)a;
+    const char **str_b = (const char **)b;
+    return strcmp(*str_a,*str_b);
+}
 
+void ordenaDic(DE* dic){
+    qsort(dic->vet,393,sizeof(char*),compara);
+    printf("vetor ordenado");
 }
