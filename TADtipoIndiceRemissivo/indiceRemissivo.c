@@ -12,3 +12,11 @@ struct InfoDic{
     int ocorrenciasTotal;
     int paginasTotal;
 };
+
+tipoIndiceRemissivo *criarIndice(char*nomeArquivo, void*stopMundo){
+            
+}
+
+int mostrarIndice(tipoIndiceRemissivo* nomeIndice){
+
+}

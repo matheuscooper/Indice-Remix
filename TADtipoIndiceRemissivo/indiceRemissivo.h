@@ -5,7 +5,7 @@ typedef struct tipoIndiceRemissivo tipoIndiceRemissivo;
 
 tipoIndiceRemissivo * criarIndice(char*nomeArquivo, void*stopMundo);
 
-int buscarIndice(tipoIndiceRemissivo* nomeIndice, char* palavraDoArquivo);
+int mostrarIndice(tipoIndiceRemissivo* nomeIndice);
 
 
 typedef struct InfoDic InfoDic;
