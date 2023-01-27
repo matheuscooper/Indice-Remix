@@ -4,7 +4,7 @@
 
 typedef struct TipoNo{
     void* info;
-    TipoNo* prox;
+    struct TipoNo* prox;
 }TipoNo;
 
 struct ListaE{

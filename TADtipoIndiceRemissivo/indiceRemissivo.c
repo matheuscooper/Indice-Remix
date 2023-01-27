@@ -1,7 +1,12 @@
 #include "stdio.h"
 #include "stdlib.h"
 #include "indiceRemissivo.h"
-#include "Dic.Dinamico.h"
+#include "../DicDinamico/Dic.Dinamico.h"
+#include "../TrataStrings/TrataStrings.h"
+
+
+
+
 typedef struct pagOcorre{    
     int pagina;
     int ocorrencias;
@@ -12,6 +17,7 @@ struct InfoDic{
     int ocorrenciasTotal;
     int paginasTotal;
 };
+
 
 InfoDic* criarInfoDic(){    
     InfoDic* tipox = malloc(sizeof(InfoDic));
@@ -41,5 +47,31 @@ pagOcorre* criarPagOcorre(int ocorrenciasXX, int paginaXX){
 
 
 struct tipoIndiceRemissivo{
+    TDicDinamic* Dicionario_do_livro;
     
 };
+
+tipoIndiceRemissivo * criarIndice(char*nomeArquivo, void*stopMundo){
+    tipoIndiceRemissivo* IndiceRe_atual = malloc(sizeof(tipoIndiceRemissivo));
+    IndiceRe_atual->Dicionario_do_livro = criarDicDinamic(100);
+    FILE* Arquivo_atual = fopen(nomeArquivo, "r");
+    char* palavraLida = malloc(sizeof(char)*46); 
+    int página;
+    while(fscanf(Arquivo_atual, "%s", palavraLida)==1){
+        ////LowerString(palavraLida);
+        printf("%s \n", palavraLida);
+        if(strcmp(palavraLida, "PA")==0){
+        }
+        else if(verificaStop(stopMundo, palavraLida)==0){
+            inserirDicDinamico(IndiceRe_atual->Dicionario_do_livro, palavraLida, palavraLida);
+        }
+
+    }
+    fclose(Arquivo_atual);
+}
+
+int main(){
+    char x[20];
+    scanf("%s", x);
+    criarIndice(x, NULL);
+}

@@ -26,8 +26,7 @@ void carrega_stopword(char word[30], DE *dic){
     printf("sucesso!\n");
 }
 
-
-int main(int argc, const char *argv[]){
+/*int main(int argc, const char *argv[]){
     DE* dic = criarDE(394);
 
     carrega_stopword("stopwords_br.txt",dic);
@@ -38,4 +37,4 @@ int main(int argc, const char *argv[]){
     char palavra[30];
     scanf("%[^\n]%*c",palavra);
     printf("%d",buscarDE(dic, palavra));
-}
+}*/
