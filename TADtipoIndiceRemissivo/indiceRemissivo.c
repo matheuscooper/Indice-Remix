@@ -1,4 +1,5 @@
-#include "stdio.h"#include "stdlib.h"
+#include "stdio.h"
+#include "stdlib.h"
 #include "indiceRemissivo.h"
 typedef struct pagOcorre{    
     int pagina;
