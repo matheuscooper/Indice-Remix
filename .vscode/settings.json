@@ -1,5 +1,8 @@
 {
     "files.associations": {
-        "indiceremissivo.h": "c"
+        "indiceremissivo.h": "c",
+        "listaencadeada.h": "c",
+        "dic.dinamico.h": "c",
+        "stdlib.h": "c"
     }
 }

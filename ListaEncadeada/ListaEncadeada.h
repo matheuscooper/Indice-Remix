@@ -2,16 +2,16 @@
 #define LISTAENCADEADA_H
 
 typedef struct ListaE ListaE;
-typedef int (*compara)(void*, void*);
+typedef int (*comparaListaEncadeada)(void*, void*);
 
 
-ListaE* criarLista();
+ListaE* criarListaEncadeada();
 
 
-void inserirLista(ListaE* lista, void* infoNova);
+void inserirListaEncadeada(ListaE* lista, void* infoNova);
 
-void* buscarLista(ListaE* lista, void* info);
+void* buscarListaEncadeada(ListaE* lista, void* info);
 
-void removerLista(ListaE* lista, void* info);
+void removerListaEncadeada(ListaE* lista, void* info);
 
 #endif
