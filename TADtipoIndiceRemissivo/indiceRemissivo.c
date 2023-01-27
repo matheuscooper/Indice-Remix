@@ -6,17 +6,18 @@ struct InfoDic{
     pagOcorre* vetDeOcorrencias;    int ocorrenciasTotal;
     int paginasTotal;};
 
-typedef struct pagOcorre{
-    int pagina;
-    int ocorrencias;
-}pagOcorre;
-
-typedef struct InfoDic{
-    ListaE listaDePags;
-    int ocorrenciasTotal;
-    int paginasTotal;
-}InfoDic;
-
-InfoDic* criarInfoDic(char* chave){
-
-}
+InfoDic* criarInfoDic(){    InfoDic* tipox = malloc(sizeof(InfoDic));
+    tipox -> vetDeOcorrencias = malloc(sizeof(pagOcorre) * 2);    tipox -> ocorrenciasTotal = 0;
+    tipox -> paginasTotal = 0;    return tipox;
+}void mostrarVetorOcorrencias(InfoDic* blocoDeInfo){
+   int x = 0;
+   pagOcorre* aux = blocoDeInfo->vetDeOcorrencias;   while(x<5){
+       printf("página: %d", aux[x].pagina);       printf("página: %d", aux[x].ocorrencias);
+   }    printf("ocorrencias totais = %d", blocoDeInfo-> ocorrenciasTotal);
+    printf("paginas totais: %d", blocoDeInfo->paginasTotal);                                                                 }
+///criar a funcao INSERE ORDENADAMENTE
+pagOcorre* criarPagOcorre(int ocorrenciasXX, int paginaXX){    pagOcorre* x = malloc(sizeof(pagOcorre));
+    x-> pagina = paginaXX;    x-> ocorrencias = ocorrenciasXX;
+    return x;}
+struct tipoIndiceRemissivo{
+    };
