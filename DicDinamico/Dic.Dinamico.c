@@ -23,7 +23,7 @@ TDicDinamic* criarDicDinamic(int tam){
     return novoDic;
 }
 
-int funcaoHash(char*chave, int tam){
+int funcaoHash(void*chave, int tam){
     char* palavra = chave;                                 
     unsigned int cons = 0xf;                    /// generalizar os parâmetros para agradar a César
     unsigned int acumulador = 0;
@@ -35,7 +35,7 @@ int funcaoHash(char*chave, int tam){
     return acumulador%tam;
 }
 
-void inserirDicDinamico (TDicDinamic* x, char* chave, void* info){      /// generalizar os parâmetros para agradar a César
+void inserirDicDinamico (TDicDinamic* x, void* chave, void* info){      /// generalizar os parâmetros para agradar a César
     int posicao = funcaoHash(chave,x->tam); 
     conjunto* novo = malloc(sizeof(conjunto));                  /// Definimos um conjunto que une chave e info para inserir na lista encadenada
     novo->chave = chave;
@@ -43,13 +43,13 @@ void inserirDicDinamico (TDicDinamic* x, char* chave, void* info){      /// gene
     inserirListaEncadeada(x->listas[posicao], novo); 
 }
 
-void* buscarDicDinamico(TDicDinamic* x, char* chave){           /// generalizar os parâmetros para agradar a César
+void* buscarDicDinamico(TDicDinamic* x, void* chave){           /// generalizar os parâmetros para agradar a César
     int posicaoBuscada = funcaoHash(chave,x->tam);           /// Usamos a funçao hash para buscar a chave 
     return buscarListaEncadeada(x->listas[posicaoBuscada], chave);   /// buscamos a chave na lista encadeada 
     
 }
 
-void removerDicDinamico(TDicDinamic* x, char* chave){           /// generalizar os parâmetros para agradar a César
+void removerDicDinamico(TDicDinamic* x, void* chave){           /// generalizar os parâmetros para agradar a César
     int posicaoBuscada = funcaoHash(chave,x->tam); 
     removerListaEncadeada(x->listas[posicaoBuscada], chave);  
     return ;
