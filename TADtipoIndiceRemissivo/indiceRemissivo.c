@@ -22,8 +22,8 @@ struct InfoDic{
 InfoDic* criarInfoDic(){    
     InfoDic* tipox = malloc(sizeof(InfoDic));
     tipox -> vetDeOcorrencias = malloc(sizeof(pagOcorre) * 2);    
-    tipox -> ocorrenciasTotal = 0;
-    tipox -> paginasTotal = 0;    
+    tipox -> ocorrenciasTotal = 1;
+    tipox -> paginasTotal = 1;    
     return tipox;
 }
 
@@ -38,13 +38,28 @@ void mostrarVetorOcorrencias(InfoDic* blocoDeInfo){
    printf("paginas totais: %d", blocoDeInfo->paginasTotal);  
    return;                                                               
    }
-///criar a funcao INSERE ORDENADAMENTE
+///FALTA criar a funcao INSERE ORDENADAMENT
 pagOcorre* criarPagOcorre(int ocorrenciasXX, int paginaXX){    
     pagOcorre* x = malloc(sizeof(pagOcorre));
     x-> pagina = paginaXX;   
     x-> ocorrencias = ocorrenciasXX;
-    return x;}
+    return x;
+}
 
+void inserirPagOcorre(int página){}
+
+
+
+
+
+
+
+
+
+typedef struct docs{
+    int págDoc;
+    int Palavras_in_Doc;
+}docs;
 
 struct tipoIndiceRemissivo{
     TDicDinamic* Dicionario_do_livro;
@@ -56,14 +71,37 @@ tipoIndiceRemissivo * criarIndice(char*nomeArquivo, void*stopMundo){
     IndiceRe_atual->Dicionario_do_livro = criarDicDinamic(100);
     FILE* Arquivo_atual = fopen(nomeArquivo, "r");
     char* palavraLida = malloc(sizeof(char)*46); 
-    int página;
+    int NumPágina_atual=-1;
+    int OcorrenciasNa_página=0; 
+    docs* registraDocs = malloc(sizeof(docs)*2);
+    int tamRegistraDocs = 2;
+
     while(fscanf(Arquivo_atual, "%s", palavraLida)==1){
         ////LowerString(palavraLida);
         printf("%s \n", palavraLida);
+
         if(strcmp(palavraLida, "PA")==0){
+            NumPágina_atual+= 1;
+            if(NumPágina_atual>=tamRegistraDocs){
+                tamRegistraDocs *= 2;
+                registraDocs = realloc(registraDocs,sizeof(docs)*tamRegistraDocs);
+            }
+            registraDocs[NumPágina_atual].págDoc = NumPágina_atual;
+            registraDocs[NumPágina_atual].Palavras_in_Doc = 0;
         }
+
         else if(verificaStop(stopMundo, palavraLida)==0){
-            inserirDicDinamico(IndiceRe_atual->Dicionario_do_livro, palavraLida, palavraLida);
+            if(buscarDicDinamico(IndiceRe_atual->Dicionario_do_livro, palavraLida)==NULL){
+                InfoDic* infoPalavra = criarInfoDic();
+                infoPalavra->vetDeOcorrencias[0].ocorrencias = 1;
+                infoPalavra->vetDeOcorrencias[0].pagina = NumPágina_atual;
+                inserirDicDinamico(IndiceRe_atual->Dicionario_do_livro, palavraLida, infoPalavra);
+            }
+            else{
+
+            }
+            registraDocs[NumPágina_atual].Palavras_in_Doc+= 1;
+
         }
 
     }
