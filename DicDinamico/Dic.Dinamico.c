@@ -10,15 +10,16 @@ typedef struct conjunto{
 
 struct TDicDinamic{
     ListaE** listas;
+    cmpDicDinamic comparatorFunction;
     int tam;
 };
 
-TDicDinamic* criarDicDinamic(int tam){
+TDicDinamic* criarDicDinamic(int tam, cmpDicDinamic comparatorFunctionDicDinamic){
     int x;
     TDicDinamic* novoDic = malloc(sizeof(TDicDinamic));
     novoDic->listas = malloc(sizeof(ListaE*)*tam);
     for(x=0; x<tam; x++){
-        novoDic->listas[x] = criarListaEncadeada();
+        novoDic->listas[x] = criarListaEncadeada(novoDic->comparatorFunction);
     }
     return novoDic;
 }

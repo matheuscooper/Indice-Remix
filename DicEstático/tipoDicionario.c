@@ -31,17 +31,17 @@ void inserirDEstatico(DE* x, void* y){
 
 void* buscarDEstatico(DE* x, void* palavra){
     int inicio = 0;
-    int fim = x->ocupacao;
+    int fim = x->ocupacao-1;
     int meio;
     while(inicio <= fim){
         meio = (inicio+fim)/2;
-        if(strcmp(palavra,x->vet[meio])<0){
+        if(x->comparatorFunction(palavra,x->vet[meio])<0){
             fim = meio - 1;
         }
-        else if(strcmp(palavra, x->vet[meio])>0){
+        else if(x->comparatorFunction(palavra, x->vet[meio])>0){
             inicio = meio + 1;
         }
-        else{
+        else if(x->comparatorFunction(palavra, x->vet[meio])==0){
             return palavra;
         }
     }
