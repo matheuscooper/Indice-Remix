@@ -4,17 +4,19 @@
 #include "string.h"
 
 struct tipoDicionario{
-void** vet;
-int ocupacao;
-int tam;
-comparaDEstatico funcaoCompara;
+    void** vet;
+    int ocupacao;
+    int tam;
+    cmpDic comparatorFunction;
+    
 };
 
-DE* criarDEstatico(int tam, comparaDEstatico funcaoCompara){
+DE* criarDEstatico(int tam, cmpDic fucCmp){
     DE* x = malloc(sizeof(DE));
     x->vet = malloc(sizeof(void*)*tam);
     x->ocupacao = 0;
     x->tam = tam;
+    x->comparatorFunction = fucCmp;
     return x;
 }
 
