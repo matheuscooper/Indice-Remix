@@ -13,7 +13,8 @@ typedef struct pagOcorre{
 }pagOcorre;
 
 struct InfoDic{
-    pagOcorre* vetDeOcorrencias;    
+    pagOcorre* vetDeOcorrencias;
+    int tamVetOcorrencias;    
     int ocorrenciasTotal;
     int paginasTotal;
 };
@@ -21,7 +22,8 @@ struct InfoDic{
 
 InfoDic* criarInfoDic(){    
     InfoDic* tipox = malloc(sizeof(InfoDic));
-    tipox -> vetDeOcorrencias = malloc(sizeof(pagOcorre) * 2);    
+    tipox -> vetDeOcorrencias = malloc(sizeof(pagOcorre) * 2);
+    tipox -> tamVetOcorrencias = 2;    
     tipox -> ocorrenciasTotal = 1;
     tipox -> paginasTotal = 1;    
     return tipox;
@@ -46,15 +48,6 @@ pagOcorre* criarPagOcorre(int ocorrenciasXX, int paginaXX){
     return x;
 }
 
-void inserirPagOcorre(int página){}
-
-
-
-
-
-
-
-
 
 typedef struct docs{
     int págDoc;
@@ -77,7 +70,7 @@ tipoIndiceRemissivo * criarIndice(char*nomeArquivo, void*stopMundo){
     int tamRegistraDocs = 2;
 
     while(fscanf(Arquivo_atual, "%s", palavraLida)==1){
-        ////LowerString(palavraLida);
+        
         printf("%s \n", palavraLida);
 
         if(strcmp(palavraLida, "PA")==0){
@@ -91,14 +84,30 @@ tipoIndiceRemissivo * criarIndice(char*nomeArquivo, void*stopMundo){
         }
 
         else if(verificaStop(stopMundo, palavraLida)==0){
-            if(buscarDicDinamico(IndiceRe_atual->Dicionario_do_livro, palavraLida)==NULL){
+            InfoDic* endPalavra = buscarDicDinamico(IndiceRe_atual->Dicionario_do_livro, palavraLida);
+            if(endPalavra==NULL){
                 InfoDic* infoPalavra = criarInfoDic();
                 infoPalavra->vetDeOcorrencias[0].ocorrencias = 1;
                 infoPalavra->vetDeOcorrencias[0].pagina = NumPágina_atual;
                 inserirDicDinamico(IndiceRe_atual->Dicionario_do_livro, palavraLida, infoPalavra);
             }
             else{
+                endPalavra->ocorrenciasTotal ++;
+                pagOcorre* VInfo = endPalavra->vetDeOcorrencias;
+                if((VInfo[(endPalavra->paginasTotal)-1].pagina)!= NumPágina_atual){
+                    // Se o Número de página atual não está no vetor, temos q adicionar ele.
+                    if(endPalavra->tamVetOcorrencias <= endPalavra->paginasTotal){
+                        endPalavra->tamVetOcorrencias *= 2;
+                        VInfo= realloc(endPalavra->vetDeOcorrencias, sizeof(pagOcorre)*endPalavra->tamVetOcorrencias);
+                    }
+                    VInfo[endPalavra->paginasTotal].pagina= NumPágina_atual;
+                    VInfo[endPalavra->paginasTotal].ocorrencias = 1;
+                    endPalavra->paginasTotal++;
 
+                }
+                else{
+                    VInfo[(endPalavra->paginasTotal)-1].ocorrencias ++;
+                }
             }
             registraDocs[NumPágina_atual].Palavras_in_Doc+= 1;
 

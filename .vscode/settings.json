@@ -3,6 +3,7 @@
         "indiceremissivo.h": "c",
         "listaencadeada.h": "c",
         "dic.dinamico.h": "c",
-        "stdlib.h": "c"
+        "stdlib.h": "c",
+        "stdio.h": "c"
     }
 }

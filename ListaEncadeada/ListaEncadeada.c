@@ -58,3 +58,16 @@ void removerListaEncadeada(ListaE* lista, void* info){
     lista->prim = removeNo(lista, lista->prim, info);
 
 }
+
+void* removeInicioListaEncadeada(ListaE* lista){
+    if(lista->prim!= NULL){
+        TipoNo* Oexcluido = lista->prim;
+        void* infoDoExcluido = lista->prim->info;
+        lista->prim = Oexcluido->prox;
+        free(Oexcluido);
+        return infoDoExcluido;
+    }
+    else{
+        return NULL;
+    }
+}

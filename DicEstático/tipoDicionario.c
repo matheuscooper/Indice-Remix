@@ -7,9 +7,10 @@ struct tipoDicionario{
 void** vet;
 int ocupacao;
 int tam;
+comparaDEstatico funcaoCompara;
 };
 
-DE* criarDEstatico(int tam){
+DE* criarDEstatico(int tam, comparaDEstatico funcaoCompara){
     DE* x = malloc(sizeof(DE));
     x->vet = malloc(sizeof(void*)*tam);
     x->ocupacao = 0;
@@ -26,7 +27,7 @@ void inserirDEstatico(DE* x, void* y){
     return ;
 }
 
-int buscarDEstatico(DE* x, void* palavra){
+void* buscarDEstatico(DE* x, void* palavra){
     int inicio = 0;
     int fim = x->ocupacao;
     int meio;
@@ -39,10 +40,10 @@ int buscarDEstatico(DE* x, void* palavra){
             inicio = meio + 1;
         }
         else{
-            return 1;
+            return palavra;
         }
     }
-    return 0;
+    return NULL;
 }
 
 int comparaDEstatico(const void * a, const void * b){
