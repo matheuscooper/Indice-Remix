@@ -18,10 +18,15 @@ int main(){
     assert(nomeArquivo!=NULL);
     char* palavraLivro = malloc(sizeof(char)*46);
     while(fscanf(nomeArquivo, "%s", palavraLivro)==1){
-        
-        printf("P: %s\n", palavraLivro);
-
         inserirDicDinamico(NossoDic, palavraLivro, palavraLivro);
         palavraLivro = malloc(sizeof(char)*46);
     }
+    palavraLivro = malloc(sizeof(char)*46);
+    char* palavraBuscada;
+    fseek(nomeArquivo, 0, SEEK_SET);
+    while(fscanf(nomeArquivo, "%s", palavraLivro)==1){
+        palavraBuscada = buscarDicDinamico(NossoDic, palavraLivro);
+        printf("%s \n", palavraBuscada);
+    }
+
 }
