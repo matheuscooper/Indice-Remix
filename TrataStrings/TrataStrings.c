@@ -26,7 +26,7 @@ void LowerString(char* string){
         string[i]= string[i] + 32; 
        } 
        i++;
-}
+    }
 }
 
 unsigned char* accentString(unsigned char* string){
