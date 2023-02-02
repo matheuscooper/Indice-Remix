@@ -23,7 +23,7 @@ void LowerString(char* string){
         string[i]= string[i] + 32; 
        } 
        i++;
-}
+    }
 }
 
 double idefDF(long int ocorrencias, long int totalPalavras, int n_documentos, int total_documentos){
