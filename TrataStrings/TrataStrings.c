@@ -1,4 +1,5 @@
 #include "stdio.h"
+#include "stdlib.h"
 
 void LimpaString(char* string){
     char * palavra = malloc(sizeof(char*));
