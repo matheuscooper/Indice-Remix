@@ -2,6 +2,7 @@
 #include "stdlib.h"
 #include "ListaEncadeada.h"
 #include "assert.h"
+#include <string.h>
 
 int func_compara(void* coisa1, void*coisa2){
     char* coisa11 = coisa1;

@@ -33,7 +33,7 @@ int main(){
     while(fscanf(nomeArquivo, "%s", palavraLivro)==1){
         
         palavraBuscada = buscarDicDinamico(NossoDic, palavraLivro);
-        printf("%S \n", palavraBuscada);
+        printf("%s \n", palavraBuscada);
     }
 
 }

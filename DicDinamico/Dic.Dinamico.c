@@ -2,6 +2,7 @@
 #include "stdlib.h"
 #include "Dic.Dinamico.h"
 #include "../ListaEncadeada/ListaEncadeada.h"
+#include <string.h>
 
 typedef struct conjunto{
     char* chave;
