@@ -10,17 +10,22 @@ typedef struct conjunto{
 
 struct TDicDinamic{
     ListaE** listas;
-    cmpDicDinamic comparatorFunction;
     int tam;
 };
 
-TDicDinamic* criarDicDinamic(int tam, cmpDicDinamic comparatorFunctionDicDinamic){
+int comparaConjuntos(void* coisa1, void* coisa2){
+    conjunto* coisa11 = coisa1;
+    conjunto* coisa22 = coisa2;
+    return strcmp(coisa11->chave, coisa22->chave);
+}
+
+TDicDinamic* criarDicDinamic(int tam){
     int x;
     TDicDinamic* novoDic = malloc(sizeof(TDicDinamic));
     novoDic->tam = tam;
     novoDic->listas = malloc(sizeof(ListaE*)*tam);
     for(x=0; x<tam; x++){
-        novoDic->listas[x] = criarListaEncadeada(novoDic->comparatorFunction);
+        novoDic->listas[x] = criarListaEncadeada(&comparaConjuntos);
     }
     return novoDic;
 }
@@ -49,9 +54,16 @@ void inserirDicDinamico (TDicDinamic* x, void* chave, void* info){      /// gene
 }
 
 void* buscarDicDinamico(TDicDinamic* x, void* chave){           /// generalizar os parâmetros para agradar a César
-    int posicaoBuscada = funcaoHash(chave,x->tam);           /// Usamos a funçao hash para buscar a chave 
-    return buscarListaEncadeada(x->listas[posicaoBuscada], chave);   /// buscamos a chave na lista encadeada 
     
+    int posicaoBuscada = funcaoHash(chave,x->tam);           /// Usamos a funçao hash para buscar a chave 
+    
+    conjunto* conjuntoBuscado = buscarListaEncadeada(x->listas[posicaoBuscada], &(conjunto){.chave=chave});   /// buscamos a chave na lista encadeada 
+    if (conjuntoBuscado!=NULL){
+        return conjuntoBuscado->info;
+    }
+    else{
+        return NULL;
+    }
 }
 
 void removerDicDinamico(TDicDinamic* x, void* chave){           /// generalizar os parâmetros para agradar a César

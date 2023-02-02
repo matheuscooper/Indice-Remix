@@ -27,12 +27,38 @@ void inserirListaEncadeada(ListaE* lista, void* infoNova){
     lista->prim = novo;
 }
 
+void inserirLE_por_conteudo(ListaE *lista, void* conteudo){
+    TipoNo* novo = malloc(sizeof(TipoNo));
+    TipoNo* aux = lista->prim;
+    TipoNo* tmp;
+    novo->info = conteudo;
+    if(lista->prim == NULL){
+        lista->prim=novo;
+        novo->prox = NULL;
+        return ;
+    }
+    if((aux!= NULL)&&(lista->funcaoDeComparar(aux->info, conteudo)>0)){
+        novo->prox= aux;
+        lista->prim = novo;
+        return ;
+    }
+    while((aux)&&(lista->funcaoDeComparar(aux->info, conteudo)<0)){
+        tmp = aux;
+        aux = aux->prox;
+    }
+    tmp->prox = novo;
+    novo->prox = aux;
+}
+
 void* buscarListaEncadeada(ListaE* lista, void* chave){
     TipoNo* x = lista->prim;
+    
     while(x != NULL){
+        
         if(lista->funcaoDeComparar(x->info,chave)==0){
             return x->info;
         }
+        
         x = x->prox;
     }
     return NULL;

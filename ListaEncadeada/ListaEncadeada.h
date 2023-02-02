@@ -10,6 +10,8 @@ ListaE* criarListaEncadeada(comparaListaEncadeada funcao);
 
 void inserirListaEncadeada(ListaE* lista, void* infoNova);
 
+void inserirLE_por_conteudo(ListaE *lista, void* conteudo);
+
 void* buscarListaEncadeada(ListaE* lista, void* info);
 
 void removerListaEncadeada(ListaE* lista, void* info);
