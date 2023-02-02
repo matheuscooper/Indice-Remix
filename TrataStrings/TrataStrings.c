@@ -1,8 +1,11 @@
 #include "stdio.h"
 #include "stdlib.h"
+#include "string.h"
+#include "TrataStrings.h"
+
 
 void LimpaString(char* string){
-    char * palavra = malloc(sizeof(char*));
+    char * palavra = malloc(sizeof(char) * 46);
     int i,j = 0;
     while ( string[i]!=0){
        if (!(string[i] > 33 && string[i] < 43)){
@@ -26,6 +29,20 @@ void LowerString(char* string){
 }
 }
 
+void accentString(unsigned char* string){
+    char* comAcentos = "ÄÅÁÂÀÃäáâàãÉÊËÈéêëèÍÎÏÌíîïìÖÓÔÒÕöóôòõÜÚÛüúûùÇç";
+    char* semAcentos = "AAAAAAaaaaaEEEEeeeeIIIIiiiiOOOOOoooooUUUuuuuCc";
+    char* texto[46];
+    int i, j;
+    for (i = 0; i < 46; i++){
+        for(j = 0; j<strlen(comAcentos); j++){
+            if(string[i]==comAcentos[j]){
+                string[i]=semAcentos[j];
+            }
+
+        }
+    }
+}
 double idefDF(long int ocorrencias, long int totalPalavras, int n_documentos, int total_documentos){
     return 0;
 }
