@@ -1,10 +1,11 @@
 #include "stdio.h"
 #include "stdlib.h"
+#include <string.h>
 #include "indiceRemissivo.h"
 #include "../DicDinamico/Dic.Dinamico.h"
 #include "../TrataStrings/TrataStrings.h"
-
-
+#include "../TADSTopMundo/stop.h"
+#include "../ListaEncadeada/ListaEncadeada.h"
 
 
 typedef struct pagOcorre{    
@@ -56,14 +57,27 @@ typedef struct docs{
 
 struct tipoIndiceRemissivo{
     TDicDinamic* Dicionario_do_livro;
+    ListaE * listWithWords;
     
 };
 
+int _cmpValues(void * a, void * b){
+
+    char * aa = a;
+    char * bb = b;
+
+    return strcmp(aa,bb);
+}
+
+
 tipoIndiceRemissivo * criarIndice(char*nomeArquivo, void*stopMundo){
+
+    tipoStop * stop = stopMundo;
 
     tipoIndiceRemissivo* IndiceRe_atual = malloc(sizeof(tipoIndiceRemissivo));
     
     IndiceRe_atual->Dicionario_do_livro = criarDicDinamic(100);
+    IndiceRe_atual->listWithWords = criarListaEncadeada(&_cmpValues);
 
     FILE* Arquivo_atual = fopen(nomeArquivo, "r");
     char* palavraLida = malloc(sizeof(char)*46); 
@@ -73,8 +87,6 @@ tipoIndiceRemissivo * criarIndice(char*nomeArquivo, void*stopMundo){
     int tamRegistraDocs = 2;
 
     while(fscanf(Arquivo_atual, "%s", palavraLida)==1){
-        
-        printf("%s \n", palavraLida);
 
         if(strcmp(palavraLida, "PA")==0){
             NumPágina_atual+= 1;
@@ -87,12 +99,16 @@ tipoIndiceRemissivo * criarIndice(char*nomeArquivo, void*stopMundo){
         }
 
         else if(verificaStop(stopMundo, palavraLida)==0){
+            
             InfoDic* endPalavra = buscarDicDinamico(IndiceRe_atual->Dicionario_do_livro, palavraLida);
             if(endPalavra==NULL){
                 InfoDic* infoPalavra = criarInfoDic();
+                inserirLE_por_conteudo(IndiceRe_atual->listWithWords,palavraLida);
                 infoPalavra->vetDeOcorrencias[0].ocorrencias = 1;
                 infoPalavra->vetDeOcorrencias[0].pagina = NumPágina_atual;
+                
                 inserirDicDinamico(IndiceRe_atual->Dicionario_do_livro, palavraLida, infoPalavra);
+                palavraLida = malloc(sizeof(char)*46);
             }
             else{
                 endPalavra->ocorrenciasTotal ++;
@@ -118,4 +134,15 @@ tipoIndiceRemissivo * criarIndice(char*nomeArquivo, void*stopMundo){
 
     }
     fclose(Arquivo_atual);
+
+    return IndiceRe_atual;
+}
+
+void* searchElement(tipoIndiceRemissivo * index, char * key){
+
+    InfoDic * retorno = buscarDicDinamico(index->Dicionario_do_livro, key);
+
+    if(retorno) printf("Acheii: %s\n",key);   
+    else printf("Nao acheiii\n");
+    
 }
