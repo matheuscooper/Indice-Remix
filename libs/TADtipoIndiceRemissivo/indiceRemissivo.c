@@ -141,8 +141,10 @@ tipoIndiceRemissivo * criarIndice(char*nomeArquivo, void*stopMundo){
 void* searchElement(tipoIndiceRemissivo * index, char * key){
 
     InfoDic * retorno = buscarDicDinamico(index->Dicionario_do_livro, key);
+    int i;
+    for( i=0; (i<retorno->tamVetOcorrencias)&&(i<5); i++){
+        printf("%d, %d", retorno->vetDeOcorrencias[i].ocorrencias, retorno->vetDeOcorrencias[i].pagina);
+    }
 
-    if(retorno) printf("Acheii: %s\n",key);   
-    else printf("Nao acheiii\n");
-    
 }
+
