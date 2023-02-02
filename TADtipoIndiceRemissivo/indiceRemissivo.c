@@ -60,8 +60,11 @@ struct tipoIndiceRemissivo{
 };
 
 tipoIndiceRemissivo * criarIndice(char*nomeArquivo, void*stopMundo){
+
     tipoIndiceRemissivo* IndiceRe_atual = malloc(sizeof(tipoIndiceRemissivo));
+    
     IndiceRe_atual->Dicionario_do_livro = criarDicDinamic(100);
+
     FILE* Arquivo_atual = fopen(nomeArquivo, "r");
     char* palavraLida = malloc(sizeof(char)*46); 
     int NumPágina_atual=-1;
@@ -115,10 +118,4 @@ tipoIndiceRemissivo * criarIndice(char*nomeArquivo, void*stopMundo){
 
     }
     fclose(Arquivo_atual);
-}
-
-int main(){
-    char x[20];
-    scanf("%s", x);
-    criarIndice(x, NULL);
 }

@@ -1,8 +1,8 @@
 #include "tipoDicionario.h"
-#include "stdlib.h"
 #include "stdio.h"
 #include "string.h"
 #include "assert.h"
+#include <stdlib.h>
 
 int comparaDics(void* palavra1, void* palavra2){
     char* palavra11 = palavra1;

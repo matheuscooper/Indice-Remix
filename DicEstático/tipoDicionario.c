@@ -1,7 +1,7 @@
+#include <string.h>
 #include"stdio.h"
 #include "stdlib.h"
 #include "tipoDicionario.h"
-#include "string.h"
 #include "../ListaEncadeada/ListaEncadeada.h"
 
 struct tipoDicionario{

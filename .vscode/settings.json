@@ -4,6 +4,7 @@
         "listaencadeada.h": "c",
         "dic.dinamico.h": "c",
         "stdlib.h": "c",
-        "stdio.h": "c"
+        "stdio.h": "c",
+        "tipodicionario.h": "c"
     }
 }
