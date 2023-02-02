@@ -2,59 +2,62 @@
 #include "stdlib.h"
 #include "tipoDicionario.h"
 #include "string.h"
+#include "../ListaEncadeada/ListaEncadeada.h"
 
 struct tipoDicionario{
-    void** vet;
+    ListaE** listas;
     int ocupacao;
     int tam;
     cmpDic comparatorFunction;
     
 };
 
+unsigned int funcaoHash(void*chave, int tam){
+    unsigned char* palavra = chave;                                 
+    unsigned int cons = 0xd;                    /// generalizar os parâmetros para agradar a César
+    unsigned int acumulador = 0;
+    unsigned int i = 0;
+    while(palavra[i]){ 
+        acumulador += palavra[i] * cons; 
+        i++;
+        }
+        
+    return acumulador%tam;
+}
+
 DE* criarDEstatico(int tam, cmpDic fucCmp){
+    
     DE* x = malloc(sizeof(DE));
-    x->vet = malloc(sizeof(void*)*tam);
+
+    x->listas = malloc(sizeof(ListaE*)*tam);
+
     x->ocupacao = 0;
     x->tam = tam;
+
+    for(int i=0; i<tam; i++){
+        x->listas[i] = criarListaEncadeada(fucCmp);
+    }
+
     x->comparatorFunction = fucCmp;
     return x;
 }
 
-void inserirDEstatico(DE* x, void* y){
-    if(x->ocupacao == x->tam){
-        return;
+void inserirDEstatico(DE* x, void* chave){
+    unsigned int posicao = funcaoHash(chave,x->tam); 
+                    /// Definimos um conjunto que une chave e info para inserir na lista encadenada
+    inserirListaEncadeada(x->listas[posicao], chave); 
+}
+
+void* buscarDEstatico(DE* x, void* chave){
+ 
+    int posicaoBuscada = funcaoHash(chave,x->tam);           /// Usamos a funçao hash para buscar a chave 
+    
+    void* chaveBuscada = buscarListaEncadeada(x->listas[posicaoBuscada], chave);   /// buscamos a chave na lista encadeada 
+    
+    if (chaveBuscada!=NULL){
+        return chaveBuscada;
     }
-    x->vet[x->ocupacao] = y;
-    x->ocupacao++;
-    return ;
-}
-
-void* buscarDEstatico(DE* x, void* palavra){
-    int inicio = 0;
-    int fim = x->ocupacao-1;
-    int meio;
-    while(inicio <= fim){
-        meio = (inicio+fim)/2;
-        if(x->comparatorFunction(palavra,x->vet[meio])<0){
-            fim = meio - 1;
-        }
-        else if(x->comparatorFunction(palavra, x->vet[meio])>0){
-            inicio = meio + 1;
-        }
-        else if(x->comparatorFunction(palavra, x->vet[meio])==0){
-            return palavra;
-        }
+    else{
+        return NULL;
     }
-    return NULL;
-}
-
-int comparaDEstatico(const void * a, const void * b){
-    const char **str_a = (const char **)a;
-    const char **str_b = (const char **)b;
-    return strcmp(*str_a,*str_b);
-}
-
-void ordenaDEstatico(DE* dic){
-    qsort(dic->vet,393,sizeof(char*),comparaDEstatico);
-    printf("vetor ordenado");
 }
