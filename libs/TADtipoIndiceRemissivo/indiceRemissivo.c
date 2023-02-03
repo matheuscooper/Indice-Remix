@@ -101,7 +101,9 @@ tipoIndiceRemissivo * criarIndice(char*nomeArquivo, void*stopMundo){
         else if(verificaStop(stopMundo, palavraLida)==0){
             
             InfoDic* endPalavra = buscarDicDinamico(IndiceRe_atual->Dicionario_do_livro, palavraLida);
+            
             if(endPalavra==NULL){
+                printf("entrei aqui");
                 InfoDic* infoPalavra = criarInfoDic();
                 inserirLE_por_conteudo(IndiceRe_atual->listWithWords,palavraLida);
                 infoPalavra->vetDeOcorrencias[0].ocorrencias = 1;
@@ -142,9 +144,9 @@ void* searchElement(tipoIndiceRemissivo * index, char * key){
 
     InfoDic * retorno = buscarDicDinamico(index->Dicionario_do_livro, key);
     int i;
-    for( i=0; (i<retorno->tamVetOcorrencias)&&(i<5); i++){
-        printf("%d, %d", retorno->vetDeOcorrencias[i].ocorrencias, retorno->vetDeOcorrencias[i].pagina);
+    for( i=0; (i<retorno->ocorrenciasTotal)&&(i<5); i++){
+        printf("{ %d, %d  }\n", retorno->vetDeOcorrencias[i].ocorrencias, retorno->vetDeOcorrencias[i].pagina);
     }
-
+    printf(" ocorrenciaaaaas totallllll %d", retorno->ocorrenciasTotal);
+    
 }
-
