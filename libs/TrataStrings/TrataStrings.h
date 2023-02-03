@@ -3,8 +3,9 @@
 
 
 
-void LimpaString(char* string);
+void LimpaString(unsigned char* string);
 void LowerString(char* string);
 unsigned char* accentString(unsigned char* string);
-double idefDF(long int ocorrencias, long int totalPalavras, int n_documentos, int total_documentos);
+double idefDF(int palavra, int doc, int qntWords, int docs);
+
 #endif
