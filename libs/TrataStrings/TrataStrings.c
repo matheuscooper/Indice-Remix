@@ -2,7 +2,7 @@
 #include "stdlib.h"
 #include "string.h"
 #include "TrataStrings.h"
-
+#include <math.h>
 
 char isLetter(unsigned char letter){
     return !( 
@@ -92,7 +92,7 @@ double idf(int docsWords, int docs){
     docsWords = docsWords > 0 ? docsWords: 1;
     double div = docs / (double) docsWords;
 
-    return log10(div);
+    return log2(div);
 
 }
 
@@ -109,11 +109,11 @@ double idefDF(long int ocorrencias, long int totalPalavras, int n_documentos, in
       // tf IDFtfidf(palavra, doc, docs) computa o TF-IDF, que ´e o produto do tf e idf.
     double TF;
     double IDF;
-    TF = ocorrencias/totalPalavras;
+    TF = ocorrencias/(double) totalPalavras;
     if(n_documentos == 0){
         n_documentos = 1;
     }
-    IDF = log(total_documentos/ n_documentos);
+    IDF = log(total_documentos/ (double) n_documentos);
     double TF_IDF;
     TF_IDF = TF * IDF;    
     return TF_IDF;

@@ -11,13 +11,14 @@
 typedef struct pagOcorre{    
     int pagina;
     int ocorrencias;
+    double pontuation;
 }pagOcorre;
 
 struct InfoDic{
     pagOcorre* vetDeOcorrencias;
     int tamVetOcorrencias;    
     int ocorrenciasTotal;
-    int paginasTotal;
+    int paginasTotal; // Total de paginas que apareceu a palavra
 };
 
 
@@ -108,7 +109,6 @@ tipoIndiceRemissivo * criarIndice(char*nomeArquivo, void*stopMundo){
             InfoDic* endPalavra = buscarDicDinamico(IndiceRe_atual->Dicionario_do_livro, palavraLida);
             
             if(endPalavra==NULL){
-                printf("entrei aqui");
                 InfoDic* infoPalavra = criarInfoDic();
                 inserirLE_por_conteudo(IndiceRe_atual->listWithWords,palavraLida);
                 infoPalavra->vetDeOcorrencias[0].ocorrencias = 1;
@@ -145,14 +145,51 @@ tipoIndiceRemissivo * criarIndice(char*nomeArquivo, void*stopMundo){
     return IndiceRe_atual;
 }
 
+void calculePontuation(InfoDic * infomation,docs * documentos, int totDocs, int tam){
+
+    for(int i=0; i < tam; i++){
+        
+        int ocorrenciaPalavra = infomation->vetDeOcorrencias[i].ocorrencias;
+
+        int page = infomation->vetDeOcorrencias[i].pagina;
+
+        int palavrasTotalDoDocumento = documentos[page].Palavras_in_Doc;
+
+        int documentosQAparece = tam;
+        infomation->vetDeOcorrencias[i].pontuation = idefDF(ocorrenciaPalavra,palavrasTotalDoDocumento,documentosQAparece,totDocs);
+    }
+
+}
+
+const int cmpQsor(const void * a,const void *b){
+
+    const pagOcorre * aa = a;
+    const pagOcorre * bb = b;
+
+    if((aa->pontuation) > (bb->pontuation)) return 1;
+    else if((aa->pontuation) < (bb->pontuation)) return -1;
+    else return 0;
+}
+
 void* searchElement(tipoIndiceRemissivo * index, char * key){
 
     InfoDic * retorno = buscarDicDinamico(index->Dicionario_do_livro, key);
+   
     int i;
-    for( i=0; (i<retorno->ocorrenciasTotal)&&(i<5); i++){
-        printf("{ %d, %d  }\n", retorno->vetDeOcorrencias[i].ocorrencias, retorno->vetDeOcorrencias[i].pagina);
+   
+    if(retorno == NULL) return NULL;
+
+    calculePontuation(retorno, index->registraDocs,index->ocupacaoRegistraDocs,retorno->paginasTotal);
+    
+    qsort(retorno->vetDeOcorrencias,retorno->paginasTotal,sizeof(pagOcorre),&cmpQsor);
+
+    printf("%s   ", key);
+    for( i=0; (i<retorno->paginasTotal)&&(i<5); i++){
+        //printf("{ %d, %d,p: %lf  }\n", retorno->vetDeOcorrencias[i].ocorrencias, retorno->vetDeOcorrencias[i].pagina, retorno->vetDeOcorrencias[i].pontuation);
+        printf("%d, ", retorno->vetDeOcorrencias[i].pagina);
     }
-    printf(" ocorrenciaaaaas totallllll %d", retorno->ocorrenciasTotal);
+    printf("\n");
+    //printf(" ocorrenciaaaaas totallllll %d", retorno->ocorrenciasTotal);
     
 }
 void* TF_IDF(tipoIndiceRemissivo* index, char* key){
@@ -161,4 +198,18 @@ void* TF_IDF(tipoIndiceRemissivo* index, char* key){
     docs* registradocs_atual = index->registraDocs;
 
     
+}
+
+void mostraIndeceRemissivo(tipoIndiceRemissivo* index){
+
+    ListaE * lista = index->listWithWords;
+
+    char* retorno = removeInicioListaEncadeada(lista);
+
+    while (retorno){
+        searchElement(index,retorno);
+        retorno = removeInicioListaEncadeada(lista);    
+    }
+    
+
 }

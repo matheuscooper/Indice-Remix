@@ -13,11 +13,8 @@ int main(int argc, char * argv[]){
 
     tipoIndiceRemissivo * indiceRemissivo = criarIndice(argv[2],stWord);
 
-    char busca[50];
-
-    scanf("%s", busca);
-
-    searchElement(indiceRemissivo, busca);
+   
+    mostraIndeceRemissivo(indiceRemissivo);
 
     // showIndex(indiceRemissivo);
 
