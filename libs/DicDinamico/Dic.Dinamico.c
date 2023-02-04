@@ -99,7 +99,22 @@ int retornaNumBuscasDinamic(TDicDinamic* x){
 }
 int retornaPassouCarga(TDicDinamic* x){
     int i;
+    int j = x->fatorCarga;
     for(i = 0; i<x->tam; i++){
-        
+        if(retornaTam(x->listas[i]) > j){
+            x->passouFatorCarga+=1;
+        } 
     }
+    return x->passouFatorCarga; 
 }
+
+int retornaMaior(TDicDinamic*x){
+    int i; 
+    for(i = 0; i<x->tam; i++){
+        if(retornaTam(x->listas[i]) > x->tamMaiorLista){
+            x->tamMaiorLista= retornaTam(x->listas[i]);
+        } 
+    }
+    return x->tamMaiorLista;
+}
+

@@ -14,6 +14,8 @@ int main(int argc, char * argv[]){
     tipoStop * stWord = criarStop(argv[1]);
 
     tipoIndiceRemissivo * indiceRemissivo = criarIndice(argv[2],stWord);
+
+
     printf(" comparations:%d  \n", returnIndexComparation(indiceRemissivo));
     printf(" searchs :%d  \n", returnIndexBusca(indiceRemissivo));
     
@@ -33,6 +35,11 @@ int main(int argc, char * argv[]){
     // showIndex(indiceRemissivo);
 
     // analiseDataStopWord(stWord);
+    int k = passouFatorCargaIndex(indiceRemissivo); 
 
+    printf("number of carga ultrapassadass: %d\n", k); 
+
+    int b =passouTamMaior(indiceRemissivo);
+    printf("number of size list%d \n", b);
 
 }

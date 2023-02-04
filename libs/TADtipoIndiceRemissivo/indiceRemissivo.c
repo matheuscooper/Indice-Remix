@@ -78,7 +78,7 @@ tipoIndiceRemissivo * criarIndice(char*nomeArquivo, void*stopMundo){
 
     tipoIndiceRemissivo* IndiceRe_atual = malloc(sizeof(tipoIndiceRemissivo));
     
-    IndiceRe_atual->Dicionario_do_livro = criarDicDinamic(100);
+    IndiceRe_atual->Dicionario_do_livro = criarDicDinamic(100000);
     IndiceRe_atual->listWithWords = criarListaEncadeada(&_cmpValues);
     IndiceRe_atual->registraDocs = malloc(sizeof(docs)*2);
     IndiceRe_atual->ocupacaoRegistraDocs= 0;
@@ -236,5 +236,17 @@ int returnIndexBusca(tipoIndiceRemissivo* index){
     TDicDinamic* atual = index->Dicionario_do_livro;
     int comps = retornaNumBuscasDinamic(atual);
     return comps;
+}
+
+int passouFatorCargaIndex(tipoIndiceRemissivo* index){
+    TDicDinamic * atual = index->Dicionario_do_livro; 
+    int passouCarga = retornaPassouCarga(atual);
+    return passouCarga; 
+}
+
+int passouTamMaior(tipoIndiceRemissivo*index){
+    TDicDinamic*atual = index->Dicionario_do_livro;
+    int tamMaior = retornaMaior(atual); 
+    return tamMaior; 
 }
 

@@ -10,4 +10,6 @@ void* buscarDicDinamico(TDicDinamic* x, void* chave);
 void removerDicDinamico(TDicDinamic* x, void* chave);
 int retornaComparacoesTotaisDinamic(TDicDinamic*x);
 int retornaNumBuscasDinamic(TDicDinamic* x);
+int retornaPassouCarga(TDicDinamic* x);
+int retornaMaior(TDicDinamic*x);
 #endif

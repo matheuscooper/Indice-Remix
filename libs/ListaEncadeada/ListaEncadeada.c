@@ -17,6 +17,7 @@ struct ListaE{
 ListaE* criarListaEncadeada(comparaListaEncadeada funcao){
     ListaE* novaLista = malloc(sizeof(ListaE));
     novaLista->prim = NULL;
+    novaLista->tam = 0;
     novaLista->funcaoDeComparar = funcao;
     novaLista->comparacoes = 0;
     return novaLista;
@@ -28,6 +29,7 @@ void inserirListaEncadeada(ListaE* lista, void* infoNova){
     novo->info = infoNova;
     novo->prox = lista->prim;
     lista->prim = novo;
+    lista->tam+= 1;
 }
 
 void inserirLE_por_conteudo(ListaE *lista, void* conteudo){
@@ -51,6 +53,7 @@ void inserirLE_por_conteudo(ListaE *lista, void* conteudo){
     }
     tmp->prox = novo;
     novo->prox = aux;
+    lista->tam+=1;
 }
 
 void* buscarListaEncadeada(ListaE* lista, void* chave){
@@ -75,6 +78,7 @@ void* removeNo(ListaE* lista, TipoNo* no, void* info){
     }
     if(lista->funcaoDeComparar(no->info ,info) == 0){
         lista->comparacoes +=1;
+        lista->tam-=1;
         aux = no->prox;
         free(no);
         return aux;
@@ -96,6 +100,7 @@ void* removeInicioListaEncadeada(ListaE* lista){
         TipoNo* Oexcluido = lista->prim;
         void* infoDoExcluido = lista->prim->info;
         lista->prim = Oexcluido->prox;
+        lista->tam-=1;
         free(Oexcluido);
         return infoDoExcluido;
     }
@@ -107,4 +112,8 @@ int retornaComparacoes(ListaE* lista){
     int x = lista->comparacoes;
     return x;
 }
-int retornaTAM(){}
+int retornaTam(ListaE*lista){                                
+    int y = lista->tam;
+    return y; 
+
+}
