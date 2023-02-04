@@ -19,7 +19,7 @@ int main(int argc, char * argv[]){
     printf(" comparations:%d  \n", returnIndexComparation(indiceRemissivo));
     printf(" searchs :%d  \n", returnIndexBusca(indiceRemissivo));
     
-    mostraIndeceRemissivo(indiceRemissivo);
+    //mostraIndeceRemissivo(indiceRemissivo);
 
     int comparations = returnIndexComparation(indiceRemissivo);
     int searchs = returnIndexBusca(indiceRemissivo);
@@ -40,6 +40,6 @@ int main(int argc, char * argv[]){
     printf("number of carga ultrapassadass: %d\n", k); 
 
     int b =passouTamMaior(indiceRemissivo);
-    printf("number of size list%d \n", b);
+    printf("number of size list: %d \n", b);
 
 }

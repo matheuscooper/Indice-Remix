@@ -16,7 +16,10 @@ void* buscarListaEncadeada(ListaE* lista, void* info);
 
 void removerListaEncadeada(ListaE* lista, void* info);
 void* removeInicioListaEncadeada(ListaE* lista);
-int retornaComparacoes(ListaE* lista);
-int retornaTam(ListaE*lista); 
+
+// comparacao e tamanho servem pra retornar os dados pra relatorio
+int retornaComparacoesLE(ListaE* lista);
+int retornaTamLE(ListaE*lista); 
+void destroiLista(ListaE* lista);
 
 #endif

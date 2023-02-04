@@ -12,9 +12,16 @@ typedef struct InfoDic InfoDic;
 InfoDic* criarInfoDic();
 void* searchElement(tipoIndiceRemissivo * index, char * key);
 void mostraIndeceRemissivo(tipoIndiceRemissivo* index);
+
+//retorna dados
 int returnIndexComparation(tipoIndiceRemissivo* index);
 int returnIndexBusca(tipoIndiceRemissivo* index);
 int passouFatorCargaIndex(tipoIndiceRemissivo* index);
 int passouTamMaior(tipoIndiceRemissivo*index); 
+int tamVetDiclivro(tipoIndiceRemissivo* index);
+int quantiChavesDicLivro(tipoIndiceRemissivo* index);
+int posiOcupadasDicLivro(tipoIndiceRemissivo* index);
+double mediasPorListaDicLivro(tipoIndiceRemissivo* index);
+int ContReHashDicLivro(tipoIndiceRemissivo* index);
 
 #endif

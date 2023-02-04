@@ -108,12 +108,16 @@ void* removeInicioListaEncadeada(ListaE* lista){
         return NULL;
     }
 }
-int retornaComparacoes(ListaE* lista){
+int retornaComparacoesLE(ListaE* lista){
     int x = lista->comparacoes;
     return x;
 }
-int retornaTam(ListaE*lista){                                
+int retornaTamLE(ListaE*lista){                                
     int y = lista->tam;
     return y; 
 
 }
+void destroiLista(ListaE* lista){
+    free(lista);
+}
+

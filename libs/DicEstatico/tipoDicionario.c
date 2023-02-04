@@ -71,7 +71,7 @@ int retornaComparacoesTotaisDE(DE*x){
     int i;
     int compTotais = 0;
     for(i=0; i<x->tam; i++){
-        compTotais+= retornaComparacoes(x->listas[i]);
+        compTotais+= retornaComparacoesLE(x->listas[i]);
     }
     return compTotais;
 }
