@@ -1,6 +1,6 @@
 #include "stdio.h"
 #include "stdlib.h"
-#include "ListaEncadeada.h"
+#include "../libs/ListaEncadeada/ListaEncadeada.h"
 #include "assert.h"
 #include <string.h>
 
@@ -16,7 +16,7 @@ int func_compara(void* coisa1, void*coisa2){
 int main(){
     ListaE* NossaLista;
     NossaLista = criarListaEncadeada(&func_compara);
-    FILE* nomeArquivo = fopen("ParteOguarani", "r");
+    FILE* nomeArquivo = fopen("./bases-dicionario/Aventuras.base", "r");
     assert(nomeArquivo != NULL);
     char* palavraLivro = malloc(sizeof(char)*46);
     while(fscanf(nomeArquivo, "%s", palavraLivro)==1){

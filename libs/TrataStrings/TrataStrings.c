@@ -11,14 +11,31 @@ char isLetter(unsigned char letter){
     || ( 91 <= letter &&  letter <= 96) 
     || ( 123 <= letter &&  letter <= 128)
     || ( 226 <= letter &&  letter <= 226)
-    || ( 152 <= letter &&  letter <= 157)  
-    || ( 8200 <= letter) 
+    || ( 147 <= letter &&  letter <= 157)  
+    || ( 8200 <= letter &&  letter <= 8230) 
     );
+}
+
+int lenStr(unsigned char *string){
+
+    int cont = 0;
+
+    int i = 0;
+
+    while (string[i])
+    {
+        cont++;
+        i++;
+    }
+
+    return cont;
+    
+
 }
 
 void removeSpecialCharacters(unsigned char * string){
 
-    int tamStr = strlen((char *)string);
+    int tamStr = strlen(string);
     int indexCopia = 0 ;
 
     int i = 0 ;
@@ -33,12 +50,22 @@ void removeSpecialCharacters(unsigned char * string){
             else if( (string[i+1] >= 178 && string[i+1] <= 181) || (string[i+1] >= 146 && string[i+1] <= 150)   ) string[indexCopia] = 111;
             else if( (string[i+1] >= 185 && string[i+1] <= 188) || (string[i+1] >= 153 && string[i+1] <= 156)   ) string[indexCopia] = 117;
             else if( (string[i+1] == 167 || string[i+1] == 135)    ) string[indexCopia] = 99;
+            else if( (string[i+1] == 177)    ) string[indexCopia] = 110;
 
             indexCopia++;
             i = i + 2;
 
         }else if(string[i] == 194) i = i + 2;
-
+        else if(string[i] == 226){
+            string[indexCopia] = 39;
+            indexCopia++;
+            i = i + 3;
+        }
+        else if( string[i] == 198 ){
+            string[indexCopia] = 102;
+            indexCopia++;
+            i = i + 3;
+        }
         else{
             string[indexCopia] = string[i];
             indexCopia++;
@@ -51,21 +78,25 @@ void removeSpecialCharacters(unsigned char * string){
 
 }
 
-void LimpaString(unsigned  char* string){
-    int tam = strlen(string);
+
+void LimpaString(unsigned  char* word){
+    
+    int tam = lenStr(word);
 
     int ctI = 0;
     int ctJ = tam-1;
 
-    while (!isLetter(string[ctI])){ ctI++; }
+    while (ctI < ctJ && !isLetter(word[ctI])){ ctI++; }
     
-    while (!isLetter(string[ctJ])){ ctJ--; }
+    while (ctJ > ctI && !isLetter(word[ctJ])){ ctJ--; }
 
     int i; 
 
-    for(i = ctI; i <= ctJ; i++ ){ string[i-ctI] = string[i]; }
+    for(i = ctI; i <= ctJ; i++ ){ word[i-ctI] = word[i]; }
 
-    string[i-ctI] = 0;
+    word[i-ctI] = 0;
+
+
 }
 
 void LowerString(char* string){

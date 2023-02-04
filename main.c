@@ -7,7 +7,9 @@
 
 int main(int argc, char * argv[]){
 
-    // assert(argc == 3);
+    // gcc ./libs/*/*.c main.c -lm -o job.n
+    // ./job.n arquivos/stopwords_br.txt bases-dicionario/Guarani.base 
+    assert(argc == 3);
 
     tipoStop * stWord = criarStop(argv[1]);
 

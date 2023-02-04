@@ -15,19 +15,19 @@ typedef struct pagOcorre{
 }pagOcorre;
 
 struct InfoDic{
-    pagOcorre* vetDeOcorrencias;
     int tamVetOcorrencias;    
     int ocorrenciasTotal;
     int paginasTotal; // Total de paginas que apareceu a palavra
+    pagOcorre* vetDeOcorrencias;
 };
 
 
 InfoDic* criarInfoDic(){    
     InfoDic* tipox = malloc(sizeof(InfoDic));
-    tipox -> vetDeOcorrencias = malloc(sizeof(pagOcorre) * 2);
-    tipox -> tamVetOcorrencias = 2;    
-    tipox -> ocorrenciasTotal = 1;
-    tipox -> paginasTotal = 1;    
+    tipox->tamVetOcorrencias = 500;    
+    tipox->vetDeOcorrencias = malloc(sizeof(pagOcorre) * tipox->tamVetOcorrencias);
+    tipox->ocorrenciasTotal = 1;
+    tipox->paginasTotal = 1;    
     return tipox;
 }
 
@@ -84,7 +84,7 @@ tipoIndiceRemissivo * criarIndice(char*nomeArquivo, void*stopMundo){
     IndiceRe_atual->ocupacaoRegistraDocs= 0;
 
     FILE* Arquivo_atual = fopen(nomeArquivo, "r");
-    char* palavraLida = malloc(sizeof(char)*46); 
+    char* palavraLida = malloc(sizeof(char)*150); 
     int NumPágina_atual=-1;
     int OcorrenciasNa_página=0; 
     //docs* registraDocs = malloc(sizeof(docs)*2);
@@ -92,8 +92,6 @@ tipoIndiceRemissivo * criarIndice(char*nomeArquivo, void*stopMundo){
     //int ocupacaoRegistraDocs = 0;
 
     while(fscanf(Arquivo_atual, "%s", palavraLida)==1){
-        
-        LimpaString((unsigned char*)palavraLida);
 
         if(strcmp(palavraLida, "PA")==0){
             NumPágina_atual+= 1;
@@ -105,32 +103,39 @@ tipoIndiceRemissivo * criarIndice(char*nomeArquivo, void*stopMundo){
             IndiceRe_atual->registraDocs[NumPágina_atual].Palavras_in_Doc = 0;
             IndiceRe_atual->ocupacaoRegistraDocs +=1;
         }
-        else if(verificaStop(stopMundo, palavraLida)==0){
-
+        else{
+            LimpaString(palavraLida);
+            
+            if(strlen(palavraLida) == 0) continue;
+            if(verificaStop(stopMundo, palavraLida)!=0) continue;
+            
             removeSpecialCharacters((unsigned char*)palavraLida);
+            
+            
             LowerString((unsigned char*)palavraLida);
-
+            
             if(strlen(palavraLida) <= 2) continue;
             
             InfoDic* endPalavra = buscarDicDinamico(IndiceRe_atual->Dicionario_do_livro, palavraLida);
             
             if(endPalavra==NULL){
                 InfoDic* infoPalavra = criarInfoDic();
-                inserirLE_por_conteudo(IndiceRe_atual->listWithWords,palavraLida);
                 infoPalavra->vetDeOcorrencias[0].ocorrencias = 1;
                 infoPalavra->vetDeOcorrencias[0].pagina = NumPágina_atual;
-                
+
+                inserirLE_por_conteudo(IndiceRe_atual->listWithWords,palavraLida);
+
                 inserirDicDinamico(IndiceRe_atual->Dicionario_do_livro, palavraLida, infoPalavra);
-                palavraLida = malloc(sizeof(char)*46);
+                
             }
             else{
                 endPalavra->ocorrenciasTotal ++;
                 pagOcorre* VInfo = endPalavra->vetDeOcorrencias;
                 if((VInfo[(endPalavra->paginasTotal)-1].pagina)!= NumPágina_atual){
-                    // Se o Número de página atual não está no vetor, temos q adicionar ele.
+                    // // Se o Número de página atual não está no vetor, temos q adicionar ele.
                     if(endPalavra->tamVetOcorrencias <= endPalavra->paginasTotal){
                         endPalavra->tamVetOcorrencias *= 2;
-                        VInfo= realloc(endPalavra->vetDeOcorrencias, sizeof(pagOcorre)*endPalavra->tamVetOcorrencias);
+                        endPalavra->vetDeOcorrencias = realloc(endPalavra->vetDeOcorrencias, sizeof(pagOcorre)*endPalavra->tamVetOcorrencias);
                     }
                     VInfo[endPalavra->paginasTotal].pagina= NumPágina_atual;
                     VInfo[endPalavra->paginasTotal].ocorrencias = 1;
@@ -145,6 +150,7 @@ tipoIndiceRemissivo * criarIndice(char*nomeArquivo, void*stopMundo){
 
         }
 
+        palavraLida = malloc(sizeof(char)*150);
     }
     fclose(Arquivo_atual);
 
@@ -213,6 +219,7 @@ void mostraIndeceRemissivo(tipoIndiceRemissivo* index){
     char* retorno = removeInicioListaEncadeada(lista);
 
     while (retorno){
+        // printf("%s\n",retorno);
         searchElement(index,retorno);
         retorno = removeInicioListaEncadeada(lista);    
     }

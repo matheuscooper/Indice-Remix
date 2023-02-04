@@ -3,7 +3,7 @@
 
 
 
-void LimpaString(unsigned char* string);
+void LimpaString(unsigned  char* word);
 void LowerString(char* string);
 void removeSpecialCharacters(unsigned char * string);
 double idefDF(long int ocorrencias, long int totalPalavras, int n_documentos, int total_documentos);
