@@ -92,6 +92,8 @@ tipoIndiceRemissivo * criarIndice(char*nomeArquivo, void*stopMundo){
     //int ocupacaoRegistraDocs = 0;
 
     while(fscanf(Arquivo_atual, "%s", palavraLida)==1){
+        
+        LimpaString((unsigned char*)palavraLida);
 
         if(strcmp(palavraLida, "PA")==0){
             NumPágina_atual+= 1;
@@ -103,8 +105,12 @@ tipoIndiceRemissivo * criarIndice(char*nomeArquivo, void*stopMundo){
             IndiceRe_atual->registraDocs[NumPágina_atual].Palavras_in_Doc = 0;
             IndiceRe_atual->ocupacaoRegistraDocs +=1;
         }
-
         else if(verificaStop(stopMundo, palavraLida)==0){
+
+            removeSpecialCharacters((unsigned char*)palavraLida);
+            LowerString((unsigned char*)palavraLida);
+
+            if(strlen(palavraLida) <= 2) continue;
             
             InfoDic* endPalavra = buscarDicDinamico(IndiceRe_atual->Dicionario_do_livro, palavraLida);
             
@@ -183,7 +189,7 @@ void* searchElement(tipoIndiceRemissivo * index, char * key){
     
     qsort(retorno->vetDeOcorrencias,retorno->paginasTotal,sizeof(pagOcorre),&cmpQsor);
 
-    printf("%s   ", key);
+    printf("%s-", key);
     for( i=0; (i<retorno->paginasTotal)&&(i<5); i++){
         //printf("{ %d, %d,p: %lf  }\n", retorno->vetDeOcorrencias[i].ocorrencias, retorno->vetDeOcorrencias[i].pagina, retorno->vetDeOcorrencias[i].pontuation);
         printf("%d, ", retorno->vetDeOcorrencias[i].pagina);
