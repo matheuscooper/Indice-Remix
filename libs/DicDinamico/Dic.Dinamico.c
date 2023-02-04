@@ -220,6 +220,7 @@ int retornaQuantiChaves(TDicDinamic*x){                                     ////
     for(i=0; i<x->tam; i++){
         somatoria += retornaTamLE(x->listas[i]);
     }
+    return somatoria;
 }
 
 int retornaPosiOcupadas(TDicDinamic*x){                                   /// Percorremos as posiçoes e somamos caso estiverem ocupadas 
@@ -230,6 +231,7 @@ int retornaPosiOcupadas(TDicDinamic*x){                                   /// Pe
             somatoria += retornaTamLE(x->listas[i]);
         }
     }
+    return somatoria;
 }
 
 double mediasPorListas(TDicDinamic* x){                                 
