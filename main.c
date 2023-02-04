@@ -42,4 +42,19 @@ int main(int argc, char * argv[]){
     int b =passouTamMaior(indiceRemissivo);
     printf("number of size list: %d \n", b);
 
+    int c = tamVetDiclivro(indiceRemissivo);
+    printf("number of size vet: %d \n", c); 
+
+    int d = quantiChavesDicLivro(indiceRemissivo);
+    printf("number of quantity key : %d \n", d); 
+
+    int e = posiOcupadasDicLivro(indiceRemissivo);
+    printf("number of positions: %d \n", e);
+
+    double f = mediasPorListaDicLivro(indiceRemissivo);
+    printf("number of medias of list: %lf \n", f);
+
+    int g = ContReHashDicLivro(indiceRemissivo);
+    printf("number of hashing: %d \n", g); 
+
 }

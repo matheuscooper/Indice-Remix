@@ -251,21 +251,31 @@ int passouTamMaior(tipoIndiceRemissivo*index){
 }
 
 int tamVetDiclivro(tipoIndiceRemissivo* index){
-
+    TDicDinamic*atual = index->Dicionario_do_livro;
+    int tamVetLivro = retornaTamVetor(atual); 
+    return tamVetLivro;
 }
 
 int quantiChavesDicLivro(tipoIndiceRemissivo* index){
-
+    TDicDinamic*atual = index->Dicionario_do_livro;
+    int quantChaves = retornaQuantiChaves(atual); 
+    return quantChaves;
 }
 
 int posiOcupadasDicLivro(tipoIndiceRemissivo* index){
-
+    TDicDinamic*atual = index->Dicionario_do_livro;
+    int posiOcupada = retornaPosiOcupadas(atual);
+    return posiOcupada;
 }
 
 double mediasPorListaDicLivro(tipoIndiceRemissivo* index){
-
+    TDicDinamic*atual = index->Dicionario_do_livro;
+    double mediasPorLista = mediasPorListas(atual);
+    return mediasPorLista;
 }
 
 int ContReHashDicLivro(tipoIndiceRemissivo* index){
-
+    TDicDinamic*atual = index->Dicionario_do_livro;
+    int contReHas = retornaContReHash(atual);
+    return contReHas; 
 }

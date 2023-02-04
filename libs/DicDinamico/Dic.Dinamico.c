@@ -187,7 +187,7 @@ int retornaTamVetor(TDicDinamic*x){
     return tamvet;
 }
 
-int retornaQuantiChaves(TDicDinamic*x){
+int retornaQuantiChaves(TDicDinamic*x){                                     //// Aqui percorremos nas posiçoes e somamos a quantidade de chaves nas listas encadeadas
     int i;
     int somatoria=0;
     for(i=0; i<x->tam; i++){
@@ -195,7 +195,7 @@ int retornaQuantiChaves(TDicDinamic*x){
     }
 }
 
-int retornaPosiOcupadas(TDicDinamic*x){
+int retornaPosiOcupadas(TDicDinamic*x){                                   /// Percorremos as posiçoes e somamos caso estiverem ocupadas 
     int i;
     int somatoria=0;
     for(i=0; i<x->tam; i++){
@@ -205,7 +205,7 @@ int retornaPosiOcupadas(TDicDinamic*x){
     }
 }
 
-double mediasPorListas(TDicDinamic* x){
+double mediasPorListas(TDicDinamic* x){                                 
     int i;
     int posiocupadas = retornaPosiOcupadas(x);
     int quantiChaves = retornaQuantiChaves(x);
