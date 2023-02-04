@@ -32,7 +32,7 @@ TDicDinamic* criarDicDinamic(int tam){
     novoDic->tam = tam;
     novoDic->listas = malloc(sizeof(ListaE*)*tam);
     novoDic->numBuscasDinamic=0;
-    novoDic->fatorCarga = 4;
+    novoDic->fatorCarga = 12;
     novoDic->passouFatorCarga = 0;
     novoDic->tamMaiorLista = 0;
     novoDic->contReHashs = 0;
@@ -58,30 +58,56 @@ TDicDinamic* criarDicDinamic(int tam){
     return acumulador%tam;
 }  */
 unsigned int _funcaoHash(void*chave, int tam){ 
-    unsigned char* palavra = chave;
-    unsigned int cons = 0x6bda;                    /// generalizar os parâmetros para agradar a César
-    unsigned int acumulador = 0;
-    unsigned int i = 0;
-    while(palavra[i]){ 
-        acumulador += palavra[i] * cons; 
-        i++;
-        }
-        
-    return acumulador%tam;
+    
+    unsigned long long int hashVal = 0;
+    unsigned char* key = chave; 
+	while (*key) {
+
+		hashVal = (hashVal << 4) + *(key++);
+
+		long g = hashVal & 0xF0000000L;
+
+		if (g != 0) hashVal ^= g >> 24;
+
+		hashVal &= ~g;
+
+	}
+
+	return hashVal%tam;
 
 }
 
+static unsigned int primo_proximo(int num){
+  short encontrou = 0;
+  while(!encontrou){
+    int i=2;
+    while( (i<num) && ( (num%i) != 0) ){
+      i++;
+    }
+    if (i==num){
+      encontrou=1;
+    }else{
+      num+=1;
+    }
+  }
+  return num;
+}
 
-int calculaC(TDicDinamic* x){
+
+int calculaC(TDicDinamic* dictionary){
+
     int i; 
     int quantListas=0;
     int n=0;
-    for(i = 0; i<x->tam; i++){
-        quantListas += pow(retornaTamLE(x->listas[i]), 2);
-        n += retornaTamLE(x->listas[i]);
+    int x;
+
+    for(i = 0; i<dictionary->tam; i++){
+        x = retornaTamLE(dictionary->listas[i]);
+        quantListas += (x*x);
+        n += retornaTamLE(dictionary->listas[i]);
     }
-    double c;
-    c = quantListas/(double)n * x->fatorCarga;
+    
+    double c = (double)quantListas/(double)n - dictionary->fatorCarga;
     if(c>1.0){
         return 1;
     }
@@ -91,18 +117,19 @@ int calculaC(TDicDinamic* x){
 }
 
 void rehash(TDicDinamic* x){
-    TDicDinamic* novoDic = criarDicDinamic((x->tam)+7);
+    TDicDinamic* novoDic = criarDicDinamic(primo_proximo((x->tam) + 7));
     novoDic->numBuscasDinamic = x->numBuscasDinamic;
     novoDic->fatorCarga = x->fatorCarga;
     novoDic->passouFatorCarga = x->passouFatorCarga;
     novoDic->tamMaiorLista = x->tamMaiorLista;
     novoDic->contReHashs = x->contReHashs;
     int i;
+    unsigned int posicao;
     for(i=0; i<x->tam; i++){
         conjunto* removido;
         removido = removeInicioListaEncadeada(x->listas[i]);
         while(removido!=NULL){
-            unsigned int posicao =_funcaoHash(removido->chave,novoDic->tam); 
+            posicao =_funcaoHash(removido->chave,novoDic->tam); 
             inserirListaEncadeada(novoDic->listas[posicao], removido); 
             removido = removeInicioListaEncadeada(x->listas[i]);
         }

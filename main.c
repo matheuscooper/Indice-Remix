@@ -19,7 +19,7 @@ int main(int argc, char * argv[]){
     printf(" comparations:%d  \n", returnIndexComparation(indiceRemissivo));
     printf(" searchs :%d  \n", returnIndexBusca(indiceRemissivo));
     
-    //mostraIndeceRemissivo(indiceRemissivo);
+    mostraIndeceRemissivo(indiceRemissivo);
 
     int comparations = returnIndexComparation(indiceRemissivo);
     int searchs = returnIndexBusca(indiceRemissivo);
@@ -32,9 +32,7 @@ int main(int argc, char * argv[]){
     double media = comparations/(double) searchs;
     printf(" a media %lf ", media);
 
-    // showIndex(indiceRemissivo);
 
-    // analiseDataStopWord(stWord);
     int k = passouFatorCargaIndex(indiceRemissivo); 
 
     printf("number of carga ultrapassadass: %d\n", k); 
