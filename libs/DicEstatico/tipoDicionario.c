@@ -33,8 +33,8 @@ DE* criarDEstatico(int tam, cmpDic fucCmp){
 
     x->ocupacao = 0;
     x->tam = tam;
-
-    for(int i=0; i<tam; i++){
+    int i;
+    for(i=0; i<tam; i++){
         x->listas[i] = criarListaEncadeada(fucCmp);
     }
 

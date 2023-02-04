@@ -2,7 +2,7 @@
 #include "stop.h"
 #include <stdlib.h>
 #include <string.h>
-#include "../DicEstático/tipoDicionario.h"
+#include "../DicEstatico/tipoDicionario.h"
 
 struct tipoStop{
     DE * dic;

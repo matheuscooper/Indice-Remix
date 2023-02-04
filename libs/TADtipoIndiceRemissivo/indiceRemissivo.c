@@ -52,7 +52,7 @@ pagOcorre* criarPagOcorre(int ocorrenciasXX, int paginaXX){
 
 
 typedef struct docs{
-    int págDoc;
+    int pagDoc;
     int Palavras_in_Doc;
 }docs;
 
@@ -85,8 +85,8 @@ tipoIndiceRemissivo * criarIndice(char*nomeArquivo, void*stopMundo){
 
     FILE* Arquivo_atual = fopen(nomeArquivo, "r");
     char* palavraLida = malloc(sizeof(char)*150); 
-    int NumPágina_atual=-1;
-    int OcorrenciasNa_página=0; 
+    int NumPagina_atual=-1;
+    int OcorrenciasNa_pagina=0; 
     //docs* registraDocs = malloc(sizeof(docs)*2);
     int tamRegistraDocs = 2;
     //int ocupacaoRegistraDocs = 0;
@@ -94,13 +94,13 @@ tipoIndiceRemissivo * criarIndice(char*nomeArquivo, void*stopMundo){
     while(fscanf(Arquivo_atual, "%s", palavraLida)==1){
 
         if(strcmp(palavraLida, "PA")==0){
-            NumPágina_atual+= 1;
-            if(NumPágina_atual>=tamRegistraDocs){
+            NumPagina_atual+= 1;
+            if(NumPagina_atual>=tamRegistraDocs){
                 tamRegistraDocs *= 2;
                 IndiceRe_atual->registraDocs = realloc(IndiceRe_atual->registraDocs,sizeof(docs)*tamRegistraDocs);
             }
-            IndiceRe_atual->registraDocs[NumPágina_atual].págDoc = NumPágina_atual;
-            IndiceRe_atual->registraDocs[NumPágina_atual].Palavras_in_Doc = 0;
+            IndiceRe_atual->registraDocs[NumPagina_atual].pagDoc = NumPagina_atual;
+            IndiceRe_atual->registraDocs[NumPagina_atual].Palavras_in_Doc = 0;
             IndiceRe_atual->ocupacaoRegistraDocs +=1;
         }
         else{
@@ -121,7 +121,7 @@ tipoIndiceRemissivo * criarIndice(char*nomeArquivo, void*stopMundo){
             if(endPalavra==NULL){
                 InfoDic* infoPalavra = criarInfoDic();
                 infoPalavra->vetDeOcorrencias[0].ocorrencias = 1;
-                infoPalavra->vetDeOcorrencias[0].pagina = NumPágina_atual;
+                infoPalavra->vetDeOcorrencias[0].pagina = NumPagina_atual;
 
                 inserirLE_por_conteudo(IndiceRe_atual->listWithWords,palavraLida);
 
@@ -131,13 +131,13 @@ tipoIndiceRemissivo * criarIndice(char*nomeArquivo, void*stopMundo){
             else{
                 endPalavra->ocorrenciasTotal ++;
                 pagOcorre* VInfo = endPalavra->vetDeOcorrencias;
-                if((VInfo[(endPalavra->paginasTotal)-1].pagina)!= NumPágina_atual){
+                if((VInfo[(endPalavra->paginasTotal)-1].pagina)!= NumPagina_atual){
                     // // Se o Número de página atual não está no vetor, temos q adicionar ele.
                     if(endPalavra->tamVetOcorrencias <= endPalavra->paginasTotal){
                         endPalavra->tamVetOcorrencias *= 2;
                         endPalavra->vetDeOcorrencias = realloc(endPalavra->vetDeOcorrencias, sizeof(pagOcorre)*endPalavra->tamVetOcorrencias);
                     }
-                    VInfo[endPalavra->paginasTotal].pagina= NumPágina_atual;
+                    VInfo[endPalavra->paginasTotal].pagina= NumPagina_atual;
                     VInfo[endPalavra->paginasTotal].ocorrencias = 1;
                     endPalavra->paginasTotal++;
 
@@ -146,7 +146,7 @@ tipoIndiceRemissivo * criarIndice(char*nomeArquivo, void*stopMundo){
                     VInfo[(endPalavra->paginasTotal)-1].ocorrencias ++;
                 }
             }
-            IndiceRe_atual->registraDocs[NumPágina_atual].Palavras_in_Doc+= 1; /// contabiliza o numero de palavras total no documento
+            IndiceRe_atual->registraDocs[NumPagina_atual].Palavras_in_Doc+= 1; /// contabiliza o numero de palavras total no documento
 
         }
 
