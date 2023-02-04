@@ -158,8 +158,8 @@ tipoIndiceRemissivo * criarIndice(char*nomeArquivo, void*stopMundo){
 }
 
 void calculePontuation(InfoDic * infomation,docs * documentos, int totDocs, int tam){
-
-    for(int i=0; i < tam; i++){
+    int i=0;
+    for( i=0; i < tam; i++){
         
         int ocorrenciaPalavra = infomation->vetDeOcorrencias[i].ocorrencias;
 
