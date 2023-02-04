@@ -12,6 +12,10 @@ typedef struct conjunto{
 struct TDicDinamic{
     ListaE** listas;
     int tam;
+    int numBuscasDinamic;
+    int fatorCarga;
+    int passouFatorCarga;
+    int tamMaiorLista;
 };
 
 int comparaConjuntos(void* coisa1, void* coisa2){
@@ -25,13 +29,20 @@ TDicDinamic* criarDicDinamic(int tam){
     TDicDinamic* novoDic = malloc(sizeof(TDicDinamic));
     novoDic->tam = tam;
     novoDic->listas = malloc(sizeof(ListaE*)*tam);
+    novoDic->numBuscasDinamic=0;
+    novoDic->fatorCarga = 4;
+    novoDic->passouFatorCarga = 0;
+    novoDic->tamMaiorLista = 0;
+
+
+
     for(x=0; x<tam; x++){
         novoDic->listas[x] = criarListaEncadeada(&comparaConjuntos);
     }
     return novoDic;
 }
 
-unsigned int _funcaoHash(void*chave, int tam){
+unsigned int _funcaoHash(void*chave, int tam){  //precisamos introduzir fator de carga
     unsigned char* palavra = chave;                                 
     unsigned int cons = 0xd;                    /// generalizar os parâmetros para agradar a César
     unsigned int acumulador = 0;
@@ -59,7 +70,7 @@ void* buscarDicDinamico(TDicDinamic* x, void* chave){           /// generalizar 
     int posicaoBuscada =_funcaoHash(chave,x->tam);           /// Usamos a funçao hash para buscar a chave 
     
     conjunto* conjuntoBuscado = buscarListaEncadeada(x->listas[posicaoBuscada], &(conjunto){.chave=chave});   /// buscamos a chave na lista encadeada 
-    
+    x->numBuscasDinamic +=1;
 
     if (conjuntoBuscado!=NULL){
         return conjuntoBuscado->info;
@@ -73,4 +84,22 @@ void removerDicDinamico(TDicDinamic* x, void* chave){           /// generalizar 
     int posicaoBuscada =_funcaoHash(chave,x->tam); 
     removerListaEncadeada(x->listas[posicaoBuscada], chave);  
     return ;
+}
+int retornaComparacoesTotaisDinamic(TDicDinamic*x){
+    int i;
+    int compTotais = 0;
+    for(i=0; i<x->tam; i++){
+        compTotais+= retornaComparacoes(x->listas[i]);
+    }
+    return compTotais;
+}
+int retornaNumBuscasDinamic(TDicDinamic* x){
+    int num = x->numBuscasDinamic;
+    return num;
+}
+int retornaPassouCarga(TDicDinamic* x){
+    int i;
+    for(i = 0; i<x->tam; i++){
+        
+    }
 }
