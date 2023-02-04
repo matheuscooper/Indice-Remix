@@ -6,6 +6,6 @@
 void LimpaString(unsigned char* string);
 void LowerString(char* string);
 unsigned char* accentString(unsigned char* string);
-double idefDF(int palavra, int doc, int qntWords, int docs);
+double idefDF(long int ocorrencias, long int totalPalavras, int n_documentos, int total_documentos);
 
 #endif

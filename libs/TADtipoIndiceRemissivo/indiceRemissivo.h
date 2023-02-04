@@ -11,5 +11,7 @@ int mostrarIndice(tipoIndiceRemissivo* nomeIndice);
 typedef struct InfoDic InfoDic;
 InfoDic* criarInfoDic();
 void* searchElement(tipoIndiceRemissivo * index, char * key);
+void* TF_IDF(tipoIndiceRemissivo* index, char* key);
+
 
 #endif

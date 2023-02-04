@@ -70,7 +70,8 @@ void LimpaString(unsigned  char* string){
 
 void LowerString(char* string){
     int size = strlen(string);
-    for (int i = 0; i < size; i++){
+    int i;
+    for (i = 0; i < size; i++){
         if (string[i] >= 65 && string[i] <= 90){
             string[i] += 32;
         }else if(string[i] >= 128 && string[i] <= 159){
@@ -104,4 +105,16 @@ double idf(int docsWords, int docs){
  * @param docs , Quantidade total de documentos do livro
  * @return double 
  */
-double idefDF(int palavra, int doc, int qntWords, int docs){ return ( tf(palavra, doc) * idf(qntWords, docs)); }
+double idefDF(long int ocorrencias, long int totalPalavras, int n_documentos, int total_documentos){
+      // tf IDFtfidf(palavra, doc, docs) computa o TF-IDF, que ´e o produto do tf e idf.
+    double TF;
+    double IDF;
+    TF = ocorrencias/totalPalavras;
+    if(n_documentos == 0){
+        n_documentos = 1;
+    }
+    IDF = log(total_documentos/ n_documentos);
+    double TF_IDF;
+    TF_IDF = TF * IDF;    
+    return TF_IDF;
+}

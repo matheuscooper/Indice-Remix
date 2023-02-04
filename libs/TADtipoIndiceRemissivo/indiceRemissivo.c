@@ -58,7 +58,8 @@ typedef struct docs{
 struct tipoIndiceRemissivo{
     TDicDinamic* Dicionario_do_livro;
     ListaE * listWithWords;
-    
+    docs* registraDocs;
+    int ocupacaoRegistraDocs;
 };
 
 int _cmpValues(void * a, void * b){
@@ -78,13 +79,16 @@ tipoIndiceRemissivo * criarIndice(char*nomeArquivo, void*stopMundo){
     
     IndiceRe_atual->Dicionario_do_livro = criarDicDinamic(100);
     IndiceRe_atual->listWithWords = criarListaEncadeada(&_cmpValues);
+    IndiceRe_atual->registraDocs = malloc(sizeof(docs)*2);
+    IndiceRe_atual->ocupacaoRegistraDocs= 0;
 
     FILE* Arquivo_atual = fopen(nomeArquivo, "r");
     char* palavraLida = malloc(sizeof(char)*46); 
     int NumPágina_atual=-1;
     int OcorrenciasNa_página=0; 
-    docs* registraDocs = malloc(sizeof(docs)*2);
+    //docs* registraDocs = malloc(sizeof(docs)*2);
     int tamRegistraDocs = 2;
+    //int ocupacaoRegistraDocs = 0;
 
     while(fscanf(Arquivo_atual, "%s", palavraLida)==1){
 
@@ -92,10 +96,11 @@ tipoIndiceRemissivo * criarIndice(char*nomeArquivo, void*stopMundo){
             NumPágina_atual+= 1;
             if(NumPágina_atual>=tamRegistraDocs){
                 tamRegistraDocs *= 2;
-                registraDocs = realloc(registraDocs,sizeof(docs)*tamRegistraDocs);
+                IndiceRe_atual->registraDocs = realloc(IndiceRe_atual->registraDocs,sizeof(docs)*tamRegistraDocs);
             }
-            registraDocs[NumPágina_atual].págDoc = NumPágina_atual;
-            registraDocs[NumPágina_atual].Palavras_in_Doc = 0;
+            IndiceRe_atual->registraDocs[NumPágina_atual].págDoc = NumPágina_atual;
+            IndiceRe_atual->registraDocs[NumPágina_atual].Palavras_in_Doc = 0;
+            IndiceRe_atual->ocupacaoRegistraDocs +=1;
         }
 
         else if(verificaStop(stopMundo, palavraLida)==0){
@@ -130,7 +135,7 @@ tipoIndiceRemissivo * criarIndice(char*nomeArquivo, void*stopMundo){
                     VInfo[(endPalavra->paginasTotal)-1].ocorrencias ++;
                 }
             }
-            registraDocs[NumPágina_atual].Palavras_in_Doc+= 1;
+            IndiceRe_atual->registraDocs[NumPágina_atual].Palavras_in_Doc+= 1; /// contabiliza o numero de palavras total no documento
 
         }
 
@@ -148,5 +153,12 @@ void* searchElement(tipoIndiceRemissivo * index, char * key){
         printf("{ %d, %d  }\n", retorno->vetDeOcorrencias[i].ocorrencias, retorno->vetDeOcorrencias[i].pagina);
     }
     printf(" ocorrenciaaaaas totallllll %d", retorno->ocorrenciasTotal);
+    
+}
+void* TF_IDF(tipoIndiceRemissivo* index, char* key){
+
+    InfoDic* retorno = buscarDicDinamico(index->Dicionario_do_livro, key);
+    docs* registradocs_atual = index->registraDocs;
+
     
 }
