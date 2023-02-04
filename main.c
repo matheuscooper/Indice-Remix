@@ -14,9 +14,21 @@ int main(int argc, char * argv[]){
     tipoStop * stWord = criarStop(argv[1]);
 
     tipoIndiceRemissivo * indiceRemissivo = criarIndice(argv[2],stWord);
-
-   
+    printf(" comparations:%d  \n", returnIndexComparation(indiceRemissivo));
+    printf(" searchs :%d  \n", returnIndexBusca(indiceRemissivo));
+    
     mostraIndeceRemissivo(indiceRemissivo);
+
+    int comparations = returnIndexComparation(indiceRemissivo);
+    int searchs = returnIndexBusca(indiceRemissivo);
+
+
+    printf(" comparations:%d  \n", returnIndexComparation(indiceRemissivo));
+    printf(" searchs :%d  \n", returnIndexBusca(indiceRemissivo));
+
+
+    double media = comparations/(double) searchs;
+    printf(" a media %lf ", media);
 
     // showIndex(indiceRemissivo);
 

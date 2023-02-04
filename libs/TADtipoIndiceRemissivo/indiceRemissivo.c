@@ -198,7 +198,7 @@ void* searchElement(tipoIndiceRemissivo * index, char * key){
     printf("%s-", key);
     for( i=0; (i<retorno->paginasTotal)&&(i<5); i++){
         //printf("{ %d, %d,p: %lf  }\n", retorno->vetDeOcorrencias[i].ocorrencias, retorno->vetDeOcorrencias[i].pagina, retorno->vetDeOcorrencias[i].pontuation);
-        printf("%d, ", retorno->vetDeOcorrencias[i].pagina);
+        printf("%d, ", retorno->vetDeOcorrencias[i].pagina+1);
     }
     printf("\n");
     //printf(" ocorrenciaaaaas totallllll %d", retorno->ocorrenciasTotal);
@@ -224,5 +224,17 @@ void mostraIndeceRemissivo(tipoIndiceRemissivo* index){
         retorno = removeInicioListaEncadeada(lista);    
     }
     
-
 }
+
+int returnIndexComparation(tipoIndiceRemissivo* index){
+    TDicDinamic* atual = index->Dicionario_do_livro;
+    int comps = retornaComparacoesTotaisDinamic(atual);
+    return comps;
+}
+
+int returnIndexBusca(tipoIndiceRemissivo* index){
+    TDicDinamic* atual = index->Dicionario_do_livro;
+    int comps = retornaNumBuscasDinamic(atual);
+    return comps;
+}
+

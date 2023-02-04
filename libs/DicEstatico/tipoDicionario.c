@@ -9,7 +9,7 @@ struct tipoDicionario{
     int ocupacao;
     int tam;
     cmpDic comparatorFunction;
-    
+    int num_de_buscas;
 };
 
 unsigned int funcaoHash(void*chave, int tam){
@@ -30,6 +30,7 @@ DE* criarDEstatico(int tam, cmpDic fucCmp){
     DE* x = malloc(sizeof(DE));
 
     x->listas = malloc(sizeof(ListaE*)*tam);
+    x->num_de_buscas = 0;
 
     x->ocupacao = 0;
     x->tam = tam;
@@ -51,7 +52,7 @@ void inserirDEstatico(DE* x, void* chave){
 void* buscarDEstatico(DE* x, void* chave){
  
     int posicaoBuscada = funcaoHash(chave,x->tam);           /// Usamos a funçao hash para buscar a chave 
-    
+    x->num_de_buscas += 1;
     void* chaveBuscada = buscarListaEncadeada(x->listas[posicaoBuscada], chave);   /// buscamos a chave na lista encadeada 
     
     if (chaveBuscada!=NULL){
@@ -60,4 +61,17 @@ void* buscarDEstatico(DE* x, void* chave){
     else{
         return NULL;
     }
+}
+int retornaNumBuscasDE(DE* x){
+    int num = x->num_de_buscas;
+    return num;
+}
+
+int retornaComparacoesTotaisDE(DE*x){
+    int i;
+    int compTotais = 0;
+    for(i=0; i<x->tam; i++){
+        compTotais+= retornaComparacoes(x->listas[i]);
+    }
+    return compTotais;
 }

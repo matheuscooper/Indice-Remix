@@ -10,12 +10,15 @@ typedef struct TipoNo{
 struct ListaE{
     TipoNo* prim;
     comparaListaEncadeada funcaoDeComparar;
+    int comparacoes;
+    int tam;
 };
 
 ListaE* criarListaEncadeada(comparaListaEncadeada funcao){
     ListaE* novaLista = malloc(sizeof(ListaE));
     novaLista->prim = NULL;
     novaLista->funcaoDeComparar = funcao;
+    novaLista->comparacoes = 0;
     return novaLista;
 }
 
@@ -56,6 +59,7 @@ void* buscarListaEncadeada(ListaE* lista, void* chave){
     while(x != NULL){
         
         if(lista->funcaoDeComparar(x->info,chave)==0){
+            lista->comparacoes +=1;
             return x->info;
         }
         
@@ -70,12 +74,14 @@ void* removeNo(ListaE* lista, TipoNo* no, void* info){
         return NULL;
     }
     if(lista->funcaoDeComparar(no->info ,info) == 0){
+        lista->comparacoes +=1;
         aux = no->prox;
         free(no);
         return aux;
     }
     else{
         no->prox = removeNo(lista, no->prox, info);
+        lista->comparacoes +=1;
         return no;
     }
 }
@@ -97,3 +103,8 @@ void* removeInicioListaEncadeada(ListaE* lista){
         return NULL;
     }
 }
+int retornaComparacoes(ListaE* lista){
+    int x = lista->comparacoes;
+    return x;
+}
+int retornaTAM(){}

@@ -16,5 +16,6 @@ void* buscarListaEncadeada(ListaE* lista, void* info);
 
 void removerListaEncadeada(ListaE* lista, void* info);
 void* removeInicioListaEncadeada(ListaE* lista);
+int retornaComparacoes(ListaE* lista);
 
 #endif
