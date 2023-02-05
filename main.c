@@ -56,8 +56,13 @@ int main(int argc, char * argv[]){
     printf("number of hashing: %d \n", g); 
 
     char* palavraBuscada = malloc(sizeof(char)*46);
-    scanf("entre com uma palavra: %s", palavraBuscada);
-    searchElement(indiceRemissivo,palavraBuscada);
+    
+    while (scanf("%s", palavraBuscada) == 1)
+    {
+        /* code */
+        searchElement(indiceRemissivo,palavraBuscada);
+    }
+    
     
 
 }
