@@ -1,6 +1,12 @@
-# Indice-Remix
+# Tabela Hash: Índice remissivo
 
-## Sugestao para comecar
+Membros:
+Matheus Souza de Oliveira;
+Beatriz Emilly Silva Aguiar;
+Felipe Rocha Spitale;
+Caio César Macedo Antunes;
+
+O presente trabalho tem como objetivo aplicar um experimento envolvendo o conhecimento adquirido em sala de aula sobre Tabelas Hash. Para isso, criamos um Índice Remissivo, e sua implementação será descrita em maiores detalhes no decorrer desse relatório.
 
 Funcao para limpar uma string.
 
