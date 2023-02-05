@@ -6,6 +6,9 @@
 #include "./libs/TADSTopMundo/stop.h"
 #include "./libs/writeFiles/writeFiles.h"
 
+
+// Cesar teste assim:  gcc ./libs/*/*.c main.c -lm -o job.n && ./job.n
+
 int main(int argc, char** argv){
     tipoIndiceRemissivo* index = writeInFiles("stopwords/stopwords_br.txt", "bases-dicionario/Guarani.base");
     tipoIndiceRemissivo* index2 = writeInFiles("stopwords/stopwords_br.txt", "bases-dicionario/Paralelismo.base");

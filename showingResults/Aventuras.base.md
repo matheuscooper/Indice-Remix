@@ -1,3 +1,20 @@
+showing results: 
+ 
+comparations:57  
+ 
+searchs :41071  
+ 
+a media = comparation/searchs 0.001388 
+ 
+number of carga ultrapassadass: 407
+ 
+number of size list: 23 
+number of size vet: 977 
+number of quantity key : 11653 
+number of positions: 977 
+number of medias of list: 0.083841 
+number of ReHashing: 70 
+ 
 a-toa-- 
 pagina: 29, pontuacao da pagina: 0.035743, 
 
@@ -46309,19 +46326,3 @@ pagina: 117, pontuacao da pagina: 0.033590,
 zurrando-- 
 pagina: 143, pontuacao da pagina: 0.034000, 
 
-# showing results: 
- 
-comparations:11710  
- 
-searchs :52724  
- 
-a media = comparation/searchs 0.222100 
- 
-number of carga ultrapassadass: 407
- 
-number of size list: 23 
-number of size vet: 977 
-number of quantity key : 11653 
-number of positions: 977 
-number of medias of list: 0.083841 
-number of ReHashing: 70 

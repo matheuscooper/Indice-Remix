@@ -51,12 +51,10 @@ tipoIndiceRemissivo* writeInFiles(char* nomeStopsWords, char * NomeLivro){
 
     FILE * fp = fopen(name,"w");
 
-    mostraIndiceRemissivoARQUIVO(indiceRemissivo, fp);
-
     int comparations = returnIndexComparation(indiceRemissivo);
     int searchs = returnIndexBusca(indiceRemissivo);
 
-    fprintf(fp, "# showing results: \n \n");
+    fprintf(fp, "showing results: \n \n");
     fprintf(fp,"comparations:%d  \n \n", returnIndexComparation(indiceRemissivo));
     fprintf(fp,"searchs :%d  \n \n", returnIndexBusca(indiceRemissivo));
 
@@ -85,15 +83,12 @@ tipoIndiceRemissivo* writeInFiles(char* nomeStopsWords, char * NomeLivro){
     fprintf(fp,"number of medias of list: %lf \n", f);
 
     int g = ContReHashDicLivro(indiceRemissivo);
-    fprintf(fp,"number of ReHashing: %d \n", g); 
+    fprintf(fp,"number of ReHashing: %d \n \n", g); 
 
-    //char* palavraBuscada = malloc(sizeof(char)*46);
 
-    /*while (scanf("%s", palavraBuscada) == 1)
-    {
-        searchElement(indiceRemissivo,palavraBuscada);
-    } */
-    
+
+    mostraIndiceRemissivoARQUIVO(indiceRemissivo, fp);
+
     fclose(fp);
     
     return indiceRemissivo;

@@ -1,3 +1,20 @@
+showing results: 
+ 
+comparations:500  
+ 
+searchs :58185  
+ 
+a media = comparation/searchs 0.008593 
+ 
+number of carga ultrapassadass: 287
+ 
+number of size list: 26 
+number of size vet: 701 
+number of quantity key : 8439 
+number of positions: 701 
+number of medias of list: 0.083067 
+number of ReHashing: 46 
+ 
 a(1:100)=b-- 
 pagina: 30, pontuacao da pagina: 0.028120, 
 
@@ -36442,19 +36459,3 @@ pagina: 29, pontuacao da pagina: 0.019181,
 zvaeis-- 
 pagina: 268, pontuacao da pagina: 0.445504, 
 
-# showing results: 
- 
-comparations:8939  
- 
-searchs :66624  
- 
-a media = comparation/searchs 0.134171 
- 
-number of carga ultrapassadass: 287
- 
-number of size list: 26 
-number of size vet: 701 
-number of quantity key : 8439 
-number of positions: 701 
-number of medias of list: 0.083067 
-number of ReHashing: 46 

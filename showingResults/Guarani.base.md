@@ -1,3 +1,20 @@
+showing results: 
+ 
+comparations:918  
+ 
+searchs :52866  
+ 
+a media = comparation/searchs 0.017365 
+ 
+number of carga ultrapassadass: 407
+ 
+number of size list: 24 
+number of size vet: 991 
+number of quantity key : 11843 
+number of positions: 991 
+number of medias of list: 0.083678 
+number of ReHashing: 71 
+ 
 aba-- 
 pagina: 105, pontuacao da pagina: 0.021029, 
 pagina: 66, pontuacao da pagina: 0.013925, 
@@ -49002,19 +49019,3 @@ pagina: 76, pontuacao da pagina: 0.022697,
 zombo-- 
 pagina: 48, pontuacao da pagina: 0.018001, 
 
-# showing results: 
- 
-comparations:12761  
- 
-searchs :64709  
- 
-a media = comparation/searchs 0.197206 
- 
-number of carga ultrapassadass: 407
- 
-number of size list: 24 
-number of size vet: 991 
-number of quantity key : 11843 
-number of positions: 991 
-number of medias of list: 0.083678 
-number of ReHashing: 71 
