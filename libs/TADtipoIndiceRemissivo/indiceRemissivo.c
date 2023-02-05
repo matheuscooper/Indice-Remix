@@ -198,7 +198,10 @@ void* searchElement(tipoIndiceRemissivo * index, char * key){
    
     int i;
    
-    if(retorno == NULL) return NULL;
+    if(retorno == NULL){
+        printf("Palavra não encontrada \n ");
+        return NULL;
+    } 
 
     calculePontuation(retorno, index->registraDocs,index->ocupacaoRegistraDocs,retorno->paginasTotal);
     

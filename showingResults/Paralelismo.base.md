@@ -1,14 +1,14 @@
 showing results: 
  
-comparations:500  
+comparations:580  
  
 searchs :58185  
  
-a media = comparation/searchs 0.008593 
+a media = comparation/searchs 0.009968 
  
-number of carga ultrapassadass: 287
+number of carga ultrapassadass: 301
  
-number of size list: 26 
+number of size list: 23 
 number of size vet: 701 
 number of quantity key : 8439 
 number of positions: 701 
@@ -368,8 +368,8 @@ pagina: 141, pontuacao da pagina: 0.027708,
 
 acreditamos-- 
 pagina: 176, pontuacao da pagina: 0.032477, 
-pagina: 260, pontuacao da pagina: 0.015783, 
 pagina: 151, pontuacao da pagina: 0.015783, 
+pagina: 260, pontuacao da pagina: 0.015783, 
 pagina: 281, pontuacao da pagina: 0.014559, 
 pagina: 283, pontuacao da pagina: 0.014251, 
 
@@ -812,7 +812,7 @@ pagina: 95, pontuacao da pagina: 0.021711,
 pagina: 224, pontuacao da pagina: 0.017450, 
 pagina: 264, pontuacao da pagina: 0.015118, 
 pagina: 147, pontuacao da pagina: 0.014937, 
-pagina: 96, pontuacao da pagina: 0.014878, 
+pagina: 77, pontuacao da pagina: 0.014878, 
 
 agrupam-- 
 pagina: 262, pontuacao da pagina: 0.053086, 
@@ -859,8 +859,8 @@ pagina: 39, pontuacao da pagina: 0.117342,
 pagina: 40, pontuacao da pagina: 0.053337, 
 
 aided-- 
-pagina: 79, pontuacao da pagina: 0.021683, 
 pagina: 75, pontuacao da pagina: 0.021683, 
+pagina: 79, pontuacao da pagina: 0.021683, 
 
 ainda-- 
 pagina: 83, pontuacao da pagina: 0.029076, 
@@ -1267,7 +1267,7 @@ pagina: 80, pontuacao da pagina: 0.033653,
 pagina: 81, pontuacao da pagina: 0.027379, 
 pagina: 86, pontuacao da pagina: 0.024200, 
 pagina: 153, pontuacao da pagina: 0.020512, 
-pagina: 260, pontuacao da pagina: 0.020129, 
+pagina: 151, pontuacao da pagina: 0.020129, 
 
 ambientes-- 
 pagina: 75, pontuacao da pagina: 0.049512, 
@@ -1288,7 +1288,7 @@ pagina: 262, pontuacao da pagina: 0.058228,
 pagina: 263, pontuacao da pagina: 0.025960, 
 pagina: 264, pontuacao da pagina: 0.025224, 
 pagina: 32, pontuacao da pagina: 0.024529, 
-pagina: 111, pontuacao da pagina: 0.015894, 
+pagina: 110, pontuacao da pagina: 0.015894, 
 
 amd-- 
 pagina: 187, pontuacao da pagina: 0.029628, 
@@ -1897,8 +1897,8 @@ pagina: 149, pontuacao da pagina: 0.024262,
 
 apresentam-- 
 pagina: 111, pontuacao da pagina: 0.038235, 
-pagina: 187, pontuacao da pagina: 0.032869, 
 pagina: 115, pontuacao da pagina: 0.032869, 
+pagina: 187, pontuacao da pagina: 0.032869, 
 pagina: 110, pontuacao da pagina: 0.028676, 
 pagina: 107, pontuacao da pagina: 0.028279, 
 
@@ -2290,8 +2290,8 @@ arranjados--
 pagina: 101, pontuacao da pagina: 0.020559, 
 pagina: 30, pontuacao da pagina: 0.020152, 
 pagina: 113, pontuacao da pagina: 0.015839, 
-pagina: 248, pontuacao da pagina: 0.015657, 
 pagina: 114, pontuacao da pagina: 0.015657, 
+pagina: 248, pontuacao da pagina: 0.015657, 
 
 arranjar-- 
 pagina: 128, pontuacao da pagina: 0.020286, 
@@ -3961,8 +3961,8 @@ pagina: 65, pontuacao da pagina: 0.024069,
 brilho-- 
 pagina: 178, pontuacao da pagina: 0.028249, 
 pagina: 142, pontuacao da pagina: 0.016972, 
-pagina: 243, pontuacao da pagina: 0.015903, 
 pagina: 185, pontuacao da pagina: 0.015903, 
+pagina: 243, pontuacao da pagina: 0.015903, 
 
 bristol-- 
 pagina: 284, pontuacao da pagina: 0.026543, 
@@ -4616,8 +4616,8 @@ pagina: 153, pontuacao da pagina: 0.027048,
 
 carga-- 
 pagina: 224, pontuacao da pagina: 0.071346, 
-pagina: 209, pontuacao da pagina: 0.044643, 
 pagina: 187, pontuacao da pagina: 0.044643, 
+pagina: 209, pontuacao da pagina: 0.044643, 
 pagina: 189, pontuacao da pagina: 0.036095, 
 pagina: 180, pontuacao da pagina: 0.032076, 
 
@@ -4626,7 +4626,7 @@ pagina: 269, pontuacao da pagina: 0.058348,
 pagina: 246, pontuacao da pagina: 0.033491, 
 pagina: 83, pontuacao da pagina: 0.018671, 
 pagina: 179, pontuacao da pagina: 0.016027, 
-pagina: 272, pontuacao da pagina: 0.015242, 
+pagina: 172, pontuacao da pagina: 0.015242, 
 
 cargo-- 
 pagina: 225, pontuacao da pagina: 0.026957, 
@@ -5140,8 +5140,8 @@ ciclos--
 pagina: 75, pontuacao da pagina: 0.024696, 
 
 ciencia-- 
-pagina: 57, pontuacao da pagina: 0.023717, 
 pagina: 51, pontuacao da pagina: 0.023717, 
+pagina: 57, pontuacao da pagina: 0.023717, 
 pagina: 60, pontuacao da pagina: 0.022362, 
 pagina: 93, pontuacao da pagina: 0.020687, 
 pagina: 283, pontuacao da pagina: 0.019814, 
@@ -5314,8 +5314,8 @@ claro--
 pagina: 185, pontuacao da pagina: 0.028803, 
 pagina: 27, pontuacao da pagina: 0.022347, 
 pagina: 84, pontuacao da pagina: 0.018342, 
-pagina: 90, pontuacao da pagina: 0.014563, 
 pagina: 86, pontuacao da pagina: 0.014563, 
+pagina: 90, pontuacao da pagina: 0.014563, 
 
 claros-- 
 pagina: 113, pontuacao da pagina: 0.019405, 
@@ -5701,8 +5701,8 @@ pagina: 284, pontuacao da pagina: 0.023304,
 coluna-- 
 pagina: 236, pontuacao da pagina: 0.067355, 
 pagina: 13, pontuacao da pagina: 0.031003, 
-pagina: 155, pontuacao da pagina: 0.017384, 
 pagina: 20, pontuacao da pagina: 0.017384, 
+pagina: 155, pontuacao da pagina: 0.017384, 
 
 colunas-- 
 pagina: 111, pontuacao da pagina: 0.068930, 
@@ -5964,7 +5964,7 @@ pagina: 211, pontuacao da pagina: 0.062228,
 pagina: 181, pontuacao da pagina: 0.049782, 
 pagina: 81, pontuacao da pagina: 0.033751, 
 pagina: 11, pontuacao da pagina: 0.031408, 
-pagina: 248, pontuacao da pagina: 0.022976, 
+pagina: 232, pontuacao da pagina: 0.022976, 
 
 comparacoes-- 
 pagina: 210, pontuacao da pagina: 0.039274, 
@@ -6248,8 +6248,8 @@ pagina: 260, pontuacao da pagina: 0.013888,
 pagina: 59, pontuacao da pagina: 0.013696, 
 
 compoem-- 
-pagina: 117, pontuacao da pagina: 0.017087, 
 pagina: 43, pontuacao da pagina: 0.017087, 
+pagina: 117, pontuacao da pagina: 0.017087, 
 pagina: 169, pontuacao da pagina: 0.016996, 
 pagina: 233, pontuacao da pagina: 0.016386, 
 pagina: 138, pontuacao da pagina: 0.016302, 
@@ -7059,7 +7059,7 @@ pagina: 82, pontuacao da pagina: 0.026566,
 pagina: 156, pontuacao da pagina: 0.025867, 
 pagina: 160, pontuacao da pagina: 0.020850, 
 pagina: 66, pontuacao da pagina: 0.020463, 
-pagina: 219, pontuacao da pagina: 0.019659, 
+pagina: 153, pontuacao da pagina: 0.019659, 
 
 conjuntos-- 
 pagina: 177, pontuacao da pagina: 0.039185, 
@@ -7201,7 +7201,7 @@ pagina: 263, pontuacao da pagina: 0.025960,
 pagina: 219, pontuacao da pagina: 0.022252, 
 pagina: 6, pontuacao da pagina: 0.021484, 
 pagina: 233, pontuacao da pagina: 0.015976, 
-pagina: 241, pontuacao da pagina: 0.013089, 
+pagina: 180, pontuacao da pagina: 0.013089, 
 
 consideram-- 
 pagina: 219, pontuacao da pagina: 0.040573, 
@@ -7392,7 +7392,7 @@ pagina: 56, pontuacao da pagina: 0.024230,
 pagina: 95, pontuacao da pagina: 0.016905, 
 pagina: 169, pontuacao da pagina: 0.015466, 
 pagina: 184, pontuacao da pagina: 0.014759, 
-pagina: 271, pontuacao da pagina: 0.013277, 
+pagina: 193, pontuacao da pagina: 0.013277, 
 
 constituidos-- 
 pagina: 270, pontuacao da pagina: 0.035906, 
@@ -7605,8 +7605,8 @@ pagina: 20, pontuacao da pagina: 0.020190,
 continuam-- 
 pagina: 117, pontuacao da pagina: 0.021769, 
 pagina: 115, pontuacao da pagina: 0.017854, 
-pagina: 114, pontuacao da pagina: 0.015657, 
 pagina: 105, pontuacao da pagina: 0.015657, 
+pagina: 114, pontuacao da pagina: 0.015657, 
 pagina: 119, pontuacao da pagina: 0.014749, 
 
 continuamente-- 
@@ -7630,8 +7630,8 @@ pagina: 29, pontuacao da pagina: 0.021847,
 
 continuas-- 
 pagina: 214, pontuacao da pagina: 0.028281, 
-pagina: 184, pontuacao da pagina: 0.023257, 
 pagina: 106, pontuacao da pagina: 0.023257, 
+pagina: 184, pontuacao da pagina: 0.023257, 
 
 continue-- 
 pagina: 117, pontuacao da pagina: 0.030375, 
@@ -7943,7 +7943,7 @@ pagina: 268, pontuacao da pagina: 0.194685,
 pagina: 238, pontuacao da pagina: 0.077419, 
 pagina: 270, pontuacao da pagina: 0.047735, 
 pagina: 235, pontuacao da pagina: 0.047281, 
-pagina: 262, pontuacao da pagina: 0.046397, 
+pagina: 230, pontuacao da pagina: 0.046397, 
 
 cor/estereo-- 
 pagina: 230, pontuacao da pagina: 0.026543, 
@@ -8017,7 +8017,7 @@ pagina: 102, pontuacao da pagina: 0.018605,
 pagina: 245, pontuacao da pagina: 0.015130, 
 pagina: 232, pontuacao da pagina: 0.014955, 
 pagina: 13, pontuacao da pagina: 0.014038, 
-pagina: 109, pontuacao da pagina: 0.013937, 
+pagina: 89, pontuacao da pagina: 0.013937, 
 
 correlacionadas-- 
 pagina: 243, pontuacao da pagina: 0.021038, 
@@ -8329,8 +8329,8 @@ pagina: 19, pontuacao da pagina: 0.015478,
 pagina: 90, pontuacao da pagina: 0.015246, 
 
 criticada-- 
-pagina: 120, pontuacao da pagina: 0.021131, 
 pagina: 65, pontuacao da pagina: 0.021131, 
+pagina: 120, pontuacao da pagina: 0.021131, 
 
 criticado-- 
 pagina: 91, pontuacao da pagina: 0.019930, 
@@ -8832,8 +8832,8 @@ pagina: 42, pontuacao da pagina: 0.013449,
 pagina: 275, pontuacao da pagina: 0.012922, 
 
 decrescimo-- 
-pagina: 219, pontuacao da pagina: 0.035622, 
 pagina: 188, pontuacao da pagina: 0.035622, 
+pagina: 219, pontuacao da pagina: 0.035622, 
 
 dedica-se-- 
 pagina: 142, pontuacao da pagina: 0.022451, 
@@ -9234,7 +9234,7 @@ pagina: 219, pontuacao da pagina: 0.051439,
 pagina: 273, pontuacao da pagina: 0.029274, 
 pagina: 67, pontuacao da pagina: 0.028131, 
 pagina: 224, pontuacao da pagina: 0.016826, 
-pagina: 114, pontuacao da pagina: 0.013849, 
+pagina: 64, pontuacao da pagina: 0.013849, 
 
 dependencia-- 
 pagina: 67, pontuacao da pagina: 0.055883, 
@@ -9249,9 +9249,9 @@ pagina: 139, pontuacao da pagina: 0.020071,
 dependendo-- 
 pagina: 271, pontuacao da pagina: 0.017051, 
 pagina: 267, pontuacao da pagina: 0.016027, 
-pagina: 81, pontuacao da pagina: 0.015823, 
 pagina: 65, pontuacao da pagina: 0.015823, 
-pagina: 148, pontuacao da pagina: 0.014418, 
+pagina: 81, pontuacao da pagina: 0.015823, 
+pagina: 82, pontuacao da pagina: 0.014418, 
 
 dependente-- 
 pagina: 60, pontuacao da pagina: 0.023748, 
@@ -9959,7 +9959,7 @@ pagina: 208, pontuacao da pagina: 0.023445,
 pagina: 91, pontuacao da pagina: 0.023034, 
 pagina: 136, pontuacao da pagina: 0.014209, 
 pagina: 127, pontuacao da pagina: 0.013343, 
-pagina: 264, pontuacao da pagina: 0.013289, 
+pagina: 261, pontuacao da pagina: 0.013289, 
 
 determinado-- 
 pagina: 244, pontuacao da pagina: 0.041648, 
@@ -10615,8 +10615,8 @@ discutida--
 pagina: 228, pontuacao da pagina: 0.018846, 
 pagina: 258, pontuacao da pagina: 0.018420, 
 pagina: 256, pontuacao da pagina: 0.016218, 
-pagina: 278, pontuacao da pagina: 0.015304, 
 pagina: 231, pontuacao da pagina: 0.015304, 
+pagina: 278, pontuacao da pagina: 0.015304, 
 
 discutidas-- 
 pagina: 20, pontuacao da pagina: 0.020190, 
@@ -10656,8 +10656,8 @@ pagina: 55, pontuacao da pagina: 0.015904,
 pagina: 93, pontuacao da pagina: 0.015343, 
 
 discutiremos-- 
-pagina: 257, pontuacao da pagina: 0.018852, 
 pagina: 87, pontuacao da pagina: 0.018852, 
+pagina: 257, pontuacao da pagina: 0.018852, 
 pagina: 57, pontuacao da pagina: 0.018186, 
 pagina: 54, pontuacao da pagina: 0.017825, 
 pagina: 69, pontuacao da pagina: 0.015724, 
@@ -10712,8 +10712,8 @@ disparity--
 pagina: 291, pontuacao da pagina: 0.025245, 
 
 disparo-- 
-pagina: 157, pontuacao da pagina: 0.032843, 
 pagina: 97, pontuacao da pagina: 0.032843, 
+pagina: 157, pontuacao da pagina: 0.032843, 
 pagina: 169, pontuacao da pagina: 0.024370, 
 
 disparos-- 
@@ -11031,8 +11031,8 @@ pagina: 55, pontuacao da pagina: 0.015789,
 pagina: 222, pontuacao da pagina: 0.015437, 
 
 diversidade-- 
-pagina: 249, pontuacao da pagina: 0.024770, 
 pagina: 159, pontuacao da pagina: 0.024770, 
+pagina: 249, pontuacao da pagina: 0.024770, 
 pagina: 42, pontuacao da pagina: 0.014458, 
 pagina: 93, pontuacao da pagina: 0.014076, 
 pagina: 280, pontuacao da pagina: 0.014076, 
@@ -11048,7 +11048,7 @@ pagina: 230, pontuacao da pagina: 0.023970,
 pagina: 47, pontuacao da pagina: 0.023585, 
 pagina: 280, pontuacao da pagina: 0.015065, 
 pagina: 133, pontuacao da pagina: 0.014073, 
-pagina: 239, pontuacao da pagina: 0.013958, 
+pagina: 149, pontuacao da pagina: 0.013958, 
 
 divide-- 
 pagina: 191, pontuacao da pagina: 0.056914, 
@@ -11254,8 +11254,8 @@ dowling--
 pagina: 9, pontuacao da pagina: 0.031662, 
 pagina: 286, pontuacao da pagina: 0.025643, 
 pagina: 110, pontuacao da pagina: 0.016746, 
-pagina: 103, pontuacao da pagina: 0.016577, 
 pagina: 101, pontuacao da pagina: 0.016577, 
+pagina: 103, pontuacao da pagina: 0.016577, 
 
 downsizing-- 
 pagina: 25, pontuacao da pagina: 0.021038, 
@@ -11598,8 +11598,8 @@ pagina: 287, pontuacao da pagina: 0.020523,
 eficacia-- 
 pagina: 15, pontuacao da pagina: 0.018350, 
 pagina: 127, pontuacao da pagina: 0.017455, 
-pagina: 245, pontuacao da pagina: 0.016708, 
 pagina: 58, pontuacao da pagina: 0.016708, 
+pagina: 245, pontuacao da pagina: 0.016708, 
 
 eficaz-- 
 pagina: 234, pontuacao da pagina: 0.022133, 
@@ -12077,7 +12077,7 @@ pagina: 256, pontuacao da pagina: 0.021390,
 pagina: 113, pontuacao da pagina: 0.020891, 
 pagina: 119, pontuacao da pagina: 0.019452, 
 pagina: 94, pontuacao da pagina: 0.016883, 
-pagina: 125, pontuacao da pagina: 0.014355, 
+pagina: 117, pontuacao da pagina: 0.014355, 
 
 encontrando-- 
 pagina: 154, pontuacao da pagina: 0.022363, 
@@ -12760,9 +12760,9 @@ pagina: 90, pontuacao da pagina: 0.021274,
 esforco-- 
 pagina: 65, pontuacao da pagina: 0.016476, 
 pagina: 149, pontuacao da pagina: 0.015871, 
-pagina: 237, pontuacao da pagina: 0.015189, 
 pagina: 80, pontuacao da pagina: 0.015189, 
-pagina: 90, pontuacao da pagina: 0.014563, 
+pagina: 237, pontuacao da pagina: 0.015189, 
+pagina: 86, pontuacao da pagina: 0.014563, 
 
 esforcos-- 
 pagina: 83, pontuacao da pagina: 0.020354, 
@@ -12787,8 +12787,8 @@ espaco--
 pagina: 202, pontuacao da pagina: 0.107122, 
 pagina: 214, pontuacao da pagina: 0.035896, 
 pagina: 12, pontuacao da pagina: 0.027005, 
-pagina: 193, pontuacao da pagina: 0.026553, 
 pagina: 55, pontuacao da pagina: 0.026553, 
+pagina: 193, pontuacao da pagina: 0.026553, 
 
 espacos-- 
 pagina: 184, pontuacao da pagina: 0.023257, 
@@ -13076,8 +13076,8 @@ pagina: 31, pontuacao da pagina: 0.011655,
 essas-- 
 pagina: 120, pontuacao da pagina: 0.026400, 
 pagina: 102, pontuacao da pagina: 0.014905, 
-pagina: 255, pontuacao da pagina: 0.014834, 
 pagina: 116, pontuacao da pagina: 0.014834, 
+pagina: 255, pontuacao da pagina: 0.014834, 
 pagina: 180, pontuacao da pagina: 0.013089, 
 
 esse-- 
@@ -14250,8 +14250,8 @@ pagina: 185, pontuacao da pagina: 0.021038,
 
 exploracao-- 
 pagina: 66, pontuacao da pagina: 0.042360, 
-pagina: 269, pontuacao da pagina: 0.035609, 
 pagina: 67, pontuacao da pagina: 0.035609, 
+pagina: 269, pontuacao da pagina: 0.035609, 
 pagina: 72, pontuacao da pagina: 0.025136, 
 pagina: 55, pontuacao da pagina: 0.020813, 
 
@@ -14451,8 +14451,8 @@ extrair--
 pagina: 280, pontuacao da pagina: 0.014459, 
 pagina: 15, pontuacao da pagina: 0.014027, 
 pagina: 137, pontuacao da pagina: 0.013676, 
-pagina: 172, pontuacao da pagina: 0.013397, 
 pagina: 149, pontuacao da pagina: 0.013397, 
+pagina: 172, pontuacao da pagina: 0.013397, 
 
 extrairmos-- 
 pagina: 226, pontuacao da pagina: 0.032645, 
@@ -14802,8 +14802,8 @@ favorecidas--
 pagina: 23, pontuacao da pagina: 0.029279, 
 
 favorecido-- 
-pagina: 90, pontuacao da pagina: 0.018678, 
 pagina: 86, pontuacao da pagina: 0.018678, 
+pagina: 90, pontuacao da pagina: 0.018678, 
 
 favored-- 
 pagina: 286, pontuacao da pagina: 0.022188, 
@@ -14829,7 +14829,7 @@ pagina: 205, pontuacao da pagina: 0.054421,
 pagina: 55, pontuacao da pagina: 0.015904, 
 pagina: 93, pontuacao da pagina: 0.015343, 
 pagina: 241, pontuacao da pagina: 0.014634, 
-pagina: 282, pontuacao da pagina: 0.014216, 
+pagina: 272, pontuacao da pagina: 0.014216, 
 
 fazia-- 
 pagina: 31, pontuacao da pagina: 0.029896, 
@@ -14912,7 +14912,7 @@ pagina: 86, pontuacao da pagina: 0.040334,
 pagina: 85, pontuacao da pagina: 0.035308, 
 pagina: 155, pontuacao da pagina: 0.026160, 
 pagina: 84, pontuacao da pagina: 0.020319, 
-pagina: 239, pontuacao da pagina: 0.017582, 
+pagina: 172, pontuacao da pagina: 0.017582, 
 
 ferramentas-- 
 pagina: 75, pontuacao da pagina: 0.064061, 
@@ -15490,8 +15490,8 @@ pagina: 269, pontuacao da pagina: 0.026387,
 
 formacao-- 
 pagina: 255, pontuacao da pagina: 0.037033, 
-pagina: 184, pontuacao da pagina: 0.019738, 
 pagina: 145, pontuacao da pagina: 0.019738, 
+pagina: 184, pontuacao da pagina: 0.019738, 
 pagina: 152, pontuacao da pagina: 0.016546, 
 pagina: 248, pontuacao da pagina: 0.014955, 
 
@@ -15506,14 +15506,14 @@ formadas--
 pagina: 148, pontuacao da pagina: 0.013902, 
 pagina: 114, pontuacao da pagina: 0.013849, 
 pagina: 231, pontuacao da pagina: 0.013537, 
-pagina: 259, pontuacao da pagina: 0.013436, 
 pagina: 144, pontuacao da pagina: 0.013436, 
+pagina: 259, pontuacao da pagina: 0.013436, 
 
 formado-- 
 pagina: 94, pontuacao da pagina: 0.019127, 
 pagina: 138, pontuacao da pagina: 0.015516, 
-pagina: 145, pontuacao da pagina: 0.015437, 
 pagina: 106, pontuacao da pagina: 0.015437, 
+pagina: 145, pontuacao da pagina: 0.015437, 
 pagina: 141, pontuacao da pagina: 0.014835, 
 
 formados-- 
@@ -15688,8 +15688,8 @@ pagina: 67, pontuacao da pagina: 0.024963,
 fosse-- 
 pagina: 51, pontuacao da pagina: 0.018186, 
 pagina: 130, pontuacao da pagina: 0.015862, 
-pagina: 74, pontuacao da pagina: 0.014403, 
 pagina: 73, pontuacao da pagina: 0.014403, 
+pagina: 74, pontuacao da pagina: 0.014403, 
 pagina: 96, pontuacao da pagina: 0.014346, 
 
 fossem-- 
@@ -15983,8 +15983,8 @@ pagina: 255, pontuacao da pagina: 0.027048,
 fundada-- 
 pagina: 18, pontuacao da pagina: 0.016905, 
 pagina: 16, pontuacao da pagina: 0.016839, 
-pagina: 64, pontuacao da pagina: 0.016515, 
 pagina: 29, pontuacao da pagina: 0.016515, 
+pagina: 64, pontuacao da pagina: 0.016515, 
 
 fundadas-- 
 pagina: 276, pontuacao da pagina: 0.021274, 
@@ -17205,8 +17205,8 @@ pagina: 162, pontuacao da pagina: 0.021435,
 hough-- 
 pagina: 202, pontuacao da pagina: 0.106398, 
 pagina: 215, pontuacao da pagina: 0.098517, 
-pagina: 212, pontuacao da pagina: 0.067050, 
 pagina: 201, pontuacao da pagina: 0.067050, 
+pagina: 212, pontuacao da pagina: 0.067050, 
 pagina: 216, pontuacao da pagina: 0.062394, 
 
 house-- 
@@ -17370,8 +17370,8 @@ ibm-pc--
 pagina: 133, pontuacao da pagina: 0.033504, 
 pagina: 159, pontuacao da pagina: 0.031556, 
 pagina: 151, pontuacao da pagina: 0.019022, 
-pagina: 160, pontuacao da pagina: 0.015419, 
 pagina: 134, pontuacao da pagina: 0.015419, 
+pagina: 160, pontuacao da pagina: 0.015419, 
 
 ibm/pc-- 
 pagina: 151, pontuacao da pagina: 0.026543, 
@@ -17519,8 +17519,8 @@ igual--
 pagina: 167, pontuacao da pagina: 0.052904, 
 pagina: 178, pontuacao da pagina: 0.051163, 
 pagina: 180, pontuacao da pagina: 0.016338, 
-pagina: 272, pontuacao da pagina: 0.015871, 
 pagina: 149, pontuacao da pagina: 0.015871, 
+pagina: 272, pontuacao da pagina: 0.015871, 
 
 igualar-- 
 pagina: 90, pontuacao da pagina: 0.021274, 
@@ -18175,8 +18175,8 @@ pagina: 116, pontuacao da pagina: 0.017782,
 
 indicando-- 
 pagina: 113, pontuacao da pagina: 0.046259, 
-pagina: 187, pontuacao da pagina: 0.026071, 
 pagina: 115, pontuacao da pagina: 0.026071, 
+pagina: 187, pontuacao da pagina: 0.026071, 
 pagina: 117, pontuacao da pagina: 0.015894, 
 pagina: 266, pontuacao da pagina: 0.014221, 
 
@@ -18466,8 +18466,8 @@ pagina: 78, pontuacao da pagina: 0.015798,
 
 iniciar-- 
 pagina: 67, pontuacao da pagina: 0.027211, 
-pagina: 173, pontuacao da pagina: 0.024020, 
 pagina: 171, pontuacao da pagina: 0.024020, 
+pagina: 173, pontuacao da pagina: 0.024020, 
 pagina: 266, pontuacao da pagina: 0.016665, 
 pagina: 180, pontuacao da pagina: 0.014634, 
 
@@ -18738,8 +18738,8 @@ pagina: 66, pontuacao da pagina: 0.017032,
 integrado-- 
 pagina: 23, pontuacao da pagina: 0.044267, 
 pagina: 127, pontuacao da pagina: 0.017455, 
-pagina: 122, pontuacao da pagina: 0.015903, 
 pagina: 25, pontuacao da pagina: 0.015903, 
+pagina: 122, pontuacao da pagina: 0.015903, 
 
 integrador-- 
 pagina: 97, pontuacao da pagina: 0.020359, 
@@ -19239,7 +19239,7 @@ pagina: 41, pontuacao da pagina: 0.024963,
 pagina: 63, pontuacao da pagina: 0.023845, 
 pagina: 125, pontuacao da pagina: 0.017087, 
 pagina: 176, pontuacao da pagina: 0.015362, 
-pagina: 267, pontuacao da pagina: 0.013714, 
+pagina: 179, pontuacao da pagina: 0.013714, 
 
 inumeros-- 
 pagina: 155, pontuacao da pagina: 0.030237, 
@@ -20153,8 +20153,8 @@ pagina: 73, pontuacao da pagina: 0.018326,
 pagina: 156, pontuacao da pagina: 0.017224, 
 
 licoes-- 
-pagina: 126, pontuacao da pagina: 0.019634, 
 pagina: 18, pontuacao da pagina: 0.019634, 
+pagina: 126, pontuacao da pagina: 0.019634, 
 
 lidarem-- 
 pagina: 120, pontuacao da pagina: 0.024069, 
@@ -20947,7 +20947,7 @@ pagina: 75, pontuacao da pagina: 0.050718,
 pagina: 74, pontuacao da pagina: 0.031107, 
 pagina: 246, pontuacao da pagina: 0.017437, 
 pagina: 105, pontuacao da pagina: 0.014955, 
-pagina: 276, pontuacao da pagina: 0.014563, 
+pagina: 86, pontuacao da pagina: 0.014563, 
 
 mapa-- 
 pagina: 142, pontuacao da pagina: 0.079118, 
@@ -21132,8 +21132,8 @@ pagina: 183, pontuacao da pagina: 0.016748,
 
 mascaras-- 
 pagina: 184, pontuacao da pagina: 0.041327, 
-pagina: 180, pontuacao da pagina: 0.017104, 
 pagina: 174, pontuacao da pagina: 0.017104, 
+pagina: 180, pontuacao da pagina: 0.017104, 
 pagina: 175, pontuacao da pagina: 0.016154, 
 pagina: 156, pontuacao da pagina: 0.015304, 
 
@@ -21235,8 +21235,8 @@ matizes--
 pagina: 185, pontuacao da pagina: 0.042075, 
 
 matlab-- 
-pagina: 287, pontuacao da pagina: 0.016752, 
 pagina: 133, pontuacao da pagina: 0.016752, 
+pagina: 287, pontuacao da pagina: 0.016752, 
 pagina: 149, pontuacao da pagina: 0.016615, 
 pagina: 150, pontuacao da pagina: 0.016154, 
 pagina: 286, pontuacao da pagina: 0.015901, 
@@ -21679,8 +21679,8 @@ mesmas--
 pagina: 158, pontuacao da pagina: 0.024003, 
 pagina: 51, pontuacao da pagina: 0.019638, 
 pagina: 255, pontuacao da pagina: 0.018516, 
-pagina: 147, pontuacao da pagina: 0.015554, 
 pagina: 74, pontuacao da pagina: 0.015554, 
+pagina: 147, pontuacao da pagina: 0.015554, 
 
 mesmo-- 
 pagina: 126, pontuacao da pagina: 0.019863, 
@@ -21734,8 +21734,8 @@ pagina: 137, pontuacao da pagina: 0.023667,
 
 meta-- 
 pagina: 139, pontuacao da pagina: 0.032379, 
-pagina: 229, pontuacao da pagina: 0.017621, 
 pagina: 29, pontuacao da pagina: 0.017621, 
+pagina: 229, pontuacao da pagina: 0.017621, 
 
 metade-- 
 pagina: 110, pontuacao da pagina: 0.036742, 
@@ -21756,8 +21756,8 @@ pagina: 285, pontuacao da pagina: 0.017487,
 metodo-- 
 pagina: 166, pontuacao da pagina: 0.112265, 
 pagina: 173, pontuacao da pagina: 0.035099, 
-pagina: 235, pontuacao da pagina: 0.031159, 
 pagina: 172, pontuacao da pagina: 0.031159, 
+pagina: 235, pontuacao da pagina: 0.031159, 
 pagina: 77, pontuacao da pagina: 0.030414, 
 
 metodologia-- 
@@ -22356,8 +22356,8 @@ pagina: 226, pontuacao da pagina: 0.017081,
 pagina: 203, pontuacao da pagina: 0.016153, 
 
 mostrada-- 
-pagina: 230, pontuacao da pagina: 0.023304, 
 pagina: 224, pontuacao da pagina: 0.023304, 
+pagina: 230, pontuacao da pagina: 0.023304, 
 
 mostradas-- 
 pagina: 208, pontuacao da pagina: 0.032725, 
@@ -22368,8 +22368,8 @@ mostrado--
 pagina: 267, pontuacao da pagina: 0.016688, 
 pagina: 283, pontuacao da pagina: 0.016407, 
 pagina: 180, pontuacao da pagina: 0.016338, 
-pagina: 272, pontuacao da pagina: 0.015871, 
 pagina: 172, pontuacao da pagina: 0.015871, 
+pagina: 272, pontuacao da pagina: 0.015871, 
 
 mostrados-- 
 pagina: 171, pontuacao da pagina: 0.034393, 
@@ -22702,7 +22702,7 @@ pagina: 159, pontuacao da pagina: 0.086843,
 pagina: 158, pontuacao da pagina: 0.023051, 
 pagina: 151, pontuacao da pagina: 0.017450, 
 pagina: 281, pontuacao da pagina: 0.016096, 
-pagina: 74, pontuacao da pagina: 0.014937, 
+pagina: 73, pontuacao da pagina: 0.014937, 
 
 multiprocessadores-- 
 pagina: 281, pontuacao da pagina: 0.033521, 
@@ -22837,8 +22837,8 @@ nao-especializados--
 pagina: 123, pontuacao da pagina: 0.026176, 
 
 narrar-- 
-pagina: 243, pontuacao da pagina: 0.018470, 
 pagina: 25, pontuacao da pagina: 0.018470, 
+pagina: 243, pontuacao da pagina: 0.018470, 
 
 nas-- 
 pagina: 257, pontuacao da pagina: 0.018235, 
@@ -23167,8 +23167,8 @@ pagina: 78, pontuacao da pagina: 0.019587,
 neste-- 
 pagina: 271, pontuacao da pagina: 0.019405, 
 pagina: 90, pontuacao da pagina: 0.015916, 
-pagina: 177, pontuacao da pagina: 0.013364, 
 pagina: 94, pontuacao da pagina: 0.013364, 
+pagina: 177, pontuacao da pagina: 0.013364, 
 pagina: 70, pontuacao da pagina: 0.012426, 
 
 nestes-- 
@@ -23882,8 +23882,8 @@ pagina: 41, pontuacao da pagina: 0.022188,
 
 obvio-- 
 pagina: 89, pontuacao da pagina: 0.029181, 
-pagina: 90, pontuacao da pagina: 0.015246, 
 pagina: 86, pontuacao da pagina: 0.015246, 
+pagina: 90, pontuacao da pagina: 0.015246, 
 pagina: 259, pontuacao da pagina: 0.015189, 
 pagina: 122, pontuacao da pagina: 0.015077, 
 
@@ -25229,8 +25229,8 @@ passam--
 pagina: 231, pontuacao da pagina: 0.021354, 
 
 passando-- 
-pagina: 147, pontuacao da pagina: 0.019948, 
 pagina: 74, pontuacao da pagina: 0.019948, 
+pagina: 147, pontuacao da pagina: 0.019948, 
 
 passar-- 
 pagina: 234, pontuacao da pagina: 0.022133, 
@@ -25641,8 +25641,8 @@ permanece--
 pagina: 187, pontuacao da pagina: 0.034109, 
 pagina: 117, pontuacao da pagina: 0.020794, 
 pagina: 175, pontuacao da pagina: 0.015430, 
-pagina: 237, pontuacao da pagina: 0.015189, 
 pagina: 80, pontuacao da pagina: 0.015189, 
+pagina: 237, pontuacao da pagina: 0.015189, 
 
 permanecem-- 
 pagina: 33, pontuacao da pagina: 0.074739, 
@@ -25706,8 +25706,8 @@ permitir--
 pagina: 230, pontuacao da pagina: 0.036340, 
 pagina: 282, pontuacao da pagina: 0.031742, 
 pagina: 238, pontuacao da pagina: 0.022739, 
-pagina: 241, pontuacao da pagina: 0.016338, 
 pagina: 174, pontuacao da pagina: 0.016338, 
+pagina: 241, pontuacao da pagina: 0.016338, 
 
 permitir-se-a-- 
 pagina: 176, pontuacao da pagina: 0.027309, 
@@ -26199,8 +26199,8 @@ poderia--
 pagina: 261, pontuacao da pagina: 0.031485, 
 pagina: 89, pontuacao da pagina: 0.027874, 
 pagina: 167, pontuacao da pagina: 0.026452, 
-pagina: 82, pontuacao da pagina: 0.015013, 
 pagina: 28, pontuacao da pagina: 0.015013, 
+pagina: 82, pontuacao da pagina: 0.015013, 
 
 poderiam-- 
 pagina: 27, pontuacao da pagina: 0.018864, 
@@ -26226,7 +26226,7 @@ pagina: 68, pontuacao da pagina: 0.028177,
 pagina: 15, pontuacao da pagina: 0.016617, 
 pagina: 239, pontuacao da pagina: 0.015871, 
 pagina: 82, pontuacao da pagina: 0.015013, 
-pagina: 88, pontuacao da pagina: 0.014402, 
+pagina: 25, pontuacao da pagina: 0.014402, 
 
 poderosos-- 
 pagina: 22, pontuacao da pagina: 0.034841, 
@@ -26280,8 +26280,8 @@ pagina: 233, pontuacao da pagina: 0.058258,
 poliedricos-- 
 pagina: 234, pontuacao da pagina: 0.022133, 
 pagina: 229, pontuacao da pagina: 0.016515, 
-pagina: 278, pontuacao da pagina: 0.016142, 
 pagina: 231, pontuacao da pagina: 0.016142, 
+pagina: 278, pontuacao da pagina: 0.016142, 
 
 poliedros-- 
 pagina: 234, pontuacao da pagina: 0.029279, 
@@ -26348,7 +26348,7 @@ pagina: 273, pontuacao da pagina: 0.029274,
 pagina: 227, pontuacao da pagina: 0.014818, 
 pagina: 155, pontuacao da pagina: 0.014578, 
 pagina: 154, pontuacao da pagina: 0.014176, 
-pagina: 259, pontuacao da pagina: 0.013436, 
+pagina: 144, pontuacao da pagina: 0.013436, 
 
 populares-- 
 pagina: 133, pontuacao da pagina: 0.033504, 
@@ -26611,8 +26611,8 @@ pagina: 238, pontuacao da pagina: 0.014881,
 possibilitar-- 
 pagina: 240, pontuacao da pagina: 0.024455, 
 pagina: 73, pontuacao da pagina: 0.015554, 
-pagina: 232, pontuacao da pagina: 0.014955, 
 pagina: 114, pontuacao da pagina: 0.014955, 
+pagina: 232, pontuacao da pagina: 0.014955, 
 pagina: 134, pontuacao da pagina: 0.014729, 
 
 possibilitaram-- 
@@ -26719,8 +26719,8 @@ pagina: 35, pontuacao da pagina: 0.036652,
 pagina: 28, pontuacao da pagina: 0.017689, 
 
 possuissem-- 
-pagina: 122, pontuacao da pagina: 0.018470, 
 pagina: 88, pontuacao da pagina: 0.018470, 
+pagina: 122, pontuacao da pagina: 0.018470, 
 
 possuiu-- 
 pagina: 282, pontuacao da pagina: 0.023184, 
@@ -27711,7 +27711,7 @@ pagina: 236, pontuacao da pagina: 0.058577,
 pagina: 242, pontuacao da pagina: 0.031119, 
 pagina: 203, pontuacao da pagina: 0.020295, 
 pagina: 117, pontuacao da pagina: 0.019969, 
-pagina: 232, pontuacao da pagina: 0.014363, 
+pagina: 229, pontuacao da pagina: 0.014363, 
 
 profundo-- 
 pagina: 248, pontuacao da pagina: 0.017621, 
@@ -28646,8 +28646,8 @@ pagina: 156, pontuacao da pagina: 0.014039,
 
 rapidas-- 
 pagina: 125, pontuacao da pagina: 0.024500, 
-pagina: 184, pontuacao da pagina: 0.023257, 
 pagina: 106, pontuacao da pagina: 0.023257, 
+pagina: 184, pontuacao da pagina: 0.023257, 
 
 rapidez-- 
 pagina: 249, pontuacao da pagina: 0.044032, 
@@ -28677,8 +28677,8 @@ rastreado--
 pagina: 130, pontuacao da pagina: 0.025023, 
 
 rastreamento-- 
-pagina: 215, pontuacao da pagina: 0.094756, 
 pagina: 213, pontuacao da pagina: 0.094756, 
+pagina: 215, pontuacao da pagina: 0.094756, 
 pagina: 214, pontuacao da pagina: 0.066680, 
 pagina: 6, pontuacao da pagina: 0.024833, 
 pagina: 12, pontuacao da pagina: 0.022296, 
@@ -29873,7 +29873,7 @@ pagina: 181, pontuacao da pagina: 0.097210,
 pagina: 202, pontuacao da pagina: 0.040931, 
 pagina: 55, pontuacao da pagina: 0.017755, 
 pagina: 136, pontuacao da pagina: 0.016833, 
-pagina: 239, pontuacao da pagina: 0.015871, 
+pagina: 235, pontuacao da pagina: 0.015871, 
 
 respectivos-- 
 pagina: 222, pontuacao da pagina: 0.030157, 
@@ -30304,7 +30304,7 @@ pagina: 26, pontuacao da pagina: 0.111471,
 pagina: 7, pontuacao da pagina: 0.024092, 
 pagina: 50, pontuacao da pagina: 0.023339, 
 pagina: 287, pontuacao da pagina: 0.015367, 
-pagina: 292, pontuacao da pagina: 0.015180, 
+pagina: 24, pontuacao da pagina: 0.015180, 
 
 risco-- 
 pagina: 247, pontuacao da pagina: 0.021435, 
@@ -30541,7 +30541,7 @@ pagina: 238, pontuacao da pagina: 0.022739,
 pagina: 1, pontuacao da pagina: 0.019738, 
 pagina: 230, pontuacao da pagina: 0.018170, 
 pagina: 280, pontuacao da pagina: 0.017130, 
-pagina: 278, pontuacao da pagina: 0.014618, 
+pagina: 156, pontuacao da pagina: 0.014618, 
 
 salvo-- 
 pagina: 22, pontuacao da pagina: 0.021598, 
@@ -31149,7 +31149,7 @@ pagina: 118, pontuacao da pagina: 0.020368,
 pagina: 120, pontuacao da pagina: 0.014758, 
 pagina: 108, pontuacao da pagina: 0.014158, 
 pagina: 99, pontuacao da pagina: 0.013712, 
-pagina: 114, pontuacao da pagina: 0.013396, 
+pagina: 29, pontuacao da pagina: 0.013396, 
 
 separado-- 
 pagina: 47, pontuacao da pagina: 0.031597, 
@@ -32549,8 +32549,8 @@ substituisse--
 pagina: 78, pontuacao da pagina: 0.019587, 
 
 sucessivamente-- 
-pagina: 242, pontuacao da pagina: 0.016961, 
 pagina: 56, pontuacao da pagina: 0.016961, 
+pagina: 242, pontuacao da pagina: 0.016961, 
 pagina: 131, pontuacao da pagina: 0.015537, 
 pagina: 128, pontuacao da pagina: 0.014538, 
 pagina: 139, pontuacao da pagina: 0.014384, 
@@ -32909,8 +32909,8 @@ system--
 pagina: 290, pontuacao da pagina: 0.027572, 
 pagina: 285, pontuacao da pagina: 0.025783, 
 pagina: 2, pontuacao da pagina: 0.023786, 
-pagina: 57, pontuacao da pagina: 0.017059, 
 pagina: 51, pontuacao da pagina: 0.017059, 
+pagina: 57, pontuacao da pagina: 0.017059, 
 
 systematic-- 
 pagina: 292, pontuacao da pagina: 0.023090, 
@@ -32988,8 +32988,8 @@ pagina: 87, pontuacao da pagina: 0.026110,
 
 tamanho-- 
 pagina: 211, pontuacao da pagina: 0.061456, 
-pagina: 213, pontuacao da pagina: 0.051753, 
 pagina: 209, pontuacao da pagina: 0.051753, 
+pagina: 213, pontuacao da pagina: 0.051753, 
 pagina: 181, pontuacao da pagina: 0.049165, 
 pagina: 226, pontuacao da pagina: 0.045209, 
 
@@ -33224,8 +33224,8 @@ temas--
 pagina: 247, pontuacao da pagina: 0.021435, 
 
 tematica-- 
-pagina: 229, pontuacao da pagina: 0.019181, 
 pagina: 64, pontuacao da pagina: 0.019181, 
+pagina: 229, pontuacao da pagina: 0.019181, 
 
 temos-- 
 pagina: 137, pontuacao da pagina: 0.019090, 
@@ -33272,8 +33272,8 @@ pagina: 64, pontuacao da pagina: 0.021847,
 tendencia-- 
 pagina: 84, pontuacao da pagina: 0.032858, 
 pagina: 85, pontuacao da pagina: 0.028549, 
-pagina: 63, pontuacao da pagina: 0.025992, 
 pagina: 26, pontuacao da pagina: 0.025992, 
+pagina: 63, pontuacao da pagina: 0.025992, 
 pagina: 123, pontuacao da pagina: 0.016050, 
 
 tendencias-- 
@@ -34169,8 +34169,8 @@ pagina: 56, pontuacao da pagina: 0.014512,
 tradicionalmente-- 
 pagina: 125, pontuacao da pagina: 0.022962, 
 pagina: 24, pontuacao da pagina: 0.017455, 
-pagina: 135, pontuacao da pagina: 0.017244, 
 pagina: 129, pontuacao da pagina: 0.017244, 
+pagina: 135, pontuacao da pagina: 0.017244, 
 
 traducao-- 
 pagina: 53, pontuacao da pagina: 0.056995, 
@@ -34640,8 +34640,8 @@ pagina: 249, pontuacao da pagina: 0.044032,
 
 trouxe-- 
 pagina: 155, pontuacao da pagina: 0.018549, 
-pagina: 64, pontuacao da pagina: 0.017621, 
 pagina: 29, pontuacao da pagina: 0.017621, 
+pagina: 64, pontuacao da pagina: 0.017621, 
 
 trouxeram-- 
 pagina: 26, pontuacao da pagina: 0.037217, 
@@ -35061,7 +35061,7 @@ pagina: 263, pontuacao da pagina: 0.024230,
 pagina: 264, pontuacao da pagina: 0.023543, 
 pagina: 158, pontuacao da pagina: 0.017948, 
 pagina: 70, pontuacao da pagina: 0.017003, 
-pagina: 125, pontuacao da pagina: 0.015549, 
+pagina: 40, pontuacao da pagina: 0.015549, 
 
 utiliza-la-- 
 pagina: 169, pontuacao da pagina: 0.030214, 
@@ -35457,8 +35457,8 @@ pagina: 273, pontuacao da pagina: 0.046180,
 
 velocidade-- 
 pagina: 96, pontuacao da pagina: 0.034752, 
-pagina: 200, pontuacao da pagina: 0.032669, 
 pagina: 90, pontuacao da pagina: 0.032669, 
+pagina: 200, pontuacao da pagina: 0.032669, 
 pagina: 106, pontuacao da pagina: 0.029519, 
 pagina: 82, pontuacao da pagina: 0.022452, 
 
@@ -35542,8 +35542,8 @@ verdadeiros--
 pagina: 78, pontuacao da pagina: 0.019587, 
 
 verde-- 
-pagina: 186, pontuacao da pagina: 0.065059, 
 pagina: 101, pontuacao da pagina: 0.065059, 
+pagina: 186, pontuacao da pagina: 0.065059, 
 pagina: 185, pontuacao da pagina: 0.031807, 
 pagina: 184, pontuacao da pagina: 0.021796, 
 
@@ -35559,8 +35559,8 @@ vergence--
 pagina: 292, pontuacao da pagina: 0.023090, 
 
 verifica-se-- 
-pagina: 114, pontuacao da pagina: 0.019181, 
 pagina: 105, pontuacao da pagina: 0.019181, 
+pagina: 114, pontuacao da pagina: 0.019181, 
 
 verificacao-- 
 pagina: 70, pontuacao da pagina: 0.023805, 
@@ -35600,8 +35600,8 @@ pagina: 288, pontuacao da pagina: 0.023861,
 pagina: 289, pontuacao da pagina: 0.020109, 
 
 vermelho-- 
-pagina: 186, pontuacao da pagina: 0.065059, 
 pagina: 101, pontuacao da pagina: 0.065059, 
+pagina: 186, pontuacao da pagina: 0.065059, 
 pagina: 185, pontuacao da pagina: 0.047710, 
 pagina: 184, pontuacao da pagina: 0.021796, 
 

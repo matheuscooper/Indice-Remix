@@ -15,10 +15,11 @@ int main(int argc, char** argv){
     tipoIndiceRemissivo* index3 = writeInFiles("stopwords/stopwords_br.txt", "bases-dicionario/Aventuras.base");
     // Para buscar uma palavra:
     char* palavra = malloc(sizeof(char)*46);
+    printf("Entre com uma palavra:\n");
     while(scanf("%s", palavra)==1){
         searchElement(index, palavra);
         searchElement(index2, palavra);
         searchElement(index3, palavra);
     }
-
+    printf("Busca finalizada");
 }
