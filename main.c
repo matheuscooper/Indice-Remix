@@ -19,7 +19,7 @@ int main(int argc, char * argv[]){
     printf(" comparations:%d  \n", returnIndexComparation(indiceRemissivo));
     printf(" searchs :%d  \n", returnIndexBusca(indiceRemissivo));
     
-    mostraIndeceRemissivo(indiceRemissivo);
+    //mostraIndeceRemissivo(indiceRemissivo);
 
     int comparations = returnIndexComparation(indiceRemissivo);
     int searchs = returnIndexBusca(indiceRemissivo);
@@ -30,7 +30,7 @@ int main(int argc, char * argv[]){
 
 
     double media = comparations/(double) searchs;
-    printf(" a media %lf ", media);
+    printf(" a media = comparation/searchs %lf \n", media);
 
 
     int k = passouFatorCargaIndex(indiceRemissivo); 
@@ -54,5 +54,10 @@ int main(int argc, char * argv[]){
 
     int g = ContReHashDicLivro(indiceRemissivo);
     printf("number of hashing: %d \n", g); 
+
+    char* palavraBuscada;
+    scanf("entre com uma palavra: %s", palavraBuscada);
+    searchElement(indiceRemissivo,palavraBuscada);
+    
 
 }
