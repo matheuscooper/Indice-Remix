@@ -222,7 +222,7 @@ void* TF_IDF(tipoIndiceRemissivo* index, char* key){
     
 }
 
-void mostraIndeceRemissivo(tipoIndiceRemissivo* index){
+void mostraIndiceRemissivo(tipoIndiceRemissivo* index){
 
     ListaE * lista = index->listWithWords;
 
@@ -234,6 +234,45 @@ void mostraIndeceRemissivo(tipoIndiceRemissivo* index){
         retorno = removeInicioListaEncadeada(lista);    
     }
     
+}
+
+void* searchElementARQUIVO(tipoIndiceRemissivo * index, char * key, FILE* nomeArquivo){
+    removeSpecialCharacters(key);
+    LimpaString(key);
+    LowerString(key);
+    
+    InfoDic * retorno = buscarDicDinamico(index->Dicionario_do_livro, key);
+   
+    int i;
+   
+    if(retorno == NULL) return NULL;
+
+    calculePontuation(retorno, index->registraDocs,index->ocupacaoRegistraDocs,retorno->paginasTotal);
+    
+    qsort(retorno->vetDeOcorrencias,retorno->paginasTotal,sizeof(pagOcorre),&cmpQsor);
+    fprintf(nomeArquivo, "%s-- \n", key);
+    for( i=0; (i<retorno->paginasTotal)&&(i<5); i++){
+        //printf("{ %d, %d,p: %lf  }\n", retorno->vetDeOcorrencias[i].ocorrencias, retorno->vetDeOcorrencias[i].pagina, retorno->vetDeOcorrencias[i].pontuation);
+        fprintf(nomeArquivo, "pagina: %d, ", retorno->vetDeOcorrencias[i].pagina+1);
+        fprintf(nomeArquivo, "pontuacao da pagina: %lf, \n", retorno->vetDeOcorrencias[i].pontuation);
+    }
+    fprintf(nomeArquivo, "\n");
+    //printf(" ocorrenciaaaaas totallllll %d", retorno->ocorrenciasTotal);
+    
+}
+
+
+
+void mostraIndiceRemissivoARQUIVO(tipoIndiceRemissivo* index, FILE* nomearquivo){
+    ListaE * lista = index->listWithWords;
+
+    char* retorno = removeInicioListaEncadeada(lista);
+
+    while (retorno){
+        // printf("%s\n",retorno);
+        searchElementARQUIVO(index,retorno, nomearquivo);
+        retorno = removeInicioListaEncadeada(lista);    
+    }
 }
 
 int returnIndexComparation(tipoIndiceRemissivo* index){

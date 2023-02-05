@@ -227,8 +227,8 @@ int retornaPosiOcupadas(TDicDinamic*x){                                   /// Pe
     int i;
     int somatoria=0;
     for(i=0; i<x->tam; i++){
-        if(retornaTamLE(x->listas[i]) >=1 ){
-            somatoria += retornaTamLE(x->listas[i]);
+        if(retornaTamLE(x->listas[i]) != 0 ){
+            somatoria += 1;
         }
     }
     return somatoria;

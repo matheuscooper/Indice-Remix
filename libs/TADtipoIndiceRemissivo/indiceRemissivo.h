@@ -11,7 +11,9 @@ int mostrarIndice(tipoIndiceRemissivo* nomeIndice);
 typedef struct InfoDic InfoDic;
 InfoDic* criarInfoDic();
 void* searchElement(tipoIndiceRemissivo * index, char * key);
-void mostraIndeceRemissivo(tipoIndiceRemissivo* index);
+void mostraIndiceRemissivo(tipoIndiceRemissivo* index);
+void* searchElementARQUIVO(tipoIndiceRemissivo * index, char * key, FILE* nomeArquivo);
+void mostraIndiceRemissivoARQUIVO(tipoIndiceRemissivo* index, FILE* nomearquivo);
 
 //retorna dados
 int returnIndexComparation(tipoIndiceRemissivo* index);

@@ -8,9 +8,8 @@
 char * getName(char * fileName){
 
     char * newName = malloc(sizeof(char)*50);
-
-    int indexNewName = 0;
-
+    strcpy(newName,"showingResults/");
+    int indexNewName = 15;
     int lenFileName = strlen(fileName);
 
     int i_start = 0;
@@ -20,8 +19,8 @@ char * getName(char * fileName){
     while ((j_end > i_start) && fileName[i_start] != 47) i_start++;
     
     i_start++;
-
-    for(int i=i_start; i < j_end; i++){
+    int i;
+    for(i=i_start; i < j_end; i++){
         newName[indexNewName] = fileName[i];
         indexNewName++;
     }
@@ -53,52 +52,48 @@ int main(int argc, char * argv[]){
 
     FILE * fp = fopen(name,"w");
 
-    fprintf(fp," comparations:%d  \n", returnIndexComparation(indiceRemissivo));
-    fprintf(fp," searchs :%d  \n", returnIndexBusca(indiceRemissivo));
-    
-    mostraIndeceRemissivo(indiceRemissivo);
+    mostraIndiceRemissivoARQUIVO(indiceRemissivo, fp);
 
     int comparations = returnIndexComparation(indiceRemissivo);
     int searchs = returnIndexBusca(indiceRemissivo);
 
-
-    fprintf(fp," comparations:%d  \n", returnIndexComparation(indiceRemissivo));
-    fprintf(fp," searchs :%d  \n", returnIndexBusca(indiceRemissivo));
+    fprintf(fp, "showing results: \n \n");
+    fprintf(fp,"comparations:%d  \n \n", returnIndexComparation(indiceRemissivo));
+    fprintf(fp,"searchs :%d  \n \n ", returnIndexBusca(indiceRemissivo));
 
 
     double media = comparations/(double) searchs;
-    printf(" a media = comparation/searchs %lf \n", media);
+    fprintf(fp,"a media = comparation/searchs %lf \n \n", media);
 
 
     int k = passouFatorCargaIndex(indiceRemissivo); 
 
-    printf("number of carga ultrapassadass: %d\n", k); 
+    fprintf(fp,"number of carga ultrapassadass: %d\n \n", k); 
 
     int b =passouTamMaior(indiceRemissivo);
-    printf("number of size list: %d \n", b);
+    fprintf(fp, "number of size list: %d \n", b);
 
     int c = tamVetDiclivro(indiceRemissivo);
-    printf("number of size vet: %d \n", c); 
+    fprintf(fp,"number of size vet: %d \n", c); 
 
     int d = quantiChavesDicLivro(indiceRemissivo);
-    printf("number of quantity key : %d \n", d); 
+    fprintf(fp,"number of quantity key : %d \n", d); 
 
     int e = posiOcupadasDicLivro(indiceRemissivo);
-    printf("number of positions: %d \n", e);
+    fprintf(fp,"number of positions: %d \n", e);
 
     double f = mediasPorListaDicLivro(indiceRemissivo);
-    printf("number of medias of list: %lf \n", f);
+    fprintf(fp,"number of medias of list: %lf \n", f);
 
     int g = ContReHashDicLivro(indiceRemissivo);
-    printf("number of hashing: %d \n", g); 
+    fprintf(fp,"number of ReHashing: %d \n", g); 
 
-    char* palavraBuscada = malloc(sizeof(char)*46);
+    //char* palavraBuscada = malloc(sizeof(char)*46);
 
-    while (scanf("%s", palavraBuscada) == 1)
+    /*while (scanf("%s", palavraBuscada) == 1)
     {
-        /* code */
         searchElement(indiceRemissivo,palavraBuscada);
-    }
+    } */
     
     fclose(fp);
     
