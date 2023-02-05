@@ -177,9 +177,9 @@ const int cmpQsor(const void * a,const void *b){
 
     const pagOcorre * aa = a;
     const pagOcorre * bb = b;
-
-    if((aa->pontuation) > (bb->pontuation)) return 1;
-    else if((aa->pontuation) < (bb->pontuation)) return -1;
+    // mudamos o sinal de comparacao para que fique em ordem decrescente
+    if((aa->pontuation) < (bb->pontuation)) return 1;
+    else if((aa->pontuation) > (bb->pontuation)) return -1;
     else return 0;
 }
 
@@ -195,10 +195,11 @@ void* searchElement(tipoIndiceRemissivo * index, char * key){
     
     qsort(retorno->vetDeOcorrencias,retorno->paginasTotal,sizeof(pagOcorre),&cmpQsor);
 
-    printf("%s-", key);
+    printf("%s-- \n", key);
     for( i=0; (i<retorno->paginasTotal)&&(i<5); i++){
         //printf("{ %d, %d,p: %lf  }\n", retorno->vetDeOcorrencias[i].ocorrencias, retorno->vetDeOcorrencias[i].pagina, retorno->vetDeOcorrencias[i].pontuation);
-        printf("%d, ", retorno->vetDeOcorrencias[i].pagina+1);
+        printf("pagina: %d, ", retorno->vetDeOcorrencias[i].pagina+1);
+        printf("pontuacao da pagina: %lf, \n", retorno->vetDeOcorrencias[i].pontuation);
     }
     printf("\n");
     //printf(" ocorrenciaaaaas totallllll %d", retorno->ocorrenciasTotal);
