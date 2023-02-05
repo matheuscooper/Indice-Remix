@@ -19,7 +19,7 @@ limpar strings;
 colocar as palavras no dicionario dinamico 
 as ocorrencias e páginas devem ser colocadas no tipo informação 
 # Conclusão
-B
+Bsss
 
 # Referência
 
