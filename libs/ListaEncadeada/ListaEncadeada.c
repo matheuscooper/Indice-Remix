@@ -45,11 +45,13 @@ void inserirLE_por_conteudo(ListaE *lista, void* conteudo){
     if((aux!= NULL)&&(lista->funcaoDeComparar(aux->info, conteudo)>0)){
         novo->prox= aux;
         lista->prim = novo;
+        lista->comparacoes +=1;
         return ;
     }
     while((aux)&&(lista->funcaoDeComparar(aux->info, conteudo)<0)){
         tmp = aux;
         aux = aux->prox;
+        lista->comparacoes +=1;
     }
     tmp->prox = novo;
     novo->prox = aux;

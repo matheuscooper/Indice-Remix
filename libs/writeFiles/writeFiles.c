@@ -93,3 +93,15 @@ tipoIndiceRemissivo* writeInFiles(char* nomeStopsWords, char * NomeLivro){
     
     return indiceRemissivo;
 }
+
+void escreveRelatorio(){
+
+    char * name = "Relatorio/Relatorio";
+    FILE* fp = fopen(name, 'w');
+    fprintf(fp, "Relatorio Indice remissivo");
+    
+
+
+
+
+}
