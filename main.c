@@ -5,19 +5,56 @@
 #include "./libs/TADtipoIndiceRemissivo/indiceRemissivo.h"
 #include "./libs/TADSTopMundo/stop.h"
 
+char * getName(char * fileName){
+
+    char * newName = malloc(sizeof(char)*50);
+
+    int indexNewName = 0;
+
+    int lenFileName = strlen(fileName);
+
+    int i_start = 0;
+    int j_end = lenFileName;
+    // int j_end = lenFileName-1;
+    // while ((j_end > i_start) && fileName[j_end] != 46) j_end--;
+    while ((j_end > i_start) && fileName[i_start] != 47) i_start++;
+    
+    i_start++;
+
+    for(int i=i_start; i < j_end; i++){
+        newName[indexNewName] = fileName[i];
+        indexNewName++;
+    }
+    
+    newName[indexNewName] = '.';
+    indexNewName++;
+    newName[indexNewName] = 'm';
+    indexNewName++;
+    newName[indexNewName] = 'd';
+    indexNewName++;
+    newName[indexNewName] = 0;
+
+    return newName;
+    
+
+}
+
 int main(int argc, char * argv[]){
 
     // gcc ./libs/*/*.c main.c -lm -o job.n
     // ./job.n arquivos/stopwords_br.txt bases-dicionario/Guarani.base 
     assert(argc == 3);
-
+    
     tipoStop * stWord = criarStop(argv[1]);
 
     tipoIndiceRemissivo * indiceRemissivo = criarIndice(argv[2],stWord);
 
+    char * name = getName(argv[2]);
 
-    printf(" comparations:%d  \n", returnIndexComparation(indiceRemissivo));
-    printf(" searchs :%d  \n", returnIndexBusca(indiceRemissivo));
+    FILE * fp = fopen(name,"w");
+
+    fprintf(fp," comparations:%d  \n", returnIndexComparation(indiceRemissivo));
+    fprintf(fp," searchs :%d  \n", returnIndexBusca(indiceRemissivo));
     
     mostraIndeceRemissivo(indiceRemissivo);
 
@@ -25,8 +62,8 @@ int main(int argc, char * argv[]){
     int searchs = returnIndexBusca(indiceRemissivo);
 
 
-    printf(" comparations:%d  \n", returnIndexComparation(indiceRemissivo));
-    printf(" searchs :%d  \n", returnIndexBusca(indiceRemissivo));
+    fprintf(fp," comparations:%d  \n", returnIndexComparation(indiceRemissivo));
+    fprintf(fp," searchs :%d  \n", returnIndexBusca(indiceRemissivo));
 
 
     double media = comparations/(double) searchs;
@@ -56,13 +93,14 @@ int main(int argc, char * argv[]){
     printf("number of hashing: %d \n", g); 
 
     char* palavraBuscada = malloc(sizeof(char)*46);
-    
+
     while (scanf("%s", palavraBuscada) == 1)
     {
         /* code */
         searchElement(indiceRemissivo,palavraBuscada);
     }
     
+    fclose(fp);
     
 
 }
