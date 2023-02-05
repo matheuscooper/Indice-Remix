@@ -56,7 +56,7 @@ tipoIndiceRemissivo* writeInFiles(char* nomeStopsWords, char * NomeLivro){
     int comparations = returnIndexComparation(indiceRemissivo);
     int searchs = returnIndexBusca(indiceRemissivo);
 
-    fprintf(fp, "showing results: \n \n");
+    fprintf(fp, "# showing results: \n \n");
     fprintf(fp,"comparations:%d  \n \n", returnIndexComparation(indiceRemissivo));
     fprintf(fp,"searchs :%d  \n \n", returnIndexBusca(indiceRemissivo));
 

@@ -46309,13 +46309,13 @@ pagina: 117, pontuacao da pagina: 0.033590,
 zurrando-- 
 pagina: 143, pontuacao da pagina: 0.034000, 
 
-showing results: 
+# showing results: 
  
 comparations:11710  
  
 searchs :52724  
  
- a media = comparation/searchs 0.222100 
+a media = comparation/searchs 0.222100 
  
 number of carga ultrapassadass: 407
  
