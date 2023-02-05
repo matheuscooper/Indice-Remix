@@ -1,9 +1,9 @@
 #ifndef WRITEFILES_H
 #define WRITEFILES_H
 
+#include "../TADtipoIndiceRemissivo/indiceRemissivo.h"
 
-
-void writeInFiles(char* nomeStopsWords, char * NomeLivro);
+tipoIndiceRemissivo* writeInFiles(char* nomeStopsWords, char * NomeLivro);
 
 
 #endif
