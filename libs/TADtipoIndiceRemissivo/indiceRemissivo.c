@@ -6,7 +6,7 @@
 #include "../TrataStrings/TrataStrings.h"
 #include "../TADSTopMundo/stop.h"
 #include "../ListaEncadeada/ListaEncadeada.h"
-
+#include "../DicEstatico/tipoDicionario.h"
 
 typedef struct pagOcorre{    
     int pagina;
@@ -61,6 +61,7 @@ struct tipoIndiceRemissivo{
     ListaE * listWithWords;
     docs* registraDocs;
     int ocupacaoRegistraDocs;
+    tipoStop* stopwordsTxt;
 };
 
 int _cmpValues(void * a, void * b){
@@ -77,7 +78,8 @@ tipoIndiceRemissivo * criarIndice(char*nomeArquivo, void*stopMundo){
     tipoStop * stop = stopMundo;
 
     tipoIndiceRemissivo* IndiceRe_atual = malloc(sizeof(tipoIndiceRemissivo));
-    
+
+    IndiceRe_atual->stopwordsTxt = stop;
     IndiceRe_atual->Dicionario_do_livro = criarDicDinamic(197);
     IndiceRe_atual->listWithWords = criarListaEncadeada(&_cmpValues);
     IndiceRe_atual->registraDocs = malloc(sizeof(docs)*2);
