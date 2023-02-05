@@ -11,7 +11,7 @@ number of carga ultrapassadass: 287
 number of size list: 26 
 number of size vet: 701 
 number of quantity key : 8439 
-number of positions: 701 
+number of posicoesOcupadasDicLivro: 701 
 number of medias of list: 0.083067 
 number of ReHashing: 46 
  

@@ -77,7 +77,7 @@ tipoIndiceRemissivo* writeInFiles(char* nomeStopsWords, char * NomeLivro){
     fprintf(fp,"number of quantity key : %d \n", d); 
 
     int e = posiOcupadasDicLivro(indiceRemissivo);
-    fprintf(fp,"number of positions: %d \n", e);
+    fprintf(fp,"number of posicoesOcupadasDicLivro: %d \n", e);
 
     double f = mediasPorListaDicLivro(indiceRemissivo);
     fprintf(fp,"number of medias of list: %lf \n", f);
