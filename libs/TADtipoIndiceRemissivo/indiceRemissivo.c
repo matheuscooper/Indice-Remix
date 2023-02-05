@@ -105,7 +105,6 @@ tipoIndiceRemissivo * criarIndice(char*nomeArquivo, void*stopMundo){
         }
         else{
             LimpaString(palavraLida);
-            
             if(strlen(palavraLida) == 0) continue;
             if(verificaStop(stopMundo, palavraLida)!=0) continue;
             
@@ -143,6 +142,7 @@ tipoIndiceRemissivo * criarIndice(char*nomeArquivo, void*stopMundo){
 
                 }
                 else{
+                    // a pagina atual já existe no vetorOcorrencias, sua ocorrencia soma + 1
                     VInfo[(endPalavra->paginasTotal)-1].ocorrencias ++;
                 }
             }
@@ -160,7 +160,8 @@ tipoIndiceRemissivo * criarIndice(char*nomeArquivo, void*stopMundo){
 void calculePontuation(InfoDic * infomation,docs * documentos, int totDocs, int tam){
     int i=0;
     for( i=0; i < tam; i++){
-        
+        // vet =  16/400/ [ ]
+        // tam é o tamanho de vet odocrrencias, ou seja, a quantidade de páginas que a palavra apareceu
         int ocorrenciaPalavra = infomation->vetDeOcorrencias[i].ocorrencias;
 
         int page = infomation->vetDeOcorrencias[i].pagina;
@@ -217,13 +218,13 @@ void* searchElement(tipoIndiceRemissivo * index, char * key){
     //printf(" ocorrenciaaaaas totallllll %d", retorno->ocorrenciasTotal);
     
 }
-void* TF_IDF(tipoIndiceRemissivo* index, char* key){
+/*void* TF_IDF(tipoIndiceRemissivo* index, char* key){
 
     InfoDic* retorno = buscarDicDinamico(index->Dicionario_do_livro, key);
     docs* registradocs_atual = index->registraDocs;
 
     
-}
+}*/
 
 void mostraIndiceRemissivo(tipoIndiceRemissivo* index){
 
