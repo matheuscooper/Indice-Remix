@@ -44,3 +44,16 @@ int verificaStop(tipoStop* stop, char* PalavraDoLivro){
     else return 0;
 
 }
+
+int retornaComparacoesTotaisSTOP(tipoStop* stop){
+    DE* x = stop->dic;
+    int i;
+    i = retornaComparacoesTotaisDE(x);
+    return i;
+}
+int retornaNumBuscasSTOP(tipoStop* stop){
+    DE* x = stop->dic;
+    int i;
+    i = retornaNumBuscasDE(x);
+    return i;
+}
