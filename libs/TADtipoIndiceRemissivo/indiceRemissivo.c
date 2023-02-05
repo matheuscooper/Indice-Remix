@@ -178,9 +178,15 @@ const int cmpQsor(const void * a,const void *b){
     const pagOcorre * aa = a;
     const pagOcorre * bb = b;
     // mudamos o sinal de comparacao para que fique em ordem decrescente
-    if((aa->pontuation) < (bb->pontuation)) return 1;
-    else if((aa->pontuation) > (bb->pontuation)) return -1;
-    else return 0;
+    if((aa->pontuation) < (bb->pontuation)){
+        return 1;
+    }
+    else if((aa->pontuation) > (bb->pontuation)){
+        return -1;
+    }
+    else{
+        return 0;
+    }
 }
 
 void* searchElement(tipoIndiceRemissivo * index, char * key){
