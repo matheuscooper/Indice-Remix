@@ -19,7 +19,7 @@ int main(int argc, char * argv[]){
     printf(" comparations:%d  \n", returnIndexComparation(indiceRemissivo));
     printf(" searchs :%d  \n", returnIndexBusca(indiceRemissivo));
     
-    //mostraIndeceRemissivo(indiceRemissivo);
+    mostraIndeceRemissivo(indiceRemissivo);
 
     int comparations = returnIndexComparation(indiceRemissivo);
     int searchs = returnIndexBusca(indiceRemissivo);
@@ -55,7 +55,7 @@ int main(int argc, char * argv[]){
     int g = ContReHashDicLivro(indiceRemissivo);
     printf("number of hashing: %d \n", g); 
 
-    char* palavraBuscada;
+    char* palavraBuscada = malloc(sizeof(char)*46);
     scanf("entre com uma palavra: %s", palavraBuscada);
     searchElement(indiceRemissivo,palavraBuscada);
     

@@ -190,7 +190,10 @@ const int cmpQsor(const void * a,const void *b){
 }
 
 void* searchElement(tipoIndiceRemissivo * index, char * key){
-
+    removeSpecialCharacters(key);
+    LimpaString(key);
+    LowerString(key);
+    
     InfoDic * retorno = buscarDicDinamico(index->Dicionario_do_livro, key);
    
     int i;
