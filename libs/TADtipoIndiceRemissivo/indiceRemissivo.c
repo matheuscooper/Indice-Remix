@@ -200,7 +200,8 @@ void* searchElement(tipoIndiceRemissivo * index, char * key){
     int i;
    
     if(retorno == NULL){
-        printf("Palavra não encontrada \n ");
+        printf("%s-- \n", key);
+        printf("Palavra nao encontrada \n\n");
         return NULL;
     } 
 
