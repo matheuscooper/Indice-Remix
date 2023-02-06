@@ -23,7 +23,7 @@ Trata-se de uma função de dispersão que mapeia uma chave de busca para um det
 ## **Nível de Agrupamento de Tabela:**
 A medida para o agrupamento visto na tabela hash é dado pela equação:
 				
-$$ C =(xi²)/n - A  $$			
+$$ C = ∑(xi²)/n - A  $$			
 			
 Onde xi é o tamanho das listas encadeadas, n o somatório de listas encadeadas, A o fator de carga. Esse cálculo determina o quão eficiente está sendo distribuída as chaves na tabela hash. Quando C = 1 o agrupamento distribui de maneira uniforme. Quando C > 1, o agrupamento está segurando o desempenho da tabela, ou seja, o tamanho da tabela é insuficiente para armazenar todas as chaves. Quando C < 1, a função hash está espalhando elementos de forma mais uniforme que uma distribuição randômica. Essa última raramente acontece, visto que as funções são generalizadas e operam junto a chaves genéricas.
 
@@ -43,7 +43,7 @@ Implementar um programa que gera o índice remissivo de um livro que encontra-se
 A seguir estão a listagem dos arquivos criados para estruturar nosso Índice Remissivo:
 
 
-## ** Lista Encadeada:**
+## **Lista Encadeada:**
 Estrutura linear de elementos de dados cuja ordem não há representação na memória. Cada elemento aponta para o próximo. São estruturas de dados que consistem em um conjunto de nós os quais representam uma sequência. Essa estrutura permite a inserção, remoção e busca de elementos através da chave genérica. Nela há duas estruturas: a primeira possui tamanho e número de comparações que usamos para atualizar as comparações feitas nas estruturas que usam essa, a segunda estrutura tem o nó de cada lista e a informação genérica que iremos armazenar.
 
 
@@ -62,7 +62,7 @@ Dessa maneira, o DE contabiliza a quantidade de buscas feitas dentro da estrutur
 ## **Trata String:**
 Estrutura que transforma caracteres do documento em suas representações na tabela ASCII, converte caracteres maiúsculos em minúsculos com a finalidade de uniformizar as comparações e retirar elementos que descaracterizam uma string.
 
-## ** Stop Word ** 
+## **Stop Word** 
 Estrutura que processa o arquivo StopWord armazenando as palavras StopWord dentro de um dicionário estático e verifica quando a string é uma stop word. 
 
 ## **Índice Remissivo:**
