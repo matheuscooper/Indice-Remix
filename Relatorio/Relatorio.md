@@ -23,7 +23,7 @@ Trata-se de uma função de dispersão que mapeia uma chave de busca para um det
 ## **Nível de Agrupamento de Tabela:**
 A medida para o agrupamento visto na tabela hash é dado pela equação:
 				
-$$ C =(xi²)/n - A  $$			
+$$ C = ∑(xi²)/n - A  $$			
 			
 Onde xi é o tamanho das listas encadeadas, n o somatório de listas encadeadas, A o fator de carga. Esse cálculo determina o quão eficiente está sendo distribuída as chaves na tabela hash. Quando C = 1 o agrupamento distribui de maneira uniforme. Quando C > 1, o agrupamento está segurando o desempenho da tabela, ou seja, o tamanho da tabela é insuficiente para armazenar todas as chaves. Quando C < 1, a função hash está espalhando elementos de forma mais uniforme que uma distribuição randômica. Essa última raramente acontece, visto que as funções são generalizadas e operam junto a chaves genéricas.
 
