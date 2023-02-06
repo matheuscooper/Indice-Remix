@@ -56,3 +56,5 @@ A tabela a seguir mostra quantas listas encadeadas ultrapassaram o fator de carg
 ![Tabela 1](Tabela1.jpeg)
 Com isso, observa-se que não obtivemos o resultado esperado, mas um pouco mais da metade do vetor . Além disso, a maior lista encadeada teve um tamanho de 26. Assim, na pior das hipóteses, fazemos uma busca sequencial de 26 comparações. A tabela a seguir mostra, o tamanho da maior lista encadeada para cada livro:
 ![Tabela 2](Tabela2.jpeg)
+No quesito quantidade de buscas e comparações, a tabela a seguir mostram as comparações e buscas operadas para cada livro, assim como a média de comparações por busca.
+![Tabela 3](Tabela3.jpeg)
