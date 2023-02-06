@@ -34,13 +34,12 @@ Implementar um programa que gera o índice remissivo de um livro que encontra-se
 * Determinar a taxa de ocupação da tabela Hash;
 * Comprovar a eficiência da tabela hash em relação ao fator de carga;
 
-# * **3. PROCEDIMENTOS EXPERIMENTAIS**
+#  **3. PROCEDIMENTOS EXPERIMENTAIS**
 A seguir estão a listagem dos arquivos criados para estruturar nosso Índice Remissivo:
 
 ## **Dicionário Dinâmico:**
 É um vetor de listas encadeadas. Além do vetor de listas e o tamanho do vetor, nosso tipo de dicionário dinâmico contém dados que serão utilizados para análise de desempenho no relatório, como: o número de buscas que ocorreu no dicionário, o fator de carga, quantas posições do vetor ultrapassaram o fator de carga, o tamanho da maior lista encadeada no vetor e quantos ReHashes ocorreram no dicionário. 
-É através da função Hash que a chave é direcionada e inserida para uma posição do vetor.
-Quando a lista encadeada ultrapassa o fator de carga a função ReHash tenta amenizar o número de colisões, aumentando o número do vetor e mudando o direcionamento de algumas chaves. Entretanto, algumas colisões ainda ocorrem, assim como a ultrapassagem do fator de carga.
+É através da função Hash que a chave é direcionada e inserida para uma posição do vetor.A função ReHash tenta amenizar o número de colisões, aumentando o número do vetor e mudando o direcionamento de algumas chaves. Ela é invocada quando o nível de agrupamento da tabela (C) é maior que 1. Entretanto, algumas colisões ainda ocorrem, assim como a ultrapassagem do fator de carga.
 
 ## **Dicionário Estático:**
 Estrutura similar à anterior: um vetor que contém listas encadeadas, de modo que o Dicionário Estático não realiza realocação de memória para inserção de novos elementos. Essa estrutura contém o tamanho e o nível de ocupação de cada posição do vetor, além de um ponteiro que recebe uma função de comparação especificada na “main” e o número de buscas realizadas.
