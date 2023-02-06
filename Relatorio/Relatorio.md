@@ -1,4 +1,4 @@
-# Relatório sobre o trabalho de Índice remissivo
+# ***Relatório sobre o trabalho de Índice remissivo***
 
 Membros:
 Matheus Souza de Oliveira;
@@ -39,7 +39,7 @@ Implementar um programa que gera o índice remissivo de um livro que encontra-se
 * Determinar a taxa de ocupação da tabela Hash;
 * Comprovar a eficiência da tabela hash em relação ao fator de carga;
 
-#  **3. PROCEDIMENTOS EXPERIMENTAIS**
+#  **3. METODOLOGIA**
 A seguir estão a listagem dos arquivos criados para estruturar nosso Índice Remissivo:
 
 
@@ -49,7 +49,9 @@ Estrutura linear de elementos de dados cuja ordem não há representação na me
 
 ## **Dicionário Dinâmico:**
 É um vetor de listas encadeadas. Além do vetor de listas e o tamanho do vetor, nosso tipo de dicionário dinâmico contém dados que serão utilizados para análise de desempenho no relatório, como: o número de buscas que ocorreu no dicionário, o fator de carga, quantas posições do vetor ultrapassaram o fator de carga, o tamanho da maior lista encadeada no vetor e quantos ReHashes ocorreram no dicionário. 
-É através da função Hash que a chave é direcionada e inserida para uma posição do vetor.A função ReHash tenta amenizar o número de colisões, aumentando o número do vetor e mudando o direcionamento de algumas chaves. Ela é invocada quando o nível de agrupamento da tabela (C) é maior que 1. Entretanto, algumas colisões ainda ocorrem, assim como a ultrapassagem do fator de carga.
+É através da função Hash que a chave é direcionada e inserida para uma posição do vetor.
+A função hash transforma qualquer chave em uma string separando os caracteres e utilizo-os em manipulação binária, calculando a posição à ser inserida no vetor.
+A função ReHash tenta amenizar o número de colisões, aumentando o número do vetor e mudando o direcionamento de algumas chaves. Ela é invocada quando o nível de agrupamento da tabela (C) é maior que 1. Entretanto, algumas colisões ainda ocorrem, assim como a ultrapassagem do fator de carga.
 
 ## **Dicionário Estático:**
 Estrutura similar à anterior: um vetor que contém listas encadeadas, de modo que o Dicionário Estático não realiza realocação de memória para inserção de novos elementos. Essa estrutura contém o tamanho e o nível de ocupação de cada posição do vetor, além de um ponteiro que recebe uma função de comparação especificada na “main” e o número de buscas realizadas.
@@ -61,9 +63,7 @@ Dessa maneira, o DE contabiliza a quantidade de buscas feitas dentro da estrutur
 Estrutura que transforma caracteres do documento em suas representações na tabela ASCII, converte caracteres maiúsculos em minúsculos com a finalidade de uniformizar as comparações e retirar elementos que descaracterizam uma string.
 
 ## ** Stop Word ** 
-Estrutura que processa o arquivo Stop World e verifica quando a string é uma stop world. 
-
-
+Estrutura que processa o arquivo StopWord armazenando as palavras StopWord dentro de um dicionário estático e verifica quando a string é uma stop word. 
 
 ## **Índice Remissivo:**
 
@@ -75,14 +75,14 @@ O RegistraDocs armazena as páginas e o total de palavras contidas nela, sendo e
 Uma lista encadeada chamada ListWithWords:
 A ListWithWords registra todas as palavras lidas e as ordena em ordem crescente. Além disso, essa lista é usada para gerar os arquivos .md onde são escritos os índices de todas as palavras do dicionário.
 As etapas do processamento de palavras estão representadas no fluxograma (figura 1). 
+![Fluxograma](fluxoAED2.jpg)
+
 Outras funções principais do arquivo Índice Remissivo é a searchElement e a MostraÍndiceRemissivo:
 ## **a) searchElement:**
 Os parâmetros dessa função são o Índice remissivo e a chave. A chave recebida é tratada com as funções do arquivo trata string. Ela é buscada no dicionário dinâmico e a informação da chave, as páginas em que a palavra ocorre, é armazenada em uma variável do tipo vetor. Em seguida, é calculado o TF-IDF dessas páginas e o vetor é ordenado do maior para o menor, a fim de retornar as 5 páginas mais importantes. 
 Em seguida a função printa até 5 páginas mais importante em que a chave aparece, assim como a pontuação de cada uma.
 ## **b) Mostra índice Remissivo:**
 Essa função utiliza a função searchElement para printar até 5 páginas mais importantes de todas as palavras contidas no dicionário, percorrendo o dicionário.
-
-![Fluxograma](fluxoAED2.jpg)
 
 # **RESULTADOS E DISCUSSÕES**
 Tomando a quantidade de palavras de cada livro como referência, têm-se uma média de 11.000 palavras. Se estas fossem postas em um vetor, o número de comparações em uma busca binária seria logarítmo de 11.000 na base 2, o qual resulta em 13. Portanto, como nosso dicionário é um vetor de listas encadeadas, definimos nosso fator de carga como 12, para que o número de comparações nesta busca sequencial seja no máximo 12, obtendo um desempenho melhor que busca binária. 
@@ -92,3 +92,7 @@ Com isso, observa-se que não obtivemos o resultado esperado, mas um pouco mais 
 ![Tabela 2](Tabela2.jpeg)
 No quesito quantidade de buscas e comparações, a tabela a seguir mostram as comparações e buscas operadas para cada livro, assim como a média de comparações por busca.
 ![Tabela 3](Tabela3.jpeg)
+O gráfico a seguir representa a relação de número de reHashs com Número de comparações
+![grafico 1](graph.png)
+Enquanto o número de comparações diminui, o número de reHashs aumenta.
+# **CONCLUSÃO**
