@@ -8,7 +8,8 @@
 
 
 // Cesar teste assim:  gcc ./libs/*/*.c main.c -lm -o job.n && ./job.n
-
+// Esse teste é para terminal Linux
+// O programa demora 2 minutos pra executar os arquivos.
 int main(int argc, char** argv){
     tipoIndiceRemissivo* index = writeInFiles("stopwords/stopwords_br.txt", "bases-dicionario/Guarani.base");
     tipoIndiceRemissivo* index2 = writeInFiles("stopwords/stopwords_br.txt", "bases-dicionario/Paralelismo.base");
