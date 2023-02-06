@@ -43,7 +43,7 @@ Implementar um programa que gera o índice remissivo de um livro que encontra-se
 A seguir estão a listagem dos arquivos criados para estruturar nosso Índice Remissivo:
 
 
-## ** Lista Encadeada:**
+## **Lista Encadeada:**
 Estrutura linear de elementos de dados cuja ordem não há representação na memória. Cada elemento aponta para o próximo. São estruturas de dados que consistem em um conjunto de nós os quais representam uma sequência. Essa estrutura permite a inserção, remoção e busca de elementos através da chave genérica. Nela há duas estruturas: a primeira possui tamanho e número de comparações que usamos para atualizar as comparações feitas nas estruturas que usam essa, a segunda estrutura tem o nó de cada lista e a informação genérica que iremos armazenar.
 
 
@@ -62,7 +62,7 @@ Dessa maneira, o DE contabiliza a quantidade de buscas feitas dentro da estrutur
 ## **Trata String:**
 Estrutura que transforma caracteres do documento em suas representações na tabela ASCII, converte caracteres maiúsculos em minúsculos com a finalidade de uniformizar as comparações e retirar elementos que descaracterizam uma string.
 
-## ** Stop Word ** 
+## **Stop Word** 
 Estrutura que processa o arquivo StopWord armazenando as palavras StopWord dentro de um dicionário estático e verifica quando a string é uma stop word. 
 
 ## **Índice Remissivo:**
@@ -96,3 +96,4 @@ O gráfico a seguir representa a relação de número de reHashs com Número de 
 ![grafico 1](graph.png)
 Enquanto o número de comparações diminui, o número de reHashs aumenta.
 # **CONCLUSÃO**
+Com isso, foi observado que apesar de várias posições do vetor ultrapassarem o fator de carga, a busca mostra-se eficiente. Em vista dos resultados obtidos, aplicamos as TADs citadas para a construção do dicionário visto em sala. A construção de uma tabela hashing foi realizada com a estrita finalidade de mapear as chaves inseridas e a partir da mesma função, buscar elementos. Na busca foi observado um valor significativo visto que a expectativa do fator de carga foi superada em 41,1% para a obra o Guarani, para a Aventuras 41,6% e 40,6% para o Paralelismo. Em contrapartida mais de 50% para cada obra o fator de carga foi respeitado conforme as tabelas anteriores. Além disso, foi observado que para cada busca tivemos que fazer uma média de 0.017365 comparações, mostrando eficiência do nosso índice remissivo. Além disso, como observado no gráfico, pudemos analisar a relação entre a quantidade de reHashs e as comparações, de modo que quanto mais reHashs ocorrerem, menos comparações serão necessárias, visto que o objetivo do reHash é diminuir o tamanho da lista encadeada, ou seja, diminuir as comparações da busca sequencial. Com isso, obtivemos sucesso em aplicar as estruturas de dados aprendidas em sala de aula. 
